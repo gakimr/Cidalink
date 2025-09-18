@@ -1,0 +1,1095 @@
+:root{
+    --verdecb: rgb(134,212,134);
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+     font-family: Arial, sans-serif;
+     line-height: 1.6;
+     color: rgb(51, 51, 51);
+     background-color: rgb(224,224,224);
+     flex-direction: column;
+     min-height: 100vh;
+}
+
+header{
+    height: 7rem;
+    background-color: var(--verdecb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+header .logocontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+   
+}
+
+header img{
+     height: 12.5rem; 
+}
+
+.titulosite{
+    margin-left: -4.7rem;
+}
+
+
+.tcida{
+color: rgb(28, 56, 28);
+}
+
+.tlink {
+    color: rgb(0, 9, 107)
+}
+
+.mainbanner{
+    height: calc(100vh - 7rem);
+    background-image: url(../img/closetoindex.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    }
+
+ .maincontainer{
+    color: #fff;
+    text-align: center;
+ }
+
+ .maincontainer h1 {
+    font-size: 3rem;
+ }
+
+ .maincontainer p {
+     font-size: 1.25rem;
+     margin-bottom: 2rem;
+ }
+
+ .botoes{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+ }
+
+ 
+.BtnC {
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.25em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.BtnA {
+    background-color: #00096b;
+    color: white;
+    padding: 1rem 1.25rem;
+    font-size: 1.25em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+.seccards {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.seccards div {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+.seccards img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+
+/* Estilos para a seção principal de cadastro do administrador*/
+.cartaDadmcadastro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* Estilos para a seção principal de cadastro do cidadão */
+.cartaDcidcadastro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+/* Estilos para a seção principal de cadastro do cidadão */
+.recuperarSenha{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* Centraliza o conteúdo de páginas como Mapa, Chat, Perfil e Notificações */
+.cidalink-main-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Estilo geral para cards de login, cadastro e recuperação de senha */
+.card-form,
+.card-login {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-top: 10rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 26rem;
+    text-align: center;
+}
+
+
+
+/* Estilo para os títulos (h2) dentro dos cards de formulário*/
+.card-form h2,
+.card-login h2 {
+    color: #0056b3;
+    margin-bottom: 0.625rem;
+}
+
+/* Define a cor específica para o título de login */
+.card-login h3 {
+    color: #28a745;
+    margin-bottom: 1.25rem;
+}
+
+/* Ajustes de espaçamento para os grupos de input*/
+.input-gp {
+    margin-bottom: 0.9375rem;
+    text-align: left;
+}
+
+/* Estilo para os rótulos dos campos de formulário */
+.input-gp label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilo para os campos de texto, email, senha e outros*/
+.input-gp input[type="text"],
+.input-gp input[type="email"],
+.input-gp input[type="password"],
+.input-gp select,
+.input-gp textarea {
+    width: calc(100% - 1.25rem);
+    padding: 0.625rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+/* Define o redimensionamento e altura mínima para o campo de texto */
+.input-group textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+.entrarBotao{
+    background-color: #00096b;
+    color: #ffffff;
+    padding: 0.75rem 11rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para botões de ação principal em diversas páginas */
+.btn-primary {
+    background-color: #00096b;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 0.625rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse sobre o botão primário */
+.btn-primary:hover {
+    background-color: #010e1d;
+}
+
+/* Estilo para botões de login, perfil e outras ações secundárias*/
+.btn-secondary {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 0.625rem 0.9375rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse sobre o botão secundário */
+.btn-secondary:hover {
+    background-color: #218838;
+}
+
+/* Estiliza os links abaixo dos formulários*/
+.link-form-action {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Formata os links como "Fazer login" */
+.link-form-action a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Centraliza e adiciona uma borda superior para separar o conteúdo */
+.signup-login {
+    margin-top: 1.5625rem;
+    padding-top: 0.9375rem;
+    border-top: 1px solid #eee;
+}
+
+/* Estilo e layout do menu de navegação em diversas páginas*/
+.cidalink-sidebar {
+    width: 15.625rem;
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+/* Formata a palavra "Menu" no topo da barra lateral*/
+.cidalink-sidebar h2 {
+    color: #0056b3;
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+}
+
+/* Remove a formatação padrão da lista */
+.cidalink-sidebar-nav li {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0.625rem;
+}
+
+/* Separa os itens da lista do menu */
+.cidalink-sidebar-nav li {
+    margin-bottom: 0.625rem;
+}
+
+/* Estilo visual dos botões/links do menu */
+.cidalink-sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 0.9375rem;
+    background-color: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito de transição de cor ao passar o mouse */
+.cidalink-sidebar-link:hover {
+    background-color: #e2e6ea;
+}
+
+/* Estilo específico para o item do menu que representa a página atual */
+.cidalink-sidebar-link.pag-atual {
+    background-color: #648343;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilo para o ícone de notificação (círculo vermelho)*/
+.notificacao-ponto {
+    background-color: #dc3545;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 0.1875rem 0.4375rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+/* Centraliza e organiza o conteúdo principal ao lado do menu */
+.cidalink-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+/* Estilo do bloco principal onde o conteúdo da página é exibido */
+.cidalink-main-content {
+    flex: 1;
+    background-color: #ffffff; 
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Alinha os botões no canto superior direito do conteúdo principal */
+.cidalink-top-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.25rem;
+}
+.ocorrenciaP{
+    flex: 1;
+    background-color: #ffffff; 
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.form-page-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+/* Layout para organizar os cards de ocorrências */
+.ocorrenc-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Estilo do card individual de uma ocorrência */
+.ocorrenc-card {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.9375rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+/* Alinhamento dos elementos no topo do card */
+.ocorrenc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 0.625rem;
+    position: center;
+}
+
+
+/* Estilo para o avatar do cidadão que reportou a ocorrência */
+.perfil-cid {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Estilo para o nome e informações do cidadão*/
+.cid-info strong {
+    display: block;
+    color: #333;
+}
+
+/* Estilo para o texto de detalhes do cidadão */
+.cid-info span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Espaçamento do corpo do card */
+.ocorrenc-body {
+    margin-bottom: 0.9375rem;
+}
+
+/* Estilo para o texto da descrição */
+.ocorrenc-descricao {
+    margin-bottom: 0.625rem;
+    color: #444;
+}
+
+/* Estilo para o espaço reservado para a foto da ocorrência */
+.photo-placeholder {
+    background-color: #e9ecef;
+    height: 9.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-style: italic;
+    border-radius: 0.3125rem;
+}
+
+/* Alinhamento e espaçamento dos botões de ação*/
+.ocorrenc-footer {
+    display: flex;
+    gap: 0.625rem;
+}
+
+/* Estilo do botão de apoio em uma ocorrência */
+.btnapoio {
+    background-color: #45a049;
+    color: #ffffff;
+    padding: 0.5rem 0.9375rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse sobre o botão de apoio*/
+.btnapoio:hover {
+    background-color: #2b642e;
+}
+
+/* Estilo para o título da seção de notificações */
+.notifications-section h3 {
+    color: #007bff;
+    margin-bottom: 1.25rem;
+}
+
+/* Estilo do card individual de uma notificação */
+.notification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9375rem;
+    background-color: #f9f9f9;
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+    margin-bottom: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+/* Define o tamanho do ícone de notificação*/
+.notification-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+/* Estilo do texto dentro do card de notificação */
+.notification-content p {
+    margin: 0;
+    color: #333;
+    line-height: 1.4rem;
+}
+
+/* Estilo para o texto em negrito dentro da notificação */
+.notification-content strong {
+    color: #0056b3;
+}
+
+/* Estilo para o texto de hora da notificação*/
+.notification-content span {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+    margin-top: 0.3125rem;
+}
+
+/* Estilo para os cards de notificação que já foram lidos */
+.notification-card.notification-read {
+    background-color: #e9ecef;
+    opacity: 0.8;
+}
+
+/* Centraliza e estiliza o título da seção do mapa */
+.sectitulo {
+    color: #0056b3;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+/* Estilo para a caixa que contém o mapa */
+.mapacontainer {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 0.5rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+/* Estilo para os marcadores de localização no mapa */
+.mapamarc {
+    position: absolute;
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #dc3545;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Define a posição de cada marcador específico no mapa */
+.marcador1 {
+    top: 20%;
+    left: 30%;
+}
+.marcador2 {
+    top: 50%;
+    left: 40%;
+    background-color: #28a745;
+}
+.marcador3 {
+    top: 70%;
+    left: 25%;
+}
+.marcador4 {
+    top: 40%;
+    left: 65%;
+    background-color: #ffc107;
+}
+.marcador5 {
+    top: 10%;
+    left: 50%;
+}
+
+/* Estilo para o pop-up que aparece ao clicar em um marcador */
+.ocorrenciapopup {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    z-index: 20;
+    min-width: 12.5rem;
+    display: none;
+    text-align: left;
+}
+
+/* Estilo para o título da ocorrência no pop-up */
+.ocorrenciapopup h4 {
+    margin-top: 0;
+    margin-bottom: 0.3125rem;
+    color: #0056b3;
+    font-size: 1.1rem;
+}
+
+/* Estilo para a descrição da ocorrência no pop-up */
+.ocorrenciapopup p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estilo para a seção de legenda do mapa*/
+.ocorrenclegend {
+    margin-top: 1.25rem;
+    padding: 0.9375rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    border: 1px solid #eee;
+}
+
+/* Estilo para o título da legenda do mapa*/
+.ocorrenclegend h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Estilo para a lista de itens da legenda */
+.ocorrenclegend ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Alinhamento dos itens da lista da legenda */
+.ocorrenclegend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Estilo para os círculos de cor que representam os marcadores */
+.legend-color {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+    border: 1px solid #ccc;
+}
+
+/* Estilo para a seção de perfil do usuário */
+.perfil-section {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    width: 100%;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Estilo para o título principal da seção de perfil*/
+.perfil-section h2 {
+    color: #0056b3;
+}
+
+/*  Organiza o layout do avatar e dos detalhes do perfil */
+.perfil-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* Estilo para o círculo do avatar do usuário*/
+.perfil-avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Estilo para as informações de texto do perfil */
+.perfil-details h3 {
+    margin-top: 0;
+    margin-bottom: 0.3125rem;
+    color: #333;
+}
+
+/* Estilo para os parágrafos de detalhes*/
+.perfil-details p {
+    margin-bottom: 0.3125rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Espaçamento para o botão na seção de detalhes do perfil */
+.perfil-details button {
+    margin-top: 0.9375rem;
+}
+
+/* Estilo para o título da seção de ocorrências do usuário */
+.mocorrenc-section h2 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem;
+    color: #0056b3;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.625rem;
+}
+
+/* Estilo para o texto de status */
+.ocorrenc-status {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Cor para o status "pendente"*/
+.status-pendente {
+    color: #ffc107;
+}
+
+/* Cor para o status "completo"*/
+.status-completo {
+    color: #28a745;
+}
+
+/* Layout principal da página de chat */
+.chat-page-content {
+    display: flex;
+    gap: 1.25rem;
+}
+
+/* Estilo para o container principal que engloba a lista e a janela de chat*/
+.chat-container {
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo para a barra lateral que mostra a lista de conversas */
+.chat-list {
+    flex: 0 0 18.75rem;
+    border-right: 1px solid #eee;
+    padding: 1.25rem;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+}
+
+/* Estilo para o título "Chats" */
+.chat-list h3 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Estilo para cada item na lista de conversas*/
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Remove a borda inferior do último item para um visual limpo*/
+.chat-item:last-child {
+    border-bottom: none;
+}
+
+/* Efeito visual ao passar o mouse sobre um chat*/
+.chat-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para o chat que está atualmente selecionado */
+.chat-item.active-chat {
+    background-color: #e6f7ff;
+    border-left: 0.25rem solid #007bff;
+    padding-left: 1rem;
+}
+
+/* Estilo para o ícone de avatar dos usuários no chat */
+.chat-avatar {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 0.9375rem;
+    flex-shrink: 0;
+}
+
+/* Estilo do contêiner de informações do chat */
+.chat-info {
+    flex-grow: 1;
+}
+
+/* Estilo para o nome do contato no chat */
+.chat-name {
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+/* Estilo para a última mensagem exibida na lista de chats */
+.last-message {
+    font-size: 0.9rem;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo para a hora da última mensagem*/
+.chat-time {
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 0.625rem;
+    flex-shrink: 0;
+}
+
+/* Layout do contêiner onde as mensagens são exibidas*/
+.chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para o cabeçalho da janela de conversa */
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 0.9375rem 1.25rem;
+    border-bottom: 1px solid #eee;
+    background-color: #f0f0f0;
+}
+
+/* ================================
+ * NOME DO CONTATO NO CHAT
+ * Estilo para o nome da pessoa na janela de conversa
+ * ================================ */
+.chat-header h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+/* Estilo do contêiner que exibe todas as mensagens */
+.chat-messages {
+    flex-grow: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para o balão individual de cada mensagem */
+.message-bubble {
+    max-width: 70%;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 1.25rem;
+    margin-bottom: 0.625rem;
+    line-height: 1.4rem;
+    position: relative;
+}
+
+/* Estilo para as mensagens enviadas pelo usuário */
+.message-bubble.sent {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0.3125rem;
+}
+
+/* Estilo para as mensagens recebidas de outros usuários */
+.message-bubble.received {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 0.3125rem;
+}
+
+/* Estilo para o nome do remetente dentro do balão de mensagem */
+.message-bubble .sender-name {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 0.1875rem;
+    display: block;
+    color: inherit;
+}
+
+/* Cor específica para o nome em mensagens recebidas*/
+.message-bubble.received .sender-name {
+    color: #0056b3;
+}
+
+/* Cor específica para o nome em mensagens enviadas */
+.message-bubble.sent .sender-name {
+    color: #d1e7ff;
+}
+
+/* Estilo para o carimbo de hora dentro do balão de mensagem*/
+.message-bubble .message-time {
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    text-align: right;
+    margin-top: 0.3125rem;
+}
+
+/* Cor específica para a hora em mensagens enviadas */
+.message-bubble.sent .message-time {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo para a barra inferior de envio de mensagens*/
+.chat-input-area {
+    display: flex;
+    padding: 0.9375rem 1.25rem;
+    border-top: 1px solid #eee;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para o campo de texto para digitar a mensagem */
+.chat-input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    margin-right: 0.625rem;
+    font-size: 1rem;
+}
+
+/* Estilo do botão de envio de mensagem*/
+.chat-input-area .btn-primary {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* LOGIN 
+ * Centraliza o formulário de login e ajusta espaçamento*/
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CADASTRO 
+ * Estiliza o formulário de cadastro com fundo claro e bordas arredondadas */
+.cadastro-form {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+}
+
+
+@media screen and (max-width: 950px) {
+
+    header {
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    header .logocontainer {
+        text-align: center;
+    }
+
+    header img {
+        height: 8rem;
+    }
+
+    .titulosite {
+        margin-left: -3rem;
+    }
+
+    
+    .mainbanner {
+        height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .mainbanner h1 {
+        font-size: 2rem;
+    }
+
+    .mainbanner p {
+        font-size: 1rem;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .BtnC, .BtnA {
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.1em;
+    }
+
+    .seccards {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .seccards div {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+

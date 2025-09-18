@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>CidaLink - Mapa</title>
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+    </header>
+
+    <div class="cidalink-main-container">
+        <aside class="cidalink-sidebar">
+            <h2>Menu</h2>
+            <ul class="cidalink-sidebar-nav">
+                <li>
+                    <a href="#" class="cidalink-sidebar-link">Notificações <span class="notificacao-ponto">2</span></a>
+                </li>
+                <li><a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a></li>
+                <li><a href="criarocorrencia.html" class="cidalink-sidebar-link">Criar Ocorrência</a></li>
+                <li><a href="mapa.html" class="cidalink-sidebar-link pag-atual">Mapa</a></li>
+                <li>
+                    <a href="perfil.html" class="cidalink-sidebar-link">Meu Perfil<span class="notificacao-ponto">3</span></a>
+                </li>
+                <li><a href="chats.html" class="cidalink-sidebar-link">Bate-Papos</a></li>
+                <li><a href="logincid.html" class="cidalink-sidebar-link">Sair</a></li>
+            </ul>
+        </aside>
+
+        <main class="cidalink-main-content">
+            <h2 class="sectitulo">Mapa de Ocorrências na Cidade</h2>
+
+            <div class="mapacontainer">
+                <div class="mapamarc marcador1" data-title="Buraco na Rua A" data-description="Grande buraco próximo à praça central."></div>
+                <div class="mapamarc marcador2" data-title="Lâmpada Queimada" data-description="Poste de luz na Rua B está sem funcionar."></div>
+                <div class="mapamarc marcador3" data-title="Lixo Acumulado" data-description="Ponto de descarte irregular na Av. C."></div>
+                <div class="mapamarc marcador4" data-title="Vazamento de Água" data-description="Vazamento significativo na Rua D"></div>
+                <div class="mapamarc marcador5" data-title="Pichação" data-description="Muro de escola pichado na Rua E."></div>
+
+                <div id="occurrencePopup" class="ocorrenciapopup">
+                    <h4 id="popupTitulo"></h4>
+                    <p id="popupDescricao"></p>
+                </div>
+            </div>
+            
+            <br>
+            <section class="ocorrenclegend">
+                <h3>Legenda:</h3>
+                <ul>
+                    <li><span class="legend-color" style="background-color: #FF4500;"></span> Ocorrências Pendentes</li>
+                    <li><span class="legend-color" style="background-color:#8BC34A ;"></span> Ocorrências Resolvidas</li>
+                    <li><span class="legend-color" style="background-color: #FFC107;"></span> Ocorrências em Andamento</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+        <footer>
+            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="Jscript/script.js"></script>
+</body>
+</html>

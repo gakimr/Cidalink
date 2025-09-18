@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>CidaLink - Recuperar a senha</title>
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+    </header>
+
+     <main class="recuperarSenha">
+        <div class="card-login">
+            <h2>Recuperar Senha</h2>
+            <p>Digite seu e-mail para receber as instruções de recuperação.</p>
+            <form action="/enviar-recuperacao" method="POST">
+                <div class="input-gp">
+                    <label for="email-or-phone">E-mail </label>
+                    <input type="text" id="email-or-phone" name="email-or-phone" placeholder="" required>
+                </div>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="Jscript/script.js"></script>
+        
+</body>
+</html>

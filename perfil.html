@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ]<link rel="stylesheet" href="Css/style.css">
+    <title>CidaLink - Perfil</title>
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+    </header>
+
+    <div class="cidalink-main-container">
+        <aside class="cidalink-sidebar">
+            <h2 class="cidalink-sidebar-title">Menu</h2>
+            <ul class="cidalink-sidebar-nav">
+                <li>
+                    <a href="notificacoes.html" class="cidalink-sidebar-link">Notificação <span class="notificacao-ponto">2</span></a>
+                </li>
+                <li><a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a></li>
+                <li><a href="criarocorrencia.html" class="cidalink-sidebar-link">Criar Ocorrência</a></li>
+                <li><a href="mapa.html" class="cidalink-sidebar-link">Mapa</a></li>
+                <li>
+                    <a href="perfil.html" class="cidalink-sidebar-link pag-atual">Meu Perfil</a> </li>
+                <li><a href="chats.html" class="cidalink-sidebar-link">Bate-Papos</a></li>
+                <li><a href="logincid.html" class="cidalink-sidebar-link logout">Sair</a></li>
+            </ul>
+        </aside>
+
+        <main class="cidalink-content">
+            <section class="perfil-section">
+                <h2>Meu Perfil</h2>
+                <div class="perfil-info-card">
+                    <div class="perfil-avatar">CC</div> <div class="perfil-details">
+                        <h3>Cidadã Cida</h3> <br>
+                        <p><strong>Email:</strong> ..........email.com</p>
+                        <p><strong>CPF/RG:</strong> XXX.XXX.XXX-XX</p>
+                        <p><strong>Endereço:</strong> Rua 123 - Bairro abc</p>
+                        <button class="btn-secondary">Editar Perfil</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mocorrenc-section">
+                <article class="ocorrenc-card">
+                    <h2>Minhas Ocorrências</h2>
+                    <div class="ocorrenc-header">
+                        <div class="perfil-cid">CC</div>
+                        <div class="cid-info">
+                            <strong>Cidadã Cida</strong>
+                            <span>Rua 123</span>
+                        </div>
+                    </div>
+                    <div class="ocorrenc-body">
+                        <p class="ocorrenc-descricao">
+                            Buraco na rua principal <br>
+                            Grande buraco causando problemas no tráfego e risco de acidentes para carros e motos.
+                        </p>
+                        <div class="photo-placeholder">Foto do Buraco</div>
+                    </div>
+                    <div class="ocorrenc-footer">
+                        <p class="ocorrenc-status status-pendente">Status: Pendente</p>
+                    </div>
+                </article>
+
+                <article class="ocorrenc-card">
+                    <div class="ocorrenc-header">
+                        <div class="perfil-cid">CC</div>
+                        <div class="cid-info">
+                            <strong>Cidadã Cida</strong>
+                            <span>Praça da Matriz</span>
+                        </div>
+                    </div>
+                    <div class="ocorrenc-body">
+                        <p class="ocorrenc-descricao">
+                            Lampada quebrada na praça! <br>
+                            Poste de luz da praça principal com a lâmpada queimada há dias, deixando a área escura à noite.
+                        </p>
+                        <div class="photo-placeholder">Foto da Lâmpada</div>
+                    </div>
+                    <div class="ocorrenc-footer">
+                        <p class="ocorrenc-status status-completo">Status: Concluída</p>
+                    </div>
+                </article>
+
+                </section>
+        </main>
+    </div>
+
+<footer>
+            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="Jscript/script.js"></script>
+</body>
+</html>
