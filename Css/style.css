@@ -307,19 +307,25 @@ footer {
 }
 
 .entrarBotao{
+    width:100% ;
     background-color: #00096b;
     color: #ffffff;
-    padding: 0.75rem 11rem;
+    /* Corrigido: Padding vertical ideal (0.75rem) e padding horizontal normal (1.25rem) */
+    padding: 0.75rem 1.25rem; 
     border: none;
     border-radius: 1rem;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
-    display: inline-block;
+    /* Manter display: flex; e adicionar centralização de conteúdo */
+    display: flex; 
+    /* Esta linha centraliza o texto "Entrar" horizontalmente */
+    justify-content: center; 
+    /* Esta linha centraliza o texto "Entrar" verticalmente (já que você está usando flex) */
+    align-items: center;
     margin-top: 0.9375rem;
     transition: background-color 0.3s ease;
 }
-
 /* Estilo para botões de ação principal em diversas páginas */
 .btn-primary {
     background-color: #00096b;
@@ -1251,6 +1257,7 @@ footer {
     .ocorrenc-feed {
         width: 100%;
     }
+
 
 }
 
