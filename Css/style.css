@@ -1111,59 +1111,79 @@ footer {
 
 @media screen and (max-width: 950px) {
 
-    header {
-        height: auto;
-        padding: 1rem 0;
-    }
-    
-    header .logocontainer {
-        text-align: center;
-    }
-
     header img {
-        height: 8rem;
+        height: 10rem; /* Logo menor */
     }
 
     .titulosite {
-        margin-left: -3rem;
+        font-size: 1.5rem;
+        margin-left: -3rem; /* Ajuste o alinhamento da logo */
     }
 
-    
-    .mainbanner {
-        height: auto;
-        padding: 4rem 1rem;
+    /* Banner */
+    .banner {
+        height: 80vh; /* Altura ajustada para não ocupar 100% da tela */
+        margin: 1rem 0;
     }
 
-    .mainbanner h1 {
-        font-size: 2rem;
+    .bannercontainer h1 {
+        font-size: 2rem; /* Título menor */
     }
 
-    .mainbanner p {
-        font-size: 1rem;
+    .bannercontainer p {
+        font-size: 1em; /* Parágrafo menor */
     }
 
     .botoes {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Botões empilhados */
         gap: 1rem;
     }
-    
+
     .BtnC, .BtnA {
-        width: 80%;
-        padding: 1rem;
-        font-size: 1.1em;
+        width: 80%; /* Botões mais largos */
+        margin: 0 auto;
     }
 
-    .seccards {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    /*Cards */
+    .secaocards {
+        padding: 3rem 0;
     }
-    
-    .seccards div {
-        width: 100%;
-        margin-bottom: 2rem;
+
+    .seccardstitulo {
+        font-size: 1.5em;
+        margin: 1.5rem 0;
     }
+
+    .cardsgrid {
+        flex-direction: column; /* Cards empilhados */
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .carditem {
+        width: 100%; /* Ocupa a largura total */
+        margin: 0;
+    }
+
+    .carditem p {
+        padding-bottom: 10px;
+    }
+
+    /*Credibilidade */
+    .credibilidade {
+        padding: 2rem 15px;
+    }
+
+    .credibilidade h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .credibilidade p {
+        font-size: 1.1em;
+        margin: 1.5rem 0;
+    }
+
 
     header {
         height: 5rem; 
