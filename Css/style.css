@@ -1,5 +1,20 @@
 :root{
-    --verdecb: rgb(134,212,134);
+     --verdeclaro: rgb(135,210,135);
+     --verde: rgb(40,170,70);
+     --verdeh: rgb(25,115,45);
+     --verdecida: rgb(30,55,30);
+
+     --azullink: rgb(0,10,110);
+     --azul: rgb(0,85,190);
+     --azulc: rgb(0,120,255);
+
+     --cinzae:rgb(50,50,50);
+     --cinza:rgb(150,150,150);
+     --cinzac:rgb(200,200,200);
+     --cinzab:rgb(248, 249, 250);
+
+     --amarelo: rgb(255,190,5);
+     --vermelho: rgb(255,15,15);
 }
 
 
@@ -20,7 +35,7 @@ body {
 
 header{
     height: 7rem;
-    background-color: var(--verdecb);
+    background-color: var(--verdeclaro);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,28 +67,27 @@ color: rgb(28, 56, 28);
     color: rgb(0, 9, 107)
 }
 
-.mainbanner{
+.banner{
     height: calc(100vh - 7rem);
     background-image: url(../img/closetoindex.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
     }
 
- .maincontainer{
-    color: #fff;
+.bannercontainer{
+    color: white;
     text-align: center;
  }
 
- .maincontainer h1 {
+ .bannercontainer h1 {
     font-size: 3rem;
  }
 
- .maincontainer p {
+ .bannercontainer p {
      font-size: 1.25rem;
      margin-bottom: 2rem;
  }
@@ -86,7 +100,7 @@ color: rgb(28, 56, 28);
 
  
 .BtnC {
-    background-color: #28a745;
+    background-color: var(--verde);
     color: white;
     padding: 1rem 1.5rem;
     font-size: 1.25em;
@@ -97,7 +111,7 @@ color: rgb(28, 56, 28);
 }
 
 .BtnA {
-    background-color: #00096b;
+    background-color: var(--azullink);
     color: white;
     padding: 1rem 1.25rem;
     font-size: 1.25em;
@@ -106,27 +120,79 @@ color: rgb(28, 56, 28);
     cursor: pointer; 
 }
 
-.seccards {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #fff;
-    flex-wrap: wrap;
-}
+.secaocards {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: var(--cinzac);
+        }
 
-.seccards div {
-    width: 30%;
-    text-align: center;
-    padding: 20px;
-}
+        .seccardstitulo {
+            font-size: 2em;
+            color: black;
+            margin: 2rem 0;
+        }
 
-.seccards img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-    margin-bottom: 20px;
-}
+        .cardsgrid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .carditem {
+            background-color: var(--cor-clara);
+            padding: 1.5rem;
+            aspect-ratio: 16 / 9 ;
+            margin: 2rem 2rem;
+            background-color: var(--cinzab);
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .carditem h3 {
+            color:black;
+            margin-bottom: 10px;
+        }
+
+        .carditem p {
+            color: var(--cinzae);
+            font-size: 0.95em;
+        }
+
+        .carditem i {
+             font-size: 2.5em;
+            color: var(--verdeh);
+            margin: 2rem;
+        }
+
+         .credibilidade {
+            background-color: var(--cor-clara);
+            padding: 3rem 3rem;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .credibilidade h2 {
+            font-size: 2rem;
+            color: var(--azullink);
+            margin-bottom: 20px;
+        }
+
+        .credibilidade p {
+            margin:3rem 3rem;
+            font-size: 1.5rem;
+            color: var(--cinzae);
+        }
+
+        .ctabotao {
+            background-color: var(--verdeh);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+        }
 
 footer {
     background-color: #4CAF50;
@@ -1027,6 +1093,21 @@ footer {
     background-color: #f9f9f9;
 }
 
+/* --- ESTILOS PADRÃO PARA O HAMBÚRGUER (ESCONDIDO EM TELAS GRANDES) --- */
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    position: absolute; 
+    right: 1.5rem; 
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(51, 51, 51);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
 
 @media screen and (max-width: 950px) {
 
@@ -1083,7 +1164,78 @@ footer {
         width: 100%;
         margin-bottom: 2rem;
     }
+
+    header {
+        height: 5rem; 
+        padding: 0 1rem;
+        justify-content: space-between; 
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100; /* Garante que o header fique acima de tudo */
+    }
+
+    
+    /* 1. MOSTRA O ÍCONE HAMBÚRGUER */
+    .hamburger {
+        display: block; /* Mostra o ícone */
+        position: relative; /* Volta para o fluxo normal dentro do header */
+    }
+
+    /* 2. PREPARA O MENU LATERAL PARA O MOBILE */
+    .cidalink-main-container {
+        flex-direction: column; /* Empilha o menu e o conteúdo */
+        padding-top: 5rem; /* Adiciona padding no topo para compensar o header fixo */
+    }
+
+    .cidalink-sidebar {
+        /* Configura o menu para se tornar uma gaveta lateral */
+        position: fixed;
+        right: 0px;
+        top: 5rem; /* Começa abaixo do header */
+        height: calc(100vh - 5rem);
+        width: 70%; /* Largura do menu lateral no mobile */
+        max-width: 300px;
+        padding: 2rem;
+        border-radius: 0;
+        
+        /* LINHA CRÍTICA: ESCONDE O MENU FORA DA TELA À DIREITA */
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in;
+        z-index: 50; /* Garante que fique acima do conteúdo */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Classe JS: TRAZ O MENU MOBILE PARA A TELA */
+    .cidalink-sidebar.nav-active {
+        transform: translateX(0%); /* Traz o menu para a vista */
+    }
+    
+    /* Animação do Ícone Hamburger (transforma em X) */
+    .hamburger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .hamburger.toggle .line2 {
+        opacity: 0;
+    }
+    .hamburger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Oculta o conteúdo principal para não interferir */
+    .cidalink-content, .cidalink-main-content {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .ocorrenc-feed {
+        width: 100%;
+    }
+
 }
+
+
+
 
 
 

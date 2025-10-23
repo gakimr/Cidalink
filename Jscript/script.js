@@ -61,4 +61,25 @@ const btnCidadao = document.getElementById('BtC');
             }
         });
 
+              /* Menu Hamburger */
+const navSlide = () => {
+    // Seleciona o ícone hamburger
+    const hamburger = document.querySelector('.hamburger');
+    // Seleciona a barra lateral, que é o seu menu
+    const nav = document.querySelector('.cidalink-sidebar'); 
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            // Alterna a classe 'nav-active' na barra lateral (exibe/esconde o menu)
+            nav.classList.toggle('nav-active');
+
+            // Alterna a classe 'toggle' no ícone hamburger (transforma em X)
+            hamburger.classList.toggle('toggle');
+        });
+    }
+}
+
+// Chama a função 
+navSlide();
+
       

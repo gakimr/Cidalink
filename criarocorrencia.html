@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style.css"> 
     <title>CidaLink - Criar Ocorrência</title>
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,62 +22,88 @@
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
+         <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
     </header>
 
-     <main class="form-page-wrapper">
+   <div class="cidalink-main-container">
         <aside class="cidalink-sidebar">
             <h2>Menu</h2>
-            <ul class="cidalink-sidebar-nav">
+           <ul class="cidalink-sidebar-nav">
                 <li>
-                    <a href="notificacoes.html" class="cidalink-sidebar-link">Notificações<span class="notificacao-ponto">2</span></a>
+                    <a href="notificacoes.html" class="cidalink-sidebar-link">Notificação <span class="notificacao-ponto">2</span></a>
                 </li>
-                <li><a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a></li>
+                <li>
+                    <a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a>
+                </li>
                 <li><a href="criarocorrencia.html" class="cidalink-sidebar-link pag-atual">Criar Ocorrência</a></li>
                 <li><a href="mapa.html" class="cidalink-sidebar-link">Mapa</a></li>
                 <li><a href="perfil.html" class="cidalink-sidebar-link">Meu Perfil</a></li>
-                 <li><a href="chats.html" class="cidalink-sidebar-link">Bate-papos</a></li>
-                 <li><a href="index.html" class="cidalink-sidebar-link">Sair</a></li>
+                <li><a href="chats.html" class="cidalink-sidebar-link">Bate-Papos</a></li>
+                <li><a href="index.html" class="cidalink-sidebar-link">Sair</a></li>
             </ul>
         </aside>
-        <div class="ocorrenciaP">
-            <div class="card-form">
-                <h2>Criar Nova Ocorrência</h2>
-                <form action="#" method="POST">
-                    <div class="input-gp">
-                        <label for="tipoOcorrencia">Criar Ocorrência</label>
-                    <select id="tipoOcorrencia" name="tipoOcorrencia" required>
-                        <option value="">Selecione o tipo</option>
-                        <option value="buraco">Buraco na Rua</option>
-                        <option value="iluminacao">Iluminação Pública</option>
-                        <option value="lixo">Acúmulo de Lixo</option>
-                        <option value="saneamento">Problemas de Saneamento</option>
-                        <option value="outro">Outro</option>
-                    </select>
+        
+        <div class="cidalink-content">
+            <div class="ocorrenciaP">
+                <div class="card-form">
+                    <h2>Criar Nova Ocorrência</h2>
+                    <form action="#" method="POST">
+                        
+                        <div class="input-gp">
+                            <label for="tipoOcorrencia">Criar Ocorrência</label>
+                            <select id="tipoOcorrencia" name="tipoOcorrencia" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="buraco">Buraco na Rua</option>
+                                <option value="iluminacao">Iluminação Pública</option>
+                                <option value="lixo">Acúmulo de Lixo</option>
+                                <option value="saneamento">Problemas de Saneamento</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
 
+                        <div class="input-gp">
+                            <label for="descricao">Descrição Detalhada</label>
+                            <textarea id="descricao" name="descricao" rows="4" placeholder="" required></textarea>
+                        </div>
 
-                    </div>
-                    <div class="input-gp">
-                        <label for="descricao">Descrição Detalhada</label>
-                        <textarea id="descricao" name="descricao" rows="4" placeholder="" required></textarea>
-                    </div>
-                    <div class="input-gp">
-                        <label for="localizacao">Localização (Endereço ou Ponto de Referência)</label>
-                        <input type="text" id="localizacao" name="localizacao" placeholder="" required>
-                    </div>
-                    <div class="input-gp">
-                        <label for="anexo">Anexar Foto</label>
-                        <input type="file" id="anexo" name="anexo">
-                    </div>
-                    <button type="submit" class="btn-primary">Registrar Ocorrência</button>
-                </form>
+                        <div class="input-gp">
+                            <label for="localizacao">Localização (Endereço ou Ponto de Referência)</label>
+                            <input type="text" id="localizacao" name="localizacao" placeholder="" required>
+                        </div>
+
+                        <div class="input-gp">
+                            <label for="anexo">Anexar Foto</label>
+                            <input type="file" id="anexo" name="anexo"> 
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Registrar Ocorrência</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </main>
+    </div> <footer>
+        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+    </footer>
 
-<footer>
-            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
-        </footer>
+    
+        <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
-        <script src="Jscript/script.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+    <script src="Jscript/script.js"></script>
 </body>
 </html>
