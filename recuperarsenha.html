@@ -18,32 +18,39 @@
 
 </head>
 <body>
-    <header>
+
+     <header>
         <div class="logocontainer">
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
     </header>
 
-     <main class="recuperarSenha">
-        <div class="card-login">
+    <main class="cardForm" style="height: 30rem;">
+        <div class="cardlogin">
             <h2>Recuperar Senha</h2>
-            <p>Digite seu e-mail para receber as instruções de recuperação.</p>
-            <form action="/enviar-recuperacao" method="POST">
-                <div class="input-gp">
-                    <label for="email-or-phone">E-mail </label>
-                    <input type="text" id="email-or-phone" name="email-or-phone" placeholder="" required>
-                </div>
-                <button type="submit" class="btn-primary">Enviar</button>
-            </form>
+            <h3>Cidadão</h3>
+            <p style="margin-bottom: 2rem; color: #555;">Informe seu e-mail para receber um link de redefinição de senha.</p>
+        <form action="#" method="post">
+            <div class="inputgp">
+                <label for="email" class="obrigatorio">E-mail</label>
+
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+            </div>
+        </form>
+        <div class="ptlogin" style="border-top: none; padding-top: 0;">
+            <button class="btnEntrar">Enviar Link de Redefinição</button>
+        </div>
+            <a class="btnCd" href="logincid.html" >Voltar para o Login</a>
         </div>
     </main>
 
     <footer>
-            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
-        </footer>
+        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+    </footer>
 
-        
+    <script src="script/script.js"></script>
+    
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -56,9 +63,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-
-        <script src="Jscript/script.js"></script>
         
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>CidaLink - Criar Ocorrência</title>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+
+</head>
+<body>
+   
+     <header>
+        <div class="logocontainer">
+            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+
+         <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+        
+    </header>
+    
+     <div class="contentcontainer">
+    <aside class="menu">
+            <h2 class="menutitulo">Menu</h2>
+        <nav>
+            <a href="notificacoes.html">Notificações <span class="notificacaop">9</span></a>
+            <a href="inicial.html">Página Inicial</a>
+            <a href="ocorrencia.html"class="pagatual">Criar Ocorrência</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="chat.html">Bate-papo</a>
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="index.html">Sair</a>
+        </nav>
+        </aside>
+
+        <div class="cardFormOc">
+            <h2>Criar Nova Ocorrência</h2>
+            <form action="#" method="POST">
+                <div class="inputgp">
+                    <label for="tipoOcorrencia">Criar Ocorrência</label>
+                <select id="tipoOcorrencia" name="tipoOcorrencia" required>
+                    <option value="">Selecione o tipo</option>
+                    <option value="buraco">Buraco na Rua</option>
+                    <option value="iluminacao">Iluminação Pública</option>
+                    <option value="lixo">Acúmulo de Lixo</option>
+                    <option value="saneamento">Problemas de Saneamento</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+
+                </div>
+                <div class="inputgp">
+                    <label for="descricao">Descrição Detalhada</label>
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="" required></textarea>
+                </div>
+                <div class="inputgp">
+                    <label for="localizacao">Localização (Endereço ou Ponto de Referência)</label>
+                    <input type="text" id="localizacao" name="localizacao" placeholder="" required>
+                </div>
+                <div class="inputgp">
+                    <label for="anexo">Anexar Foto</label>
+                    <input type="file" id="anexo" name="anexo">
+                </div>
+                <button type="submit" class="btnoc">Registrar Ocorrência</button>
+            </form>
+        </div>
+    </div>
+</main>
+        
+ </div>
+
+ <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+
+    <footer>
+        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+        <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

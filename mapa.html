@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>CidaLink - Mapa</title>
 
       <!-- Google tag (gtag.js) -->
@@ -18,37 +18,36 @@
 
 </head>
 <body>
+
     <header>
         <div class="logocontainer">
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
+
          <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+
     </header>
 
-    <div class="cidalink-main-container">
-        <aside class="cidalink-sidebar">
-            <h2>Menu</h2>
-            <ul class="cidalink-sidebar-nav">
-                <li>
-                    <a href="#" class="cidalink-sidebar-link">Notificações <span class="notificacao-ponto">2</span></a>
-                </li>
-                <li><a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a></li>
-                <li><a href="criarocorrencia.html" class="cidalink-sidebar-link">Criar Ocorrência</a></li>
-                <li><a href="mapa.html" class="cidalink-sidebar-link pag-atual">Mapa</a></li>
-                <li>
-                    <a href="perfil.html" class="cidalink-sidebar-link">Meu Perfil<span class="notificacao-ponto">3</span></a>
-                </li>
-                <li><a href="chats.html" class="cidalink-sidebar-link">Bate-Papos</a></li>
-                <li><a href="index.html" class="cidalink-sidebar-link">Sair</a></li>
-            </ul>
+ <div class="contentcontainer">
+    <aside class="menu">
+            <h2 class="menutitulo">Menu</h2>
+        <nav>
+            <a href="notificacoes.html">Notificações <span class="notificacaop">9</span></a>
+            <a href="inicial.html">Página Inicial</a>
+            <a href="ocorrencia.html">Criar Ocorrência</a>
+            <a href="mapa.html"class="pagatual">Mapa</a>
+            <a href="chat.html">Bate-papo</a>
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="index.html">Sair</a>
+        </nav>
         </aside>
 
-        <main class="cidalink-main-content">
+         <main class="maincontainer">
             <h2 class="sectitulo">Mapa de Ocorrências na Cidade</h2>
 
             <div class="mapacontainer">
@@ -68,19 +67,21 @@
             <section class="ocorrenclegend">
                 <h3>Legenda:</h3>
                 <ul>
-                    <li><span class="legend-color" style="background-color: #FF4500;"></span> Ocorrências Pendentes</li>
-                    <li><span class="legend-color" style="background-color:#8BC34A ;"></span> Ocorrências Resolvidas</li>
-                    <li><span class="legend-color" style="background-color: #FFC107;"></span> Ocorrências em Andamento</li>
+                    <li><span class="legcor" style="background-color: #FF4500;"></span> Ocorrências Pendentes</li>
+                    <li><span class="legcor" style="background-color:#8BC34A ;"></span> Ocorrências Resolvidas</li>
+                    <li><span class="legcor" style="background-color: #FFC107;"></span> Ocorrências em Andamento</li>
                 </ul>
             </section>
 
         </main>
-    </div>
+ </div>
 
-        <footer>
-            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
-        </footer>
+ <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
 
+ <footer><p>&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
+     
+        <script src="script/script.js"></script>
+   
         
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -95,7 +96,5 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-
-        <script src="Jscript/script.js"></script>
 </body>
 </html>

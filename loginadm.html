@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>CidaLink - Login Administrador</title>
 
       <!-- Google tag (gtag.js) -->
@@ -18,6 +18,7 @@
 
 </head>
 <body>
+
     <header>
         <div class="logocontainer">
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
@@ -25,35 +26,38 @@
         </div>
     </header>
 
-    <main class="cartaDcidcadastro">
-        <div class="card-login">
+    <main class="cardForm">
+        <div class="cardlogin">
             <h2>Entrar no CidaLink</h2>
             <h3>Administrador</h3>
-            <form action="#" method="POST">
-                <div class="input-gp">
-                    <label for="username">CPF</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-gp">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-            </form>
-             <div class="signup-login">
-                <a href="cidalinkinicial.html" class="entrarBotao">Entrar</a>
-             </div>
-            <div class="signup-login">
-                <a href="recuperarsenha.html">Esqueceu a senha ?</a>
+        <form action="#" method="post">
+            <div class="inputgp">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf">
             </div>
-            <div class="signup-login">
-                <a href="cadastroadm.html" class="btn-secondary">Cadastre-se</a>
+            <div class="inputgp">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" >
             </div>
+        </form>
+        <div class="ptlogin">
+            <button class="btnEntrar">Entrar</button>
+        </div>
+       <div class="ptlogin">
+        <a class="rsenha" href="recuperarsenha.html">Esqueceu a senha?</a>
+       </div>
+       <div class="ptlogin">
+        <p>Ainda não tem uma conta?</p>
+            <button class="btnCd">Cadastre-se</button>
+       </div>
         </div>
     </main>
 
-<footer>
-            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
-        </footer>
+    <footer>
+        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+    </footer>
+
+   
         
         <div vw class="enabled">
         <div vw-access-button class="active"></div>

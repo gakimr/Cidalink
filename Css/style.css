@@ -6,31 +6,35 @@
 
      --azullink: rgb(0,10,110);
      --azul: rgb(0,85,190);
+     --azule: rgb(0,50,170);
      --azulc: rgb(0,120,255);
 
      --cinzae:rgb(50,50,50);
+     --cinzinha:rgb(240,240,240);
      --cinza:rgb(150,150,150);
      --cinzac:rgb(200,200,200);
-     --cinzab:rgb(248, 249, 250);
+     --cinzab:rgb(250, 250, 250);
+     --cinzazulado:rgb(233,236,239);
+     --cinza225: rgb(225,225,225);
 
      --amarelo: rgb(255,190,5);
      --vermelho: rgb(255,15,15);
 }
 
-
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
 body {
-     font-family: Arial, sans-serif;
-     line-height: 1.6;
-     color: rgb(51, 51, 51);
-     background-color: rgb(224,224,224);
-     flex-direction: column;
-     min-height: 100vh;
+    background-color: var(--cinza225);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
 }
 
 header{
@@ -39,7 +43,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+   
+   
 }
 
 header .logocontainer{
@@ -47,7 +52,6 @@ header .logocontainer{
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-   
 }
 
 header img{
@@ -58,14 +62,15 @@ header img{
     margin-left: -4.7rem;
 }
 
-
 .tcida{
-color: rgb(28, 56, 28);
+color: var(--verdecida);
 }
 
 .tlink {
-    color: rgb(0, 9, 107)
+    color: var(--azullink);
 }
+
+/*Index*/
 
 .banner{
     height: calc(100vh - 7rem);
@@ -166,7 +171,7 @@ color: rgb(28, 56, 28);
         }
 
          .credibilidade {
-            background-color: var(--cor-clara);
+            background-color: var(--cinzab);
             padding: 3rem 3rem;
             text-align: center;
             border-top: 1px solid #ddd;
@@ -194,336 +199,285 @@ color: rgb(28, 56, 28);
             cursor: pointer;
         }
 
-footer {
-    background-color: #4CAF50;
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 20px;
-    margin-top: auto;
-    font-size: 0.9em;
+        footer {
+           background-color: #4CAF50;
+           color: #ffffff;
+           text-align: center;
+           padding: 15px 20px;
+           margin-top: auto;
+           font-size:1rem;
+           bottom: 0;
+           width: 100%;
+        }
+
+         /*paginas de cadastro e logins*/
+        .cardForm {
+            display: flex;
+            flex-direction: column ;
+            height: 40rem;
+            width: 30rem;
+            text-align: center;
+            margin: 4rem auto;
+            background-color: white;
+          
+        
+        }
+
+        .cardlogin {
+            background-color: white;
+            margin: 3rem 4rem;
+            padding-bottom: 0.6rem;
+            
+        }
+
+        .cardcadastro {
+            display: flex;
+            flex-direction: column ;
+            width: 30rem;
+            text-align: center;
+            margin: 4rem auto;
+            background-color: white;
+            padding: 2rem 3rem;
+        }
+
+
+        .cardform h2, .cardlogin h2 {
+            color: var(--azul);
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+
+        .cardform h3, .cardlogin h3 {
+            color: var(--verde);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .inputgp {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .inputgp label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .inputgp input {
+            width: calc(100% - 1.25rem);
+            padding: 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .btnEntrar , .btnCadastro {
+        width:calc(100% - 1.25rem) ;
+        background-color: var(--azul);
+        color: white;
+        padding: 0.75rem 1.25rem; 
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        margin-top: 0.9375rem;
+        transition: background-color 0.3s ease;
+        }
+
+        .btnEntrar:hover {
+            background-color: var(--azule);
+        }
+
+        .ptlogin{
+            margin-top: 1.5625rem;
+            padding-top: 0.9375rem;
+            border-top: 1px solid var(--cinzac);
+        }
+
+        .ptlogin p{
+            color: #555;
+        }
+
+        .btnCd {
+            background-color: var(--verde);
+            color: white;
+            padding: 0.625rem 0.9375rem;
+            border: none;
+            border-radius: 0.3125rem;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.9375rem;
+            transition: background 0.3s ease;
+        }
+
+        .btnCd:hover {
+            background-color: var(--verdeh);
+        }
+
+        .obrigatorio::after {
+    content: "*";
+    color: var(--vermelho);
 }
 
-/* Estilos para a seção principal de cadastro do administrador*/
-.cartaDadmcadastro {
-    flex: 1;
-    display: flex;
+/*Validação dos formulários*/
+
+.inputgp .campo-invalido {
+    border: 1px solid var(--vermelho) !important; 
+    box-shadow: 0 0 5px rgba(255, 15, 15, 0.5); 
+}
+
+
+.inputgp .campo-valido {
+    border: 1px solid var(--verde) !important; 
+    box-shadow: 0 0 5px rgba(40, 170, 70, 0.5); 
+}
+
+
+
+
+    /*menu para todas as páginas*/
+
+    .menu {
+        top: 8rem;
+        width: 15rem;
+        height: max-content;
+        display: inline-block;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--cinzab);
+         border-left: #333;
+         position: fixed;
+        
+    }
+
+    .menu h2 {
+        color: var(--azul);
+        margin: 2rem 0;
+    }
+
+    .menu nav{
+    display:flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5rem;
-    text-align: center;
-    max-width: 100rem;
-    margin: 0 auto;
-}
-
-/* Estilos para a seção principal de cadastro do cidadão */
-.cartaDcidcadastro {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem;
-    text-align: center;
-    max-width: 100rem;
-    margin: 0 auto;
-}
-/* Estilos para a seção principal de cadastro do cidadão */
-.recuperarSenha{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem;
-    text-align: center;
-    max-width: 100rem;
-    margin: 0 auto;
-}
-
-/* Centraliza o conteúdo de páginas como Mapa, Chat, Perfil e Notificações */
-.cidalink-main-container {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-/* Estilo geral para cards de login, cadastro e recuperação de senha */
-.card-form,
-.card-login {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-top: 10rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    gap:1.5rem;
+    left: 1.5rem;
+  
+    }
+    
+    .menu a {
     width: 100%;
-    max-width: 26rem;
-    text-align: center;
-}
-
-
-
-/* Estilo para os títulos (h2) dentro dos cards de formulário*/
-.card-form h2,
-.card-login h2 {
-    color: #0056b3;
-    margin-bottom: 0.625rem;
-}
-
-/* Define a cor específica para o título de login */
-.card-login h3 {
-    color: #28a745;
-    margin-bottom: 1.25rem;
-}
-
-/* Ajustes de espaçamento para os grupos de input*/
-.input-gp {
-    margin-bottom: 0.9375rem;
-    text-align: left;
-}
-
-/* Estilo para os rótulos dos campos de formulário */
-.input-gp label {
-    display: block;
-    margin-bottom: 0.3125rem;
-    font-weight: bold;
-    color: #555;
-}
-
-/* Estilo para os campos de texto, email, senha e outros*/
-.input-gp input[type="text"],
-.input-gp input[type="email"],
-.input-gp input[type="password"],
-.input-gp select,
-.input-gp textarea {
-    width: calc(100% - 1.25rem);
-    padding: 0.625rem;
-    border: 1px solid #ddd;
-    border-radius: 0.3125rem;
-    font-size: 1rem;
-}
-
-/* Define o redimensionamento e altura mínima para o campo de texto */
-.input-group textarea {
-    resize: vertical;
-    min-height: 5rem;
-}
-
-.entrarBotao{
-    width:100% ;
-    background-color: #00096b;
-    color: #ffffff;
-    /* Corrigido: Padding vertical ideal (0.75rem) e padding horizontal normal (1.25rem) */
-    padding: 0.75rem 1.25rem; 
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: none;
-    /* Manter display: flex; e adicionar centralização de conteúdo */
-    display: flex; 
-    /* Esta linha centraliza o texto "Entrar" horizontalmente */
-    justify-content: center; 
-    /* Esta linha centraliza o texto "Entrar" verticalmente (já que você está usando flex) */
-    align-items: center;
-    margin-top: 0.9375rem;
-    transition: background-color 0.3s ease;
-}
-/* Estilo para botões de ação principal em diversas páginas */
-.btn-primary {
-    background-color: #00096b;
-    color: #ffffff;
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 0.625rem;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-/* Efeito visual ao passar o mouse sobre o botão primário */
-.btn-primary:hover {
-    background-color: #010e1d;
-}
-
-/* Estilo para botões de login, perfil e outras ações secundárias*/
-.btn-secondary {
-    background-color: #28a745;
-    color: #ffffff;
-    padding: 0.625rem 0.9375rem;
-    border: none;
-    border-radius: 0.3125rem;
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 0.9375rem;
-    transition: background-color 0.3s ease;
-}
-
-/* Efeito visual ao passar o mouse sobre o botão secundário */
-.btn-secondary:hover {
-    background-color: #218838;
-}
-
-/* Estiliza os links abaixo dos formulários*/
-.link-form-action {
-    margin-top: 1.25rem;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* Formata os links como "Fazer login" */
-.link-form-action a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Centraliza e adiciona uma borda superior para separar o conteúdo */
-.signup-login {
-    margin-top: 1.5625rem;
-    padding-top: 0.9375rem;
-    border-top: 1px solid #eee;
-}
-
-/* Estilo e layout do menu de navegação em diversas páginas*/
-.cidalink-sidebar {
-    width: 15.625rem;
-    background-color: #ffffff;
-    padding: 1.25rem;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-    height: fit-content;
-}
-
-/* Formata a palavra "Menu" no topo da barra lateral*/
-.cidalink-sidebar h2 {
-    color: #0056b3;
-    margin-bottom: 1.25rem;
-    font-size: 1.5rem;
-}
-
-/* Remove a formatação padrão da lista */
-.cidalink-sidebar-nav li {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0.625rem;
-}
-
-/* Separa os itens da lista do menu */
-.cidalink-sidebar-nav li {
-    margin-bottom: 0.625rem;
-}
-
-/* Estilo visual dos botões/links do menu */
-.cidalink-sidebar-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.625rem 0.9375rem;
-    background-color: #f8f9fa;
+    background-color: var(--cinzab);
     color: #333;
     text-decoration: none;
     border-radius: 0.3125rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background 0.3s;
+    padding: auto;
+    }
+
+    .menu a:hover {
+        background-color: var(--cinzac);
+    }
+
+    .menu .pagatual{
+        background-color: var(--cinzac);
+        color: white;
+        font-weight: bold;
+    }
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    z-index: 60; 
 }
 
-/* Efeito de transição de cor ao passar o mouse */
-.cidalink-sidebar-link:hover {
-    background-color: #e2e6ea;
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--azullink); 
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
-/* Estilo específico para o item do menu que representa a página atual */
-.cidalink-sidebar-link.pag-atual {
-    background-color: #648343;
-    color: #ffffff;
-    font-weight: bold;
+
+.hamburger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-/* Estilo para o ícone de notificação (círculo vermelho)*/
-.notificacao-ponto {
-    background-color: #dc3545;
-    color: #ffffff;
-    font-size: 0.75rem;
-    padding: 0.1875rem 0.4375rem;
-    border-radius: 50%;
-    margin-left: 0.5rem;
+.hamburger.toggle .line2 {
+    opacity: 0;
 }
 
-/* Centraliza e organiza o conteúdo principal ao lado do menu */
-.cidalink-content {
+.hamburger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+    /*pagina inicial*/
+
+    .contentcontainer {
+    display: flex;
+    background-color: var(--cinzab);
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.25rem;
 }
 
-/* Estilo do bloco principal onde o conteúdo da página é exibido */
-.cidalink-main-content {
-    flex: 1;
-    background-color: #ffffff; 
-    padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-}
+    .maincontainer{
+        background-color: white; 
+        padding: 3rem;
+        background-color: var(--cinzab);
+        margin-left: 15rem;
+        width: calc(100% - 15rem); 
+      
+       
+    }
+ 
 
-/* Alinha os botões no canto superior direito do conteúdo principal */
-.cidalink-top-buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1.25rem;
-}
-.ocorrenciaP{
-    flex: 1;
-    background-color: #ffffff; 
-    padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-}
-.form-page-wrapper{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
-}
-
-/* Layout para organizar os cards de ocorrências */
-.ocorrenc-feed {
+.feed {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    align-items: center;
 }
 
-/* Estilo do card individual de uma ocorrência */
-.ocorrenc-card {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
+.occard {
+    width: 35rem; 
+    aspect-ratio: 4 / 5; 
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid var(--cinzac); 
     padding: 0.9375rem;
     background-color: #f9f9f9;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2)
 }
 
-/* Alinhamento dos elementos no topo do card */
-.ocorrenc-header {
+.ocheader {
     display: flex;
     align-items: center;
     gap: 0.625rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.6rem;
     position: center;
 }
 
 
-/* Estilo para o avatar do cidadão que reportou a ocorrência */
-.perfil-cid {
+.perfilcid {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: rgb(0, 123, 255);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -532,139 +486,201 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Estilo para o nome e informações do cidadão*/
-.cid-info strong {
+.cidinfo strong {
     display: block;
     color: #333;
 }
 
-/* Estilo para o texto de detalhes do cidadão */
-.cid-info span {
+.cidinfo span {
     font-size: 0.9rem;
     color: #666;
 }
 
-/* Espaçamento do corpo do card */
-.ocorrenc-body {
+.ocbody {
     margin-bottom: 0.9375rem;
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+    min-height: 0; 
 }
 
-/* Estilo para o texto da descrição */
-.ocorrenc-descricao {
-    margin-bottom: 0.625rem;
+
+.ocdescricao {
+    margin-bottom: 0.6rem;
     color: #444;
 }
 
-/* Estilo para o espaço reservado para a foto da ocorrência */
-.photo-placeholder {
-    background-color: #e9ecef;
-    height: 9.375rem;
+.Foto {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
-    font-style: italic;
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
+    flex-grow: 1; 
+    overflow: hidden;
 }
 
-/* Alinhamento e espaçamento dos botões de ação*/
-.ocorrenc-footer {
+.Foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.ocfooter {
     display: flex;
-    gap: 0.625rem;
+    gap: 0.6rem;
 }
 
-/* Estilo do botão de apoio em uma ocorrência */
+
+
 .btnapoio {
-    background-color: #45a049;
-    color: #ffffff;
-    padding: 0.5rem 0.9375rem;
+    background-color: var(--verdeclaro);
+    color: white;
+    padding: 0.5rem 0.9rem;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.3rem;
     cursor: pointer;
     font-size: 0.9rem;
+    transition: background  0.3s;
+}
+
+.btnapoio:hover {
+    background-color:var(--verde);
+}
+ 
+.mensagenflut {
+    width: 12rem;
+    height: 3rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    color: #333;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cinzab);
+    border-radius: 0.3rem;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2) ;
+    transition: background 0.3s;
+}
+
+.mensagenflut:hover{
+    background-color: var(--cinzac);
+}
+
+.notificacaop {
+    background-color: var(--vermelho);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+/*criar ocorrências*/
+
+.cardFormOc {
+    width: 95%; 
+    max-width: 700px; 
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardFormOc h2 {
+    text-align: center;
+    color: var(--azule);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.inputgp {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputgp label {
+    font-weight: bold;
+    color: var(--cinzae);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.cardFormOc input[type="text"],
+.cardFormOc input[type="file"],
+.cardFormOc select,
+.cardFormOc textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--cinzac);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; 
+     resize: none;
+}
+
+.cardFormOc input:focus,
+.cardFormOc select:focus,
+.cardFormOc textarea:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 5px rgba(0, 85, 190, 0.3);
+    outline: none;
+   
+}
+
+.cardFormOc input[type="file"] {
+    padding: 0.5rem;
+    background-color: var(--cinzab);
+    cursor: pointer;
+}
+
+.btnoc {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Efeito visual ao passar o mouse sobre o botão de apoio*/
-.btnapoio:hover {
-    background-color: #2b642e;
+.btnoc:hover {
+    background-color: var(--verdeh);
 }
 
-/* Estilo para o título da seção de notificações */
-.notifications-section h3 {
-    color: #007bff;
-    margin-bottom: 1.25rem;
-}
+/*mapa*/
 
-/* Estilo do card individual de uma notificação */
-.notification-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.9375rem;
-    background-color: #f9f9f9;
-    padding: 0.9375rem;
-    border-radius: 0.5rem;
-    border: 1px solid #eee;
-    margin-bottom: 0.625rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
-}
-
-/* Define o tamanho do ícone de notificação*/
-.notification-icon {
-    font-size: 1.8rem;
-    flex-shrink: 0;
-}
-
-/* Estilo do texto dentro do card de notificação */
-.notification-content p {
-    margin: 0;
-    color: #333;
-    line-height: 1.4rem;
-}
-
-/* Estilo para o texto em negrito dentro da notificação */
-.notification-content strong {
-    color: #0056b3;
-}
-
-/* Estilo para o texto de hora da notificação*/
-.notification-content span {
-    font-size: 0.85rem;
-    color: #888;
-    display: block;
-    margin-top: 0.3125rem;
-}
-
-/* Estilo para os cards de notificação que já foram lidos */
-.notification-card.notification-read {
-    background-color: #e9ecef;
-    opacity: 0.8;
-}
-
-/* Centraliza e estiliza o título da seção do mapa */
 .sectitulo {
     color: #0056b3;
     margin-bottom: 1.25rem;
     text-align: center;
 }
 
-/* Estilo para a caixa que contém o mapa */
 .mapacontainer {
+    position: relative;
     background-color: #e6f7ff;
     border: 1px solid #b3e0ff;
     border-radius: 0.5rem;
     height: 25rem;
-    position: relative;
     overflow: hidden;
     margin-bottom: 1.25rem;
+    width: 100%;
 }
 
-/* Estilo para os marcadores de localização no mapa */
 .mapamarc {
     position: absolute;
     width: 1.875rem;
     height: 1.875rem;
-    background-color: #dc3545;
+    background-color: var(--vermelho);
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -677,15 +693,14 @@ footer {
     z-index: 10;
 }
 
-/* Define a posição de cada marcador específico no mapa */
 .marcador1 {
-    top: 20%;
+    top: 35%;
     left: 30%;
 }
 .marcador2 {
     top: 50%;
     left: 40%;
-    background-color: #28a745;
+    background-color: var(--verdeh);
 }
 .marcador3 {
     top: 70%;
@@ -694,14 +709,13 @@ footer {
 .marcador4 {
     top: 40%;
     left: 65%;
-    background-color: #ffc107;
+    background-color: var(--amarelo);
 }
 .marcador5 {
-    top: 10%;
+    top: 40%;
     left: 50%;
 }
 
-/* Estilo para o pop-up que aparece ao clicar em um marcador */
 .ocorrenciapopup {
     position: absolute;
     background-color: #ffffff;
@@ -715,7 +729,6 @@ footer {
     text-align: left;
 }
 
-/* Estilo para o título da ocorrência no pop-up */
 .ocorrenciapopup h4 {
     margin-top: 0;
     margin-bottom: 0.3125rem;
@@ -723,14 +736,12 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Estilo para a descrição da ocorrência no pop-up */
 .ocorrenciapopup p {
     margin-bottom: 0;
     font-size: 0.9rem;
     color: #555;
 }
 
-/* Estilo para a seção de legenda do mapa*/
 .ocorrenclegend {
     margin-top: 1.25rem;
     padding: 0.9375rem;
@@ -739,7 +750,6 @@ footer {
     border: 1px solid #eee;
 }
 
-/* Estilo para o título da legenda do mapa*/
 .ocorrenclegend h3 {
     margin-top: 0;
     color: #333;
@@ -747,13 +757,13 @@ footer {
     margin-bottom: 0.625rem;
 }
 
-/* Estilo para a lista de itens da legenda */
+
 .ocorrenclegend ul {
     list-style: none;
     padding: 0;
 }
 
-/* Alinhamento dos itens da lista da legenda */
+
 .ocorrenclegend li {
     display: flex;
     align-items: center;
@@ -761,8 +771,7 @@ footer {
     color: #555;
 }
 
-/* Estilo para os círculos de cor que representam os marcadores */
-.legend-color {
+.legcor {
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
@@ -770,383 +779,515 @@ footer {
     border: 1px solid #ccc;
 }
 
-/* Estilo para a seção de perfil do usuário */
-.perfil-section {
-    background-color: #ffffff;
-    padding: 1.25rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.25rem;
-    width: 100%;
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-}
-
-/* Estilo para o título principal da seção de perfil*/
-.perfil-section h2 {
-    color: #0056b3;
-}
-
-/*  Organiza o layout do avatar e dos detalhes do perfil */
-.perfil-info-card {
+/*chat*/
+.containerchat{
+    height: 31rem;
+    width: 50rem;
+    margin-top:2rem;
+    position: relative;
+    left:25rem;
     display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-/* Estilo para o círculo do avatar do usuário*/
-.perfil-avatar {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: white;
+    
+ }
+ .containercontato{
+   background-color:rgb(236, 236, 236);
+    height: 31rem;
+    width: 15rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
+    flex-direction: column;
+    border-radius: 5px 0 0 5px;
+ }
+ .conversas{
+    position: relative;
+    left: 0.5rem;
+    margin-top: 0.5rem;
+ }
+    .contato{
+       background-color: var(--cinzab);
+        height: 6rem;
+        width: 14rem;
+        display:flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: 1rem;
+        left:0.5rem
+    }
+    .fotochat{
+        background-color: var(--azulc);
+        color: white;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        left:  0.2rem;
+        margin-top: 1rem;
+
+    }
+    .informachat{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 1rem;
+    margin-top: 1rem;
+
+    }
+    .nomechat{
+        font-weight: bold;
+        color: black;
+    }
+  .conversas{
     font-weight: bold;
-}
+        color: black;
+        font-size: 1.5rem;
+  }
+    .horariochat{
+       font-size: 0.6rem;
+    }
+    .menssagem{
+        font-size: 0.8rem;
+    }
+    .chat{
+       background-color: white;
+        width: 35rem;
+        height:31rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 5px 5px 5px;
 
-/* Estilo para as informações de texto do perfil */
-.perfil-details h3 {
-    margin-top: 0;
-    margin-bottom: 0.3125rem;
-    color: #333;
-}
+    }
+    .chataberto{
+        align-items: center;
+        display:flex;
+        flex-direction: row;
+        height: 4rem;
+        width: 35rem;
+        background-color: var(--cinzinha);
+        border-radius: 0 5px 0 5px;
+        
+    }
+    .fotochataberto{
+        background-color: var(--azulc);
+        color: white;
+        border-radius: 50%;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+        left:  0.2rem;
+      
+    }
+    .nomechataberto{
+         font-weight: bold;
+        color: black;
+        position: relative;
+        left: 1rem;
+    }
+    
+    .balao1{
+        background-color: var(--cinzazulado);
+        height: 6rem;
+        width: 12rem;
+        position: relative;
+        left: 1rem;
+        margin-top: 1rem;
+        border-radius: 1rem 1rem 1rem 5px;
+    }
+    .nome{
+        position: relative;
+        left: 0.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--azullink);
+    }
+    .menssage{
+        position: relative;
+        margin-top: 0.5rem;
+        left: 0.5rem;
+        font-size: 15px;
 
-/* Estilo para os parágrafos de detalhes*/
-.perfil-details p {
-    margin-bottom: 0.3125rem;
-    color: #555;
-    font-size: 0.95rem;
-}
+    }
+    .hora{
+        position: relative;
+        left: 9rem;
+        font-size: 13px;
 
-/* Espaçamento para o botão na seção de detalhes do perfil */
-.perfil-details button {
-    margin-top: 0.9375rem;
-}
+    }
+    .balao2{
+         background-color: var(--azulc);
+        height: 4rem;
+        width: 24rem;
+        position: relative;
+        left: 10rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem  1rem  5px 1rem ;
+    }
+    .balao3{
+         background-color: var(--cinzazulado);
+        height: 5.5rem;
+        width: 27rem;
+        position: relative;
+        left: 1rem;
+        margin-top: 1rem;
+        border-radius: 1rem 1rem 1rem 5px;
+    }
+    .balao4{
+        background-color: var(--azulc);
+        height: 4rem;
+        width: 10rem;
+        position: relative;
+        left: 24rem;
+        margin-top: 1rem;
+        border-radius: 1rem  1rem  5px 1rem ;
+    }
+         
+        .hora1{
+        position: relative;
+        left: 21.5rem;
+        font-size: 13px;
+        }
+        .hora2{
+        position: relative;
+        left: 24rem;
+        font-size: 13px;
+        }
+        .hora3{
+        position: relative;
+        left: 7rem;
+        font-size: 13px;
+        }
+        .confirmamenssage{
+             height: 4rem;
+            width: 35rem;
+            background-color: var(--cinzinha);
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            margin-top: 0.5rem;
+            border-radius: 0 0 5px 0;
+        }
+        .digitar{
+            height: 2.5rem;
+            width: 26rem;
+            position: relative;
+            left: 1rem;
+            border-radius: 10px;
+        }
+        .enviarmnsg{
+        height: 2.5rem;
+           width: 5rem;
+           position: relative;
+           left: 2rem;
+           border-radius: 10px;
+           background-color: var(--azullink);
+           color: white;
+           border: none;
 
-/* Estilo para o título da seção de ocorrências do usuário */
-.mocorrenc-section h2 {
-    margin-top: 1.875rem;
-    margin-bottom: 1.25rem;
-    color: #0056b3;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.625rem;
-}
+        }
+        .menssagew{
+            color: white;
+            position: relative;
+            left:0.2rem;
+        }
+        .nomew{
+             position: relative;
+        left: 0.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--cinzab);
+        }
 
-/* Estilo para o texto de status */
-.ocorrenc-status {
-    font-weight: bold;
-    font-size: 0.9rem;
-}
+    /*notificacoes*/
 
-/* Cor para o status "pendente"*/
-.status-pendente {
-    color: #ffc107;
-}
-
-/* Cor para o status "completo"*/
-.status-completo {
-    color: #28a745;
-}
-
-/* Layout principal da página de chat */
-.chat-page-content {
-    display: flex;
-    gap: 1.25rem;
-}
-
-/* Estilo para o container principal que engloba a lista e a janela de chat*/
-.chat-container {
-    display: flex;
+ .containernotficacao{
+    position: static; 
+    left: auto;
     width: 100%;
-    background-color: #ffffff;
+    max-width: 900px; 
+    margin: 2rem auto; 
+    padding: 1.5rem;
+    background-color: white;
     border-radius: 0.5rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    
+ }
+ .card{
+    display: flex;
+    align-items: center; 
+    gap: 1rem; 
+    width: 100%;
+    min-height: 5rem;
+    margin-top: 0.75rem; 
+    padding: 1rem;
+    background-color: var(--cinzab);
+    border-radius: 0.5rem;
+    border: 1px solid var(--cinzac); 
+    transition: background 0.4s ease;
+ }
+
+ .card:hover {
+    background-color: var(--cinzazulado);
+    cursor: pointer;
 }
 
-/* Estilo para a barra lateral que mostra a lista de conversas */
-.chat-list {
-    flex: 0 0 18.75rem;
-    border-right: 1px solid #eee;
-    padding: 1.25rem;
-    background-color: #f8f8f8;
-    overflow-y: auto;
+.card .icon {
+    font-size: 1.8rem; 
+    flex-shrink: 0; 
 }
 
-/* Estilo para o título "Chats" */
-.chat-list h3 {
-    margin-top: 0;
-    margin-bottom: 1.25rem;
-    color: #333;
+.card .comentario {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card .comentario p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.card .comentario .hora {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cinza); 
+    margin-top: 0.4rem;
+}
+
+.titulonotificacao{
+   font-size: 1.8rem;
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+/*perfil*/
+.perfil-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--cinzab); 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-container h1 {
+    color: var(--azule);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+
+.card-perfil {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cinzac);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.card-perfil h2 {
+    color: var(--cinzae);
     font-size: 1.5rem;
 }
 
-/* Estilo para cada item na lista de conversas*/
-.chat-item {
-    display: flex;
-    align-items: center;
-    padding: 0.625rem 0;
-    border-bottom: 1px solid #eee;
+
+.btnEditar {
+    background: var(--verde);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
-/* Remove a borda inferior do último item para um visual limpo*/
-.chat-item:last-child {
-    border-bottom: none;
+.btnEditar:hover {
+    background: var(--verdeh);
 }
 
-/* Efeito visual ao passar o mouse sobre um chat*/
-.chat-item:hover {
-    background-color: #f0f0f0;
+.inputgp input:disabled {
+    background-color: var(--cinzab);
+    color: var(--cinzae);
+    cursor: default;
+    border: 1px solid var(--cinzac);
 }
 
-/* Estilo para o chat que está atualmente selecionado */
-.chat-item.active-chat {
-    background-color: #e6f7ff;
-    border-left: 0.25rem solid #007bff;
-    padding-left: 1rem;
+.inputgp input:enabled {
+    background-color: #fff;
+    cursor: text;
+    border: 1px solid var(--azullink); 
 }
 
-/* Estilo para o ícone de avatar dos usuários no chat */
-.chat-avatar {
-    width: 3.125rem;
-    height: 3.125rem;
+.foto-perfil-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color: #007bff;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 0.9375rem;
-    flex-shrink: 0;
+    object-fit: cover;
+    border: 3px solid var(--verde);
+    margin-bottom: 10px;
 }
 
-/* Estilo do contêiner de informações do chat */
-.chat-info {
-    flex-grow: 1;
-}
-
-/* Estilo para o nome do contato no chat */
-.chat-name {
-    font-weight: bold;
-    color: #333;
-    display: block;
-}
-
-/* Estilo para a última mensagem exibida na lista de chats */
-.last-message {
+#btnUpload {
+    padding: 6px 12px;
     font-size: 0.9rem;
-    color: #777;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-/* Estilo para a hora da última mensagem*/
-.chat-time {
-    font-size: 0.8rem;
-    color: #999;
-    margin-left: 0.625rem;
-    flex-shrink: 0;
+
+.minhas-ocorrencias h2 {
+    color: var(--cinzae);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
 }
 
-/* Layout do contêiner onde as mensagens são exibidas*/
-.chat-window {
-    flex-grow: 1;
+.lista-ocorrencias {
+    display: grid;
+    gap: 15px;
+}
+
+.card-ocorrencia {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-/* Estilo para o cabeçalho da janela de conversa */
-.chat-header {
+.card-ocorrencia:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.oc-info h3 {
+    font-size: 1.2rem;
+    color: var(--cinzae);
+    margin-bottom: 5px;
+}
+
+.oc-info p {
+    font-size: 0.9rem;
+    color: var(--cinza);
+}
+
+.oc-status {
     display: flex;
     align-items: center;
-    padding: 0.9375rem 1.25rem;
-    border-bottom: 1px solid #eee;
-    background-color: #f0f0f0;
-}
-
-/* ================================
- * NOME DO CONTATO NO CHAT
- * Estilo para o nome da pessoa na janela de conversa
- * ================================ */
-.chat-header h4 {
-    margin: 0;
-    color: #333;
-    font-size: 1.3rem;
-}
-
-/* Estilo do contêiner que exibe todas as mensagens */
-.chat-messages {
-    flex-grow: 1;
-    padding: 1.25rem;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Estilo para o balão individual de cada mensagem */
-.message-bubble {
-    max-width: 70%;
-    padding: 0.625rem 0.9375rem;
-    border-radius: 1.25rem;
-    margin-bottom: 0.625rem;
-    line-height: 1.4rem;
-    position: relative;
-}
-
-/* Estilo para as mensagens enviadas pelo usuário */
-.message-bubble.sent {
-    background-color: #007bff;
-    color: white;
-    align-self: flex-end;
-    border-bottom-right-radius: 0.3125rem;
-}
-
-/* Estilo para as mensagens recebidas de outros usuários */
-.message-bubble.received {
-    background-color: #e9ecef;
-    color: #333;
-    align-self: flex-start;
-    border-bottom-left-radius: 0.3125rem;
-}
-
-/* Estilo para o nome do remetente dentro do balão de mensagem */
-.message-bubble .sender-name {
     font-weight: bold;
-    font-size: 0.85rem;
-    margin-bottom: 0.1875rem;
-    display: block;
-    color: inherit;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
-/* Cor específica para o nome em mensagens recebidas*/
-.message-bubble.received .sender-name {
-    color: #0056b3;
+.oc-status i {
+    margin-right: 5px;
 }
 
-/* Cor específica para o nome em mensagens enviadas */
-.message-bubble.sent .sender-name {
-    color: #d1e7ff;
+.status-concluido {
+    border-left: 5px solid var(--verde);
+    background-color: #f0fff0;
+}
+.status-concluido .oc-status {
+    color: var(--verdeh);
+    background-color: var(--verdeclaro);
 }
 
-/* Estilo para o carimbo de hora dentro do balão de mensagem*/
-.message-bubble .message-time {
-    font-size: 0.75rem;
-    color: rgba(0, 0, 0, 0.5);
-    display: block;
-    text-align: right;
-    margin-top: 0.3125rem;
+.status-analise {
+    border-left: 5px solid var(--amarelo);
+    background-color: #fffaf0;
+}
+.status-analise .oc-status {
+    color: #cc9900;
+    background-color: #ffeb99;
 }
 
-/* Cor específica para a hora em mensagens enviadas */
-.message-bubble.sent .message-time {
-    color: rgba(255, 255, 255, 0.7);
+.status-rejeitado {
+    border-left: 5px solid var(--vermelho);
+    background-color: #fff0f0;
+}
+.status-rejeitado .oc-status {
+    color: #b30000;
+    background-color: #ffcccb;
 }
 
-/* Estilo para a barra inferior de envio de mensagens*/
-.chat-input-area {
-    display: flex;
-    padding: 0.9375rem 1.25rem;
-    border-top: 1px solid #eee;
-    background-color: #f0f0f0;
-}
 
-/* Estilo para o campo de texto para digitar a mensagem */
-.chat-input-area input[type="text"] {
-    flex-grow: 1;
-    padding: 0.625rem;
-    border: 1px solid #ccc;
-    border-radius: 0.3125rem;
-    margin-right: 0.625rem;
-    font-size: 1rem;
-}
 
-/* Estilo do botão de envio de mensagem*/
-.chat-input-area .btn-primary {
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.3125rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* LOGIN 
- * Centraliza o formulário de login e ajusta espaçamento*/
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* CADASTRO 
- * Estiliza o formulário de cadastro com fundo claro e bordas arredondadas */
-.cadastro-form {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
-}
-
-/* --- ESTILOS PADRÃO PARA O HAMBÚRGUER (ESCONDIDO EM TELAS GRANDES) --- */
-.hamburger {
-    display: none; 
-    cursor: pointer;
-    position: absolute; 
-    right: 1.5rem; 
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(51, 51, 51);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width:950px) {
+     header {
+        height: 5rem; 
+    }
 
     header img {
-        height: 10rem; /* Logo menor */
+        height: 10rem; 
     }
 
     .titulosite {
         font-size: 1.5rem;
-        margin-left: -3rem; /* Ajuste o alinhamento da logo */
+        margin-left: -3rem; 
+    }
+
+    .menu {
+        display: none; 
+    }
+
+    .maincontainer {
+        margin-left: 0; 
+        width: 100%; 
+        padding: 1rem; 
+    }
+
+    .contentcontainer {
+        flex-direction: column; 
+    }
+
+    .mensagenflut{
+        display: none;
     }
 
     /* Banner */
     .banner {
-        height: 80vh; /* Altura ajustada para não ocupar 100% da tela */
+        height: 80vh; 
         margin: 1rem 0;
     }
 
     .bannercontainer h1 {
-        font-size: 2rem; /* Título menor */
+        font-size: 2rem; 
     }
 
     .bannercontainer p {
-        font-size: 1em; /* Parágrafo menor */
+        font-size: 1em; 
     }
 
     .botoes {
-        flex-direction: column; /* Botões empilhados */
+        flex-direction: column; 
         gap: 1rem;
     }
 
     .BtnC, .BtnA {
-        width: 80%; /* Botões mais largos */
+        width: 80%; 
         margin: 0 auto;
     }
 
@@ -1161,13 +1302,13 @@ footer {
     }
 
     .cardsgrid {
-        flex-direction: column; /* Cards empilhados */
+        flex-direction: column; 
         gap: 20px;
         padding: 0 15px;
     }
 
     .carditem {
-        width: 100%; /* Ocupa a largura total */
+        width: 100%; 
         margin: 0;
     }
 
@@ -1190,82 +1331,156 @@ footer {
         margin: 1.5rem 0;
     }
 
+    /*Notificações*/
 
-    header {
-        height: 5rem; 
-        padding: 0 1rem;
-        justify-content: space-between; 
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 100; /* Garante que o header fique acima de tudo */
+    .titulonotificacao {
+        font-size: 1.5rem; 
     }
 
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem;
+    }
     
-    /* 1. MOSTRA O ÍCONE HAMBÚRGUER */
+    .card .icon {
+        margin-bottom: 0.5rem;
+    }
+
+
+    /*chats*/
+    .containerchat {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%; 
+     
+        flex-direction: column; 
+    }
+
+    .chat {
+        display: none; 
+    }
+
+    .containercontato {
+        width: 100%; 
+        height: 99%; 
+        border-radius: 5px;
+        flex-direction: column;
+        overflow-x: hidden;
+        padding-bottom: 0;
+    }
+    
+    .conversas {
+        display: block; 
+        margin: 0.5rem 0 0.5rem 0.5rem;
+    }
+
+    .contato {
+        width: calc(100% - 1rem); 
+        margin: 0.5rem 0.5rem 0 0.5rem; 
+        border-radius: 5px;
+    }
+   
+    /* Mapa*/
+
+    .mapacontainer {
+        height: 20rem; 
+        width: 100%;
+    }
+
+    .ocorrenclegend ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    .ocorrenclegend li {
+        margin: 0.5rem 0.75rem;
+        margin-bottom: 0;
+    }
+
+    /*criar ocorrências*/
+
+    .cardFormOc {
+        width: 100%; 
+        padding: 1.5rem; 
+        margin: 1rem auto;
+    }
+
+    .cardFormOc h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btnoc {
+        padding: 0.8rem; 
+        font-size: 1rem;
+    }
+
+   
     .hamburger {
-        display: block; /* Mostra o ícone */
-        position: relative; /* Volta para o fluxo normal dentro do header */
+        display: block; 
     }
 
-    /* 2. PREPARA O MENU LATERAL PARA O MOBILE */
-    .cidalink-main-container {
-        flex-direction: column; /* Empilha o menu e o conteúdo */
-        padding-top: 5rem; /* Adiciona padding no topo para compensar o header fixo */
-    }
-
-    .cidalink-sidebar {
-        /* Configura o menu para se tornar uma gaveta lateral */
-        position: fixed;
+    .menu {
+        display: block;
+        position: fixed; 
         right: 0px;
-        top: 5rem; /* Começa abaixo do header */
+        top: 5rem; 
         height: calc(100vh - 5rem);
-        width: 70%; /* Largura do menu lateral no mobile */
+        width: 70%;
         max-width: 300px;
         padding: 2rem;
         border-radius: 0;
-        
-        /* LINHA CRÍTICA: ESCONDE O MENU FORA DA TELA À DIREITA */
+        background-color: white; 
         transform: translateX(100%); 
         transition: transform 0.3s ease-in;
-        z-index: 50; /* Garante que fique acima do conteúdo */
+        z-index: 50;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     }
     
-    /* Classe JS: TRAZ O MENU MOBILE PARA A TELA */
-    .cidalink-sidebar.nav-active {
-        transform: translateX(0%); /* Traz o menu para a vista */
+    .menu.nav-active {
+        transform: translateX(0%);
     }
-    
-    /* Animação do Ícone Hamburger (transforma em X) */
-    .hamburger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .hamburger.toggle .line2 {
-        opacity: 0;
-    }
-    .hamburger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+ 
+    .contentcontainer {
+        flex-direction: column;
     }
 
-    /* Oculta o conteúdo principal para não interferir */
-    .cidalink-content, .cidalink-main-content {
-        width: 100%;
-        padding: 1rem;
-    }
-    
-    .ocorrenc-feed {
-        width: 100%;
-    }
-
+    /*perfil*/
 
 }
 
+@media (max-width: 600px) {
+    .perfil-container {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    
+    .perfil-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .perfil-header h2 {
+        margin-bottom: 10px;
+    }
 
+    .card-ocorrencia {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .oc-info {
+        margin-bottom: 10px;
+    }
 
-
-
-
+    .oc-status {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
 
 

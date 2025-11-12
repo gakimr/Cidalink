@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>CidaLink -Notificações</title>
 </head>
 
@@ -18,88 +18,77 @@
 </script>
 
 <body>
-    <header>
+
+     <header>
         <div class="logocontainer">
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
+
          <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+        
+
     </header>
 
-    
-    <div class="cidalink-main-container">
-        <aside class="cidalink-sidebar">
-            <h2>Menu</h2>
-            <ul class="cidalink-sidebar-nav">
-                <li>
-                    <a href="notificacoes.html" class="cidalink-sidebar-link pag-atual">Notificações<span class="notificacao-ponto">2</span></a>
-                </li>
-                <li><a href="cidalinkinicial.html" class="cidalink-sidebar-link">Página Inicial</a></li>
-                <li><a href="criarocorrencia.html" class="cidalink-sidebar-link">Criar Ocorrência</a></li>
-                <li><a href="mapa.html" class="cidalink-sidebar-link">Mapa</a></li>
-                <li><a href="perfil.html" class="cidalink-sidebar-link">Meu Perfil</a></li>
-                 <li><a href="chats.html" class="cidalink-sidebar-link">Bate-papos</a></li>
-                 <li><a href="index.html" class="cidalink-sidebar-link">Sair</a></li>
-            </ul>
+     <div class="contentcontainer">
+    <aside class="menu">
+            <h2 class="menutitulo">Menu</h2>
+        <nav>
+            <a href="notificacoes.html"class="pagatual">Notificações <span class="notificacaop">9</span></a>
+            <a href="inicial.html">Página Inicial</a>
+            <a href="ocorrencia.html">Criar Ocorrência</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="chat.html">Bate-papo</a>
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="index.html">Sair</a>
+        </nav>
         </aside>
 
-        <main class="cidalink-main-content">
-            <section class="notifications-section">
-                <h3>Minhas Notificações</h3>
-
-                <article class="notification-card">
-                    <div class="notification-icon">👍</div>
-                    <div class="notification-content">
-                        <p><strong>Ricardão</strong> apoiou sua ocorrência "Buraco na rua principal".</p>
-                        <span class="notification-time">Há 5 minutos</span>
-                    </div>
-                </article>
-
-                <article class="notification-card">
-                    <div class="notification-icon">💬</div>
-                    <div class="notification-content">
-                        <p><strong>Carla</strong> compartilhou uma ocorrência "Lâmpada de poste queimada".</p>
-                        <span class="notification-time">Há 1 hora</span>
-                    </div>
-                </article>
-
-                <article class="notification-card notification-read">
-                    <div class="notification-icon">✅</div>
-                    <div class="notification-content">
-                        <p>A ocorrência "Árvore caída na praça" foi <strong>concluída</strong> pela administração.</p>
-                        <span class="notification-time">Ontem, 14:30</span>
-                    </div>
-                </article>
-
-                <article class="notification-card notification-read">
-                    <div class="notification-icon">⬆️</div>
-                    <div class="notification-content">
-                        <p>Sua ocorrência "Falta de água no bairro" recebeu <strong>10 novos apoios</strong>.</p>
-                        <span class="notification-time">22 de Maio</span>
-                    </div>
-                </article>
-
-                 <article class="notification-card">
-                    <div class="notification-icon">🏛️</div>
-                    <div class="notification-content">
-                        <p>A <strong>Prefeitura Municipal</strong> solicitou mais informações sobre sua ocorrência "Esgoto a céu aberto".</p>
-                        <span class="notification-time">Há 30 minutos</span>
-                    </div>
-                </article>
-
-            </section>
+        <main class="containernotficacao">
+            <h3 class="titulonotificacao">Notificações</h3>
+            <div class="card">
+                <div class="icon">👍</div>
+                <div class="comentario">
+                  <p>Ricardão apoiou sua ocorrência "Buraco na rua principal".</p>
+                       <span class="hora">Há 5 minutos</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">💬</div>
+                <div class="comentario">
+                    <p>Carla compartilhou uma ocorrência "Lâmpada de poste queimada".</p>
+                      <span class="hora">Há 1 hora</span>
+                </div>
+            </div>
+             <div class="card">
+                <div class="icon">✅</div>
+                <div class="comentario">
+                    <p>A ocorrência "Árvore caída na praça" foi <strong>concluída</strong> pela administração.</p>
+                      <span class="hora">Ontem, 14:30</span>
+                </div>
+            </div> 
+            <div class="card">
+                <div class="icon">🏛️</div>
+                <div class="comentario">
+                 <p>A <strong>Prefeitura Municipal</strong> solicitou mais informações sobre sua ocorrência "Esgoto a céu aberto".</p>
+                      <span class="hora">Há 30 minutos</span>
+                </div>
+            </div>
         </main>
-    </div>
+ </div>
 
-<footer>
-            <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
-        </footer>
+ <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
 
-        
+ <footer>
+        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+   
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -113,7 +102,5 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-
-        <script src="Jscript/script.js"></script>
 </body>
 </html>
