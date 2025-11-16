@@ -1,3 +1,4 @@
+
 function cpfMask(input) {
     let value = input.value.replace(/\D/g, ""); 
     value = value.replace(/(\d{3})(\d)/, "$1.$2");
@@ -5,6 +6,7 @@ function cpfMask(input) {
     value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
     input.value = value;
 }
+
 
 function handleFormValidation(event, form) {
     event.preventDefault(); 
