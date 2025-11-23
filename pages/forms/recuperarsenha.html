@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CidaLink - Login Cidadão</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>CidaLink - Recuperar a senha</title>
 
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
@@ -17,41 +17,31 @@
 </script>
 
 </head>
-
 <body>
 
-     <header>
+      <header>
         <div class="logocontainer">
-            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <img id="logo" src="../../img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
     </header>
 
-    <main class="cardForm">
+    <main class="cardForm" style="height: 30rem;">
         <div class="cardlogin">
-            <h2>Entrar no CidaLink</h2>
+            <h2>Recuperar Senha</h2>
             <h3>Cidadão</h3>
+            <p style="margin-bottom: 2rem; color: #555;">Informe seu e-mail para receber um link de redefinição de senha.</p>
         <form action="#" method="post">
             <div class="inputgp">
-                <label for="usuario">Usuário</label>
-                <input type="text" id="usuario">
-            </div>
-            <div class="inputgp">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" >
+                <label for="email" class="obrigatorio">E-mail</label>
+
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
             </div>
         </form>
-        <div class="ptlogin">
-            <button class="btnEntrar">Entrar</button>
+        <div class="ptlogin" style="border-top: none; padding-top: 0;">
+            <button class="btnEntrar">Enviar Link de Redefinição</button>
         </div>
-       <div class="ptlogin">
-        <a class="rsenha" href="recuperarsenha.html">Esqueceu a senha?</a>
-       </div>
-       
-       <div class="ptlogin">
-        <p>Ainda não tem uma conta?</p>
-            <button class="btnCd" id="btnCadastrarCidadao">Cadastre-se</button>
-       </div>
+            <a class="btnCd" href="logincid.html" >Voltar para o Login</a>
         </div>
     </main>
 
@@ -59,9 +49,8 @@
         <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script/script.js"></script>
- 
-        
+    <script src="../../script/script.js"></script>
+    
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -74,6 +63,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
+        
 </body>
 </html>

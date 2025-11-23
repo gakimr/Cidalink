@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CidaLink - Cadastro Administrador</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>CidaLink - Cadastro Cidadão</title>
 
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
-    <script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-     gtag('config', 'G-71078FM2JV');
-    </script>
-    
+  
+    gtag('config', 'G-71078FM2JV');
+  </script>
+  
 </head>
 <body>
-
-    <header>
+    
+     <header>
         <div class="logocontainer">
-            <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
+            <img id="logo" src="../../img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
     </header>
 
-    <main class="cardcadastro">
+     <main class="cardcadastro">
         <div class="cardform">
-            <h2>Cadastro Administrador</h2>
+            <h2>Cadastro Cidadão</h2>
             
-            <form id="cadastroFormAdministrador"> 
+            <form id="cadastroFormCidadao"> 
                 
                 <div class="inputgp">
                     <label for="nome" class="obrigatorio">Nome Completo</label>
@@ -38,39 +38,34 @@
                 </div>
                 <div class="inputgp">
                     <label for="cpf" class="obrigatorio">CPF</label>
-                    <input type="text" id="cpf" placeholder="Ex: 000.000.00-00" required maxlength="14"> 
-                </div>
-                <div class="inputgp">
-                    <label for="cargo" class="obrigatorio">Cargo</label>
-                    <input type="text" id="cargo" placeholder="Ex: Secretário Municipal" required>
+                   <input type="text" id="cpf" placeholder="Ex: 000.000.00-00" required maxlength="14">
                 </div>
                 <div class="inputgp">
                 <label for="email" class="obrigatorio">E-mail</label>
-                <input type="email" id="email" placeholder="Ex:admdasilva@gmail.com" autocomplete="email" required>
+                 <input type="email" id="email" placeholder="Ex:joaodasilva@gmail.com" autocomplete="email" required>
                 </div>
                 <div class="inputgp">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" required>
+                     <input type="password" id="senha" required>
                 </div>
                 <div class="inputgp">
                     <label for="csenha">Confirmar Senha</label>
-                    <input type="password" id="csenha" required> 
+                    <input type="password" id="csenha" required>
                 </div>
                 
                 <button type="submit" class="btnCadastro">Cadastrar</button>
                 
             </form> <div class="ptlogin">
                 <p>Já possui uma conta??</p>
-                    <button class="btnCd" id="btn_LoginAdministrador">Login</button>
+                    <button class="btnCd" id="btn_LoginCidadao">Login</button>
             </div>
         </div>
     </main>
 
-    <footer><p>&copy; 2025 Cidalink.</p></footer>
+     <footer><p>&copy; 2025 Cidalink.</p></footer>
 
+    <script src="../../script/script.js"></script>
 
-    <script src="script/script.js"></script>
-    
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
     <script>

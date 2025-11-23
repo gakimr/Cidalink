@@ -48,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (btnCidadao) {
         btnCidadao.addEventListener('click', function() {
-            window.location.href = 'logincid.html';
+            window.location.href = 'pages/forms/logincid.html';
         });
     }
 
     if (btnAdministrador) {
         btnAdministrador.addEventListener('click', function() {
-            window.location.href = 'loginadm.html'; 
+            window.location.href = 'pages/forms/loginadm.html'; 
         });
     }
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (botaoEntrar) {
         botaoEntrar.addEventListener('click', function(event) {
             event.preventDefault(); 
-            window.location.href = 'inicial.html'; 
+            window.location.href = '../app/inicial.html'; 
         });
     }
 
