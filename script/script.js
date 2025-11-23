@@ -144,3 +144,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+/*Botão Cadastre-se Cidadão*/
+    const botaoCadastrarCidadao = document.getElementById('btnCadastrarCidadao');
+    if (botaoCadastrarCidadao) {
+        botaoCadastrarCidadao.addEventListener('click', function() {
+            window.location.href = 'cadastrocid.html'; 
+        });
+    }
+
+    /*Botão Cadastre-se Administrador*/
+    const botaoCadastrarAdministrador = document.getElementById('btnCadastrarAdministrador');
+    if (botaoCadastrarAdministrador) {
+        botaoCadastrarAdministrador.addEventListener('click', function() {
+            window.location.href = 'cadastroadm.html'; 
+        });
+    }
+
+    /*Botão Login Cidadão (volta do Cadastro)*/
+    const botaoLoginCidadao = document.getElementById('btn_LoginCidadao');
+    if (botaoLoginCidadao) {
+        botaoLoginCidadao.addEventListener('click', function() {
+            window.location.href = 'logincid.html'; 
+        });
+    }
+
+    /*Botão Login Administrador (volta do Cadastro)*/
+    const botaoLoginAdministrador = document.getElementById('btn_LoginAdministrador');
+    if (botaoLoginAdministrador) {
+        botaoLoginAdministrador.addEventListener('click', function() {
+            window.location.href = 'loginadm.html'; 
+        });
+    }

@@ -226,7 +226,7 @@ color: var(--verdecida);
         .cardlogin {
             background-color: white;
             margin: 3rem 4rem;
-            padding-bottom: 0.6rem;
+            padding-bottom: 2rem;
             
         }
 
@@ -304,6 +304,8 @@ color: var(--verdecida);
             color: #555;
         }
 
+
+ 
         .btnCd {
             background-color: var(--verde);
             color: white;
@@ -339,8 +341,6 @@ color: var(--verdecida);
     border: 1px solid var(--verde) !important; 
     box-shadow: 0 0 5px rgba(40, 170, 70, 0.5); 
 }
-
-
 
 
     /*menu para todas as páginas*/
@@ -1329,6 +1329,65 @@ color: var(--verdecida);
     .credibilidade p {
         font-size: 1.1em;
         margin: 1.5rem 0;
+    }
+
+    /* Formulários de Login */
+    .cardForm {
+        width: 95%; 
+        max-width: 450px; 
+        margin: 1rem auto; 
+    }
+
+    .cardlogin {
+        padding: 1.5rem;
+    }
+
+    /* Formulários de Cadastro */
+    .cardcadastro {
+        width: 95%; 
+        max-width: 500px; 
+        margin: 1rem auto;
+    }
+
+    .cardform {
+        padding: 1rem;
+    }
+
+    .cardform h2 {
+        font-size: 1.5rem; 
+    }
+    
+    .inputgp label {
+        font-size: 1rem; 
+    }
+    
+    .inputgp input {
+        padding: 0.8rem; 
+    }
+
+    .cardlogin .ptlogin:last-child,
+    .cardcadastro .cardform .ptlogin {
+        flex-wrap: nowrap; /* Não é estritamente necessário, mas mantém a segurança */
+        margin-top: 0.2rem; 
+    }
+
+     /*inicial*/
+
+    .occard {
+        width: 95%; 
+        max-width: 400px;
+        aspect-ratio: auto; 
+        height: auto;
+    } 
+
+    .feed {
+        align-items: center; 
+    }
+
+    .Foto img {
+        max-height: 250px; 
+        width: auto;
+        object-fit: contain;
     }
 
     /*Notificações*/
