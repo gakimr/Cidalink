@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styleadm.css">
+    <title>Perfil do Administrador</title>
+
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+
+</head>
+<body>
+
+      <header>
+        <div class="logocontainer">
+            <img id="logo" src="../../img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </header>
+
+     <div class="contentcontainer">
+        
+        <aside class="menu">
+            <h2 class="menutitulo">Menu</h2>
+        <nav>
+           <a href="../adm/notificacoesadm.html" >Notificações <span class="notificacaop">9</span></a>
+            <a href="../adm/inicialadm.html">Página Inicial</a>
+            <a href="../adm/gerenciaroc.html">Gerenciar Ocorrências</a>
+            <a href="../adm/mapaadm.html">Mapa</a>
+            <a href="../adm/chatadm.html">Bate-papo</a>
+            <a href="../adm/perfiladm.html" class="pagatual">Meu Perfil</a>
+            <a href="../../index.html">Sair</a>
+        </nav>
+        </aside>
+
+    <div class="content">
+
+        <h1>Perfil do Administrador</h1>
+
+        <div class="card">
+            <button class="edit-btn">Editar</button>
+            <div class="profile-circle">AD</div>
+
+            <label>Nome Completo</label>
+            <input type="text" value="Administrador do Sistema" disabled>
+
+            <label>E-mail</label>
+            <input type="email" value="admin@cidade.com" disabled>
+
+            <label>Nível de Acesso</label>
+            <input type="text" value="Administrador Master" disabled>
+        </div>
+
+        <h2>Estatísticas Gerais</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Usuários Ativos</h3>
+                <div class="stat-number">128</div>
+            </div>
+            <div class="stat-card">
+                <h3>Ocorrências Pendentes</h3>
+                <div class="stat-number">36</div>
+            </div>
+            <div class="stat-card">
+                <h3>Relatórios Emitidos</h3>
+                <div class="stat-number">57</div>
+            </div>
+        </div>
+
+        <h2 class="Pacoes">Ações Recentes</h2>
+
+        <div class="list-item">
+            <strong>Usuário "Maria" foi bloqueado.</strong><br>
+            <span>Data: 21/Nov/2025 • 14:22</span>
+        </div>
+
+        <div class="list-item">
+            <strong>Ocorrência #CID782 revisada e direcionada ao setor responsável.</strong><br>
+            <span>Data: 20/Nov/2025 • 10:05</span>
+        </div>
+
+        <div class="list-item">
+            <strong>Backup completo gerado pelo sistema.</strong><br>
+            <span>Data: 19/Nov/2025 • 22:41</span>
+        </div>
+
+    </div>
+</div>
+
+ <footer><p>&copy; 2025 Cidalink.</p></footer>
+
+ <script src="../../script/script.js"></script>
+
+  <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+</body>
+</html>

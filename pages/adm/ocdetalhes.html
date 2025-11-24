@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styleadm.css">
+    <title>CidaLink - Ocorrência #00101</title>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+
+</head>
+<body>
+
+      <header>
+        <div class="logocontainer">
+            <img id="logo" src="../../img/Logo.svg" alt="CidaLink Logo">
+            <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+        </header>
+
+    <div class="contentcontainer">
+        
+        <aside class="menu">
+            <h2 class="menutitulo">Menu</h2>
+        <nav>
+            <a href="../adm/notificacoesadm.html" >Notificações <span class="notificacaop">9</span></a>
+            <a href="../adm/inicialadm.html">Página Inicial</a>
+            <a href="../adm/gerenciaroc.html">Gerenciar Ocorrências</a>
+            <a href="../adm/mapaadm.html">Mapa</a>
+            <a href="../adm/chatadm.html">Bate-papo</a>
+            <a href="../adm/perfiladm.html">Meu Perfil</a>
+            <a href="../../index.html">Sair</a>
+        </nav>
+        </aside>
+
+        <main class="maincontainer">
+            <h1 class="titulopagina">Detalhe da Ocorrência #00101</h1>
+            
+            <section class="occard detalhe">
+                <div class="ocheader">
+                    <div class="perfilcid">C1</div>
+                    <div class="cidinfo">
+                        <strong>Cidadão 1</strong>
+                        <span>Bairro Tal | Data: 20/09/2025</span>
+                    </div>
+                </div>
+                <div class="ocbody">
+                    <p class="ocdescricao">
+                        Sérios problemas de iluminação na Rua B, Postes com lampadas sem funcionar! A situação está perigosa para pedestres à noite. É urgente.
+                    </p>
+                    <div class="Foto">
+                        <img src="../../img/ruaescura.jpeg" alt="Foto de uma rua com má iluminação ">
+                    </div>
+                    <div class="ocinfo-extra">
+                        <p><strong>Status Atual:</strong> <span class="status-pendente">Pendente</span></p>
+                        <p><strong>Prioridade:</strong> <span class="prioridade-alta">Alta</span></p>
+                        <p><strong>Localização:</strong> Rua B, próximo ao número 123</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cardFormOc">
+                <h2>Atualizar Status e Enviar Resposta</h2>
+                
+                <form action="#" method="POST" class="formulario-admin">
+                    
+                    <div class="form-group-status">
+                        <label>Alterar Status:</label>
+                        <div class="status-botoes">
+                            <button type="button" class="btnstatus status-pendente">Pendente</button>
+                            <button type="button" class="btnstatus status-andamento">Em Andamento</button>
+                            <button type="button" class="btnstatus status-resolvida">Concluída</button>
+                        </div>
+                        <input type="hidden" name="status" id="status-input" value="pendente">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resposta">Resposta Oficial ao Cidadão:</label>
+                        <textarea id="resposta" name="resposta" rows="6" placeholder="Descreva as ações que serão tomadas, o prazo de resolução ou a solução final." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btnoc">Enviar Resposta e Atualizar</button>
+                </form>
+
+            </section>
+            
+            <section class="cardFormOc historico">
+                <h2>Histórico de Ações</h2>
+                <div class="historico-item">
+                    <p><strong>25/11/2025 10:30 - Admin:</strong> Status alterado para Em Andamento.</p>
+                    <p class="resposta-admin">Prezado cidadão, sua ocorrência foi registrada e a equipe de manutenção de iluminação já foi notificada. O serviço será iniciado em até 48 horas.</p>
+                </div>
+                <div class="historico-item">
+                    <p><strong>20/09/2025 14:00 - Sistema:</strong> Ocorrência criada com status Pendente.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+        <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+
+    <footer><p>&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
+    
+     <script src="../../script/script.js"></script>
+    
+        <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

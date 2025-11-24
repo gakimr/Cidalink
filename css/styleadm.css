@@ -1,0 +1,529 @@
+/*Pagina Inicial - Estilos de `ocfooter` para o Administrador */
+.ocfooter.admin {
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.ocfooter.admin .botoes-apoio {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.btnadmin {
+    display: inline-block;
+    background-color: var(--azul); 
+    color: white;
+    padding: 0.5rem 0.9rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btnadmin:hover {
+    background-color: var(--azule); 
+}
+
+/*Gerenciar Ocorrências*/
+.titulopagina {
+    margin-bottom: 1.5rem;
+    color: var(--azullink);
+    font-size: 2rem;
+    border-bottom: 2px solid var(--cinzinha);
+    padding-bottom: 0.5rem;
+}
+
+
+.stats-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.stat-card.pendente {
+    background-color: var(--vermelho); 
+}
+
+.stat-card.em-andamento {
+    background-color: var(--amarelo); 
+}
+
+.stat-card.resolvida {
+    background-color: var(--verde); 
+}
+
+/* Área de Filtros*/
+.filtros {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--cinzab);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtros input[type="text"],
+.filtros select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--cinzac);
+    border-radius: 0.3rem;
+    flex-grow: 1; 
+    min-width: 150px;
+}
+
+.filtros .btnoc {
+    padding: 0.5rem 1rem;
+    flex-shrink: 0;
+}
+
+/*Tabela de Ocorrências */
+.tabela-container {
+    overflow-x: auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tabela-ocorrencias {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    min-width: 700px;
+}
+
+.tabela-ocorrencias th,
+.tabela-ocorrencias td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--cinzinha);
+    text-align: left;
+}
+
+.tabela-ocorrencias th {
+    background-color: var(--azullink);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.tabela-ocorrencias tbody tr:hover {
+    background-color: var(--cinzinha);
+    cursor: pointer;
+}
+
+.status-pendente, .prioridade-alta {
+    font-weight: bold;
+    color: var(--vermelho);
+}
+
+.status-andamento, .prioridade-media {
+    font-weight: bold;
+    color: var(--amarelo);
+}
+
+.status-resolvida, .prioridade-baixa {
+    font-weight: bold;
+    color: var(--verde);
+}
+
+.btnadmin-small {
+    background-color: var(--azulc);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+
+.btnadmin-small:hover {
+    background-color: var(--azule);
+}
+
+/*pefil adm*/
+.container {
+     display: flex;
+}
+/* CONTEÚDO */
+.content {
+    margin-left: 270px;
+     padding: 2rem;
+ }
+
+ h1 {
+    font-size: 2rem;
+    color: #0044cc;
+ }
+
+ .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem;
+}
+
+.profile-circle {
+     width: 120px;
+    height: 120px;
+    background: #b7f8c0;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-size: 2.5rem;
+    border-radius: 50%;
+    border: 3px solid #2faa54;
+    margin: 0 auto 1rem;
+ }
+
+.edit-btn {
+    background: #2faa54;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+ }
+
+.edit-btn:hover {
+    background: #238c45;
+}
+
+    label {
+    font-weight: bold;
+}
+
+    input {
+     width: 100%;
+    padding: 0.8rem;
+    margin: 0.3rem 0 1rem 0;
+     border-radius: 6px;
+    border: 1px solid #ccc;
+     }
+
+/* CARDS DE ESTATÍSTICAS */
+.stats {
+     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+     gap: 1.5rem;
+ }
+
+.stat-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+ }
+
+.stat-card h3 {
+     margin-bottom: 0.5rem;
+    color: #333;
+}
+
+ .stat-number {
+    font-size: 2rem;
+     font-weight: bold;
+     color:  #0322d5;
+}
+
+/* LISTA DE AÇÕES RECENTES */
+ .list-item {
+    background: #fff;
+    padding: 1rem;
+    border-left: 6px solid #03d562;
+    border-radius: 8px;
+     margin-bottom: 1rem;
+     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.list-item span {
+    font-size: 0.9rem;
+    color: #666;
+}
+.Pacoes{
+    margin-top: 2rem;
+}
+
+ /*Página de detalhes */
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+ .occard.detalhe {
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     border: 1px solid var(--cinzac);
+     margin-bottom: 2rem;
+     max-width: 100%; 
+}
+
+.ocinfo-extra {
+     margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--cinzac);
+}
+
+.ocinfo-extra p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+/*Formulário de Resposta e Status*/
+.cardFormOc {
+    margin-bottom: 2rem;
+}
+
+.formulario-admin textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid var(--cinzac);
+    border-radius: 0.3rem;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-group-status {
+    margin-bottom: 1.5rem;
+}
+
+.status-botoes {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.btnstatus {
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--cinzac);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+    flex-grow: 1; 
+}
+
+/* Estilos para Status */
+.status-pendente { 
+    color: var(--vermelho); 
+    border-color: var(--vermelho);
+    background-color: white;
+}
+.status-andamento { 
+    color: var(--amarelo); 
+    border-color: var(--amarelo);
+    background-color: white;
+}
+.status-resolvida { 
+    color: var(--verde); 
+    border-color: var(--verde);
+    background-color: white;
+}
+
+/* Efeito de Seleção para Status */
+.btnstatus.selected, 
+.btnstatus:hover {
+    color: white;
+}
+.btnstatus.status-pendente.selected, .btnstatus.status-pendente:hover {
+    background-color: var(--vermelho);
+}
+.btnstatus.status-andamento.selected, .btnstatus.status-andamento:hover {
+    background-color: var(--amarelo);
+}
+.btnstatus.status-resolvida.selected, .btnstatus.status-resolvida:hover {
+    background-color: var(--verde);
+}
+
+
+.historico-item {
+    padding: 1rem;
+    border-left: 3px solid var(--azullink);
+    margin-bottom: 1rem;
+    background-color: var(--cinzab);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.historico-item strong {
+    color: var(--azullink);
+}
+
+.resposta-admin {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-style: italic;
+    background-color: white;
+    border-radius: 0.3rem;
+    border: 1px solid var(--cinzinha);
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width:950px) {
+
+    /*inicial*/
+    
+    .occard {
+        width: 95%; 
+        max-width: 400px;
+        aspect-ratio: auto; 
+        height: auto;
+    } 
+
+    .ocfooter.admin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .ocfooter.admin .botoes-apoio {
+        width: 100%;
+        justify-content: space-between; 
+    }
+
+    .ocfooter.admin .botoes-apoio .btnapoio {
+        flex-grow: 1; 
+        text-align: center;
+    }
+
+    .btnadmin {
+        width: 100%; 
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+
+    /*Perfil*/
+    .content {
+        margin-left: 0; 
+        padding: 1.5rem;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    /* Cards de Estatísticas */
+    .stats {
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* Gerenciar Oc */
+    .stats-cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat-card p {
+        font-size: 1.5rem; 
+    }
+
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filtros input[type="text"],
+    .filtros select,
+    .filtros .btnoc {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .tabela-ocorrencias {
+        min-width: 700px;
+    }
+
+    .status-botoes {
+        flex-direction: column; 
+        gap: 0.5rem;
+    }
+    
+    .btnstatus {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /*Perfil*/
+    
+    .content {
+        padding: 1rem;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+
+    .edit-btn {
+        position: relative; 
+        float: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .profile-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+    
+    
+    .list-item {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+

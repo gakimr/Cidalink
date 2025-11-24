@@ -73,13 +73,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     /*Login Cidadão*/
-    const botaoEntrar = document.querySelector('.btnEntrar');
+    const botaoEntrar = document.getElementById('btnEntrarCid');
     if (botaoEntrar) {
         botaoEntrar.addEventListener('click', function(event) {
             event.preventDefault(); 
             window.location.href = '../app/inicial.html'; 
         });
     }
+
+    /*Login do Administrador */
+const btnEntrarAdmin = document.getElementById('btnEntrarAdmin');
+
+if (btnEntrarAdmin) {
+    btnEntrarAdmin.addEventListener('click', function() {
+        window.location.href = '../adm/inicialadm.html'; 
+    });
+}
 
 
     /*Mapa */
@@ -176,3 +185,20 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'loginadm.html'; 
         });
     }
+
+     /*Seleção de botões da pagina de detlahes de ocorrência do adm*/
+
+     document.querySelectorAll('.btnstatus').forEach(button => {
+            button.addEventListener('click', function() {
+                
+                document.querySelectorAll('.btnstatus').forEach(btn => btn.classList.remove('selected'));
+                
+                this.classList.add('selected');
+                
+        
+                const statusValue = this.textContent.trim().toLowerCase().replace(' ', '-');
+                document.getElementById('status-input').value = statusValue;
+            });
+        });
+
+        document.querySelector('.btnstatus.status-pendente').classList.add('selected');
