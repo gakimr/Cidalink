@@ -1,0 +1,122 @@
+/* Accessibility (daltonism) styles */
+.accessibility-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Posiciona o menu no canto direito do header quando dentro do header */
+header .accessibility-menu {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+.accessibility-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.accessibility-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.accessibility-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1001;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.accessibility-dropdown.active {
+    display: block;
+    animation: slideDown 0.2s ease;
+}
+
+.accessibility-header {
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+    color: white;
+    text-align: center;
+}
+
+.accessibility-header h3 { margin: 0 0 4px 0; font-size: 15px; }
+.accessibility-header p { margin: 0; font-size: 12px; opacity: 0.95; }
+
+.accessibility-options { max-height: 280px; overflow-y: auto; padding: 8px; }
+
+.accessibility-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.accessibility-option:hover { background: #f5f5f5; }
+.accessibility-option.active { background: #e3f2fd; border: 1px solid #2196F3; }
+
+.color-indicator { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #ddd; flex-shrink: 0; }
+.color-indicator.normal { background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff); }
+.color-indicator.protanopia { background: linear-gradient(45deg, #5e5e5e, #00ff00, #0000ff); }
+.color-indicator.protanomalia { background: linear-gradient(45deg, #a05252, #00ff00, #0000ff); }
+.color-indicator.deuteranopia { background: linear-gradient(45deg, #ff0000, #5e5e5e, #0000ff); }
+.color-indicator.deuteranomalia { background: linear-gradient(45deg, #ff0000, #a0a052, #0000ff); }
+.color-indicator.tritanopia { background: linear-gradient(45deg, #ff0000, #00ff00, #5e5e5e); }
+.color-indicator.tritanomalia { background: linear-gradient(45deg, #ff0000, #00ff00, #a0a0ff); }
+.color-indicator.acromatopsia { background: linear-gradient(45deg, #808080, #a0a0a0, #c0c0c0); }
+.color-indicator.acromatomalia { background: linear-gradient(45deg, #a0a0a0, #b0b0b0, #d0d0d0); }
+
+.accessibility-footer { padding: 12px; border-top: 1px solid #eee; text-align: center; }
+.reset-btn { display:flex; gap:8px; align-items:center; justify-content:center; width:100%; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:6px; cursor:pointer; }
+.reset-btn:hover { background:#e9ecef; border-color:#2196F3; }
+
+/* Filtros CSS para simular daltonismo - usa os filtros SVG inseridos no HTML */
+body.protanopia { filter: url('#protanopia'); }
+body.protanomalia { filter: url('#protanomalia'); }
+body.deuteranopia { filter: url('#deuteranopia'); }
+body.deuteranomalia { filter: url('#deuteranomalia'); }
+body.tritanopia { filter: url('#tritanopia'); }
+body.tritanomalia { filter: url('#tritanomalia'); }
+body.acromatopsia { filter: grayscale(100%); }
+body.acromatomalia { filter: grayscale(50%); }
+
+.svg-filters { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+@keyframes slideDown { from { transform: translateY(-6px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* Ajustes responsivos: em telas pequenas o menu fica estático e aparece após o logo */
+@media (max-width: 600px) {
+    header .accessibility-menu {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        display: inline-block;
+    }
+    .accessibility-dropdown { right: 8px; left: auto; min-width: 220px; }
+}
