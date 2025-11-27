@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styledark.css">
     <title>CidaLink - Login Administrador</title>
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -17,7 +17,7 @@
 </script>
 
 </head>
-<body>
+<body data-page="loginadm">
 
    <header>
         <div class="logocontainer">
@@ -28,8 +28,8 @@
 
     <main class="cardForm">
         <div class="cardlogin">
-            <h2>Entrar no CidaLink</h2>
-            <h3>Administrador</h3>
+            <h2 >Entrar no CidaLink</h2>
+            <h3 >Administrador</h3>
         <form action="#" method="post">
             <div class="inputgp">
                 <label for="cpf">CPF</label>
@@ -53,11 +53,14 @@
         </div>
     </main>
 
+    <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
+
     <footer>
         <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../../script/script.js"></script>
+    <script src="../../script/alternar-tema.js"></script>
 
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -67,10 +70,8 @@
     </div>
     
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
 </body>
 </html>

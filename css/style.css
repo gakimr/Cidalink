@@ -1233,6 +1233,414 @@ color: var(--verdecida);
     background-color: #ffcccb;
 }
 
+/* =========== SELETOR DE IDIOMA =========== */
+
+/* Ajuste o header para permitir a colocação do seletor nas laterais */
+header {
+    /* Mantém a altura e cor originais */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Permite elementos nos cantos */
+    padding: 0 15px; /* Adiciona espaçamento nas laterais */
+    position: relative; 
+}
+
+/* Centraliza o logo dentro do novo fluxo do header */
+header .logocontainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.language-selector {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 100; /* Garante que o dropdown fique por cima de outros elementos */
+}
+
+/* ================ BOTÃO SELETOR ================ */
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.language-btn i:first-child {
+    color: var(--azullink); /* Icone de tradução */
+    font-size: 1.1rem;
+}
+
+.language-btn i:last-child {
+    color: #666;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.language-selector.active .language-btn i:last-child {
+    transform: rotate(180deg);
+}
+
+/* ================ DROPDOWN ================ */
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.language-selector.active .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.language-option:last-child {
+    border-bottom: none;
+}
+
+.language-option:hover {
+    background: rgba(0, 102, 204, 0.1);
+}
+
+.language-option.active {
+    background: rgba(0, 102, 204, 0.15);
+    color: var(--azullink);
+}
+
+.language-option i {
+    color: var(--verde); /* Cor do checkmark */
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.language-option.active i {
+    opacity: 1;
+}
+
+.language-option span {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+language-selector {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 100; 
+}
+
+/* ================ BOTÃO SELETOR ================ */
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.language-btn i:first-child {
+    color: var(--azullink); /* Adaptado para cor do CidaLink */
+    font-size: 1.1rem;
+}
+
+.language-btn i:last-child {
+    color: #666;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.language-selector.active .language-btn i:last-child {
+    transform: rotate(180deg);
+}
+
+/* ================ DROPDOWN ================ */
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.language-selector.active .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ================ OPÇÕES ================ */
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.language-option:last-child {
+    border-bottom: none;
+}
+
+.language-option:hover {
+    background: rgba(0, 10, 110, 0.1); /* Usa cor do azullink */
+}
+
+.language-option.active {
+    background: rgba(0, 10, 110, 0.15); /* Usa cor do azullink */
+    color: var(--azullink);
+}
+
+.language-option i {
+    color: var(--verde); /* Adaptado para cor verde do CidaLink */
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.language-option.active i {
+    opacity: 1;
+}
+
+.language-option span {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.accessibility-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.accessibility-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.accessibility-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.accessibility-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    z-index: 1001;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.accessibility-dropdown.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+.accessibility-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
+    color: white;
+    text-align: center;
+}
+
+.accessibility-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.accessibility-header p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.accessibility-options {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.accessibility-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.accessibility-option:hover {
+    background: #f5f5f5;
+}
+
+.accessibility-option.active {
+    background: #e3f2fd;
+    border: 2px solid #2196F3;
+}
+
+.color-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+}
+
+/* Indicadores de cores para cada tipo de daltonismo */
+.color-indicator.normal {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+}
+
+.color-indicator.protanopia {
+    background: linear-gradient(45deg, #5e5e5e, #00ff00, #0000ff);
+}
+
+.color-indicator.protanomalia {
+    background: linear-gradient(45deg, #a05252, #00ff00, #0000ff);
+}
+
+.color-indicator.deuteranopia {
+    background: linear-gradient(45deg, #ff0000, #5e5e5e, #0000ff);
+}
+
+.color-indicator.deuteranomalia {
+    background: linear-gradient(45deg, #ff0000, #a0a052, #0000ff);
+}
+
+.color-indicator.tritanopia {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #5e5e5e);
+}
+
+.color-indicator.tritanomalia {
+    background: linear-gradient(45deg, #ff0000, #00ff00, #a0a0ff);
+}
+
+.color-indicator.acromatopsia {
+    background: linear-gradient(45deg, #808080, #a0a0a0, #c0c0c0);
+}
+
+.color-indicator.acromatomalia {
+    background: linear-gradient(45deg, #a0a0a0, #b0b0b0, #d0d0d0);
+}
+
+.accessibility-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.reset-btn:hover {
+    background: #e9ecef;
+    border-color: #2196F3;
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+    .language-dropdown {
+        top: 3.5rem; /* Ajustar a posição no mobile, já que a header fica com 5rem */
+        right: 15px;
+    }
+}
+
 
 
 @media screen and (max-width:950px) {
@@ -1538,5 +1946,13 @@ color: var(--verdecida);
     .oc-status {
         width: 100%;
         justify-content: center;
+    }
+
+    .language-selector {
+         position: relative;
+    }
+    .language-dropdown {
+        right: 0;
+        left: unset;
     }
 }

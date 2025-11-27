@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styledark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>CidaLink -Notificações</title>
 </head>
 
@@ -17,7 +19,7 @@
   gtag('config', 'G-71078FM2JV');
 </script>
 
-<body>
+<body data-page="notificacoes">
 
      <header>
         <div class="logocontainer">
@@ -29,9 +31,7 @@
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-        </div> 
-        
-
+        </div>   
     </header>
 
      <div class="contentcontainer">
@@ -82,12 +82,15 @@
  </div>
 
  <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+ <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
 
  <footer>
         <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
     </footer>
     
+    
      <script src="../../script/script.js"></script>
+     <script src="../../script/alternar-tema.js"></script>
    
         <div vw class="enabled">
         <div vw-access-button class="active"></div>

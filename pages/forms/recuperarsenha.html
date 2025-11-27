@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/styledark.css">
     <title>CidaLink - Recuperar a senha</title>
 
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -26,7 +26,7 @@
         </div>
     </header>
 
-    <main class="cardForm" style="height: 30rem;">
+    <main class="cardForm">
         <div class="cardlogin">
             <h2>Recuperar Senha</h2>
             <h3>Cidadão</h3>
@@ -35,21 +35,23 @@
             <div class="inputgp">
                 <label for="email" class="obrigatorio">E-mail</label>
 
-                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                <input type="email" id="email" name="email" required >
             </div>
         </form>
-        <div class="ptlogin" style="border-top: none; padding-top: 0;">
-            <button class="btnEntrar">Enviar Link de Redefinição</button>
+        <div class="ptlogin">
+            <button class="btnEntrar" >Enviar Link de Redefinição</button>
         </div>
-            <a class="btnCd" href="logincid.html" >Voltar para o Login</a>
+            <a class="btnCd" href="logincid.html">Voltar para o Login</a>
         </div>
     </main>
+    <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
 
     <footer>
         <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../../script/script.js"></script>
+    <script src="../../script/alternar-tema.js"></script>
     
         <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -59,10 +61,8 @@
     </div>
     
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-        
 </body>
 </html>

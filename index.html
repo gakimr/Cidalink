@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styledark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>CidaLink</title>
 
       <!-- Google tag (gtag.js) -->
@@ -18,47 +20,74 @@
 </script>
 
 </head>
-<body>
+<body >
 
       <header>
         <div class="logocontainer">
             <img id="logo" src="img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
+
+        <div class="language-selector" id="languageSelector">
+        <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+            <i class="bi bi-translate"></i>
+            <span>Português</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="language-dropdown">
+            <div class="language-option" data-lang="pt">
+                <i class="bi bi-check-lg"></i>
+                <span>Português</span>
+            </div>
+            <div class="language-option" data-lang="en">
+                <i class="bi bi-check-lg"></i>
+                <span>English</span>
+            </div>
+            <div class="language-option" data-lang="es">
+                <i class="bi bi-check-lg"></i>
+                <span>Español</span>
+            </div>
+            <div class="language-option" data-lang="fr">
+                <i class="bi bi-check-lg"></i>
+                <span>Français</span>
+            </div>
+        </div>
+    </div>
+
     </header>
 
     <main class="banner">
          <div class="bannercontainer">
-            <h1>Cidalink: A cidadania ativa começa por aqui!</h1>
-            <p>A plataforma que conecta você, seus vizinhos e a prefeitura para transformar problemas em soluções
+            <h1 data-translate="banner_h1">Cidalink: A cidadania ativa começa por aqui!</h1>
+            <p data-translate="banner_p">A plataforma que conecta você, seus vizinhos e a prefeitura para transformar problemas em soluções
                 simples, Fácil e direto! </p>
             <div class="botoes">
-                <button id="BtC" class="BtnC">Sou Cidadão</button>
-                <button id="BtA" class="BtnA">Sou Administrador</button>
+                <button id="BtC" class="BtnC" data-translate="btn_citizen">Sou Cidadão</button>
+                <button id="BtA" class="BtnA" data-translate="btn_admin">Sou Administrador</button>
             </div>
         </main>
 
       <section class="secaocards">
         <div class="container">
-            <h2 class="seccardstitulo">Como o CidaLink transforma a sua cidade:</h2>
+            <h2 class="seccardstitulo" data-translate="cards_title">Como o CidaLink transforma a sua cidade:</h2>
             <div class="cardsgrid"> 
 
-                <div class="carditem">
+                <div class="carditem" >
                     <i class="fas fa-camera"></i>
-                    <h3>1. Reporte Fácil e Imediato</h3>
-                    <p>Chega de burocracia. Viu um problema? Tire uma foto, descreva o ocorrido e envie. Sua solicitação é registrada em segundos.</p>
+                    <h3 data-translate="card1_h3">1. Reporte Fácil e Imediato</h3>
+                    <p data-translate="card1_p">Chega de burocracia. Viu um problema? Tire uma foto, descreva o ocorrido e envie. Sua solicitação é registrada em segundos.</p>
                 </div>
 
                 <div class="carditem">
                      <i class="fas fa-sync-alt"></i>
-                    <h3>2. Acompanhamento Transparente</h3>
-                    <p>Diga adeus à incerteza! Você acompanha o andamento de cada solicitação, desde o envio até a resolução final. Com o CidaLink, a transparência não é promessa, é regra.</p>
+                    <h3 data-translate="card2_h3">2. Acompanhamento Transparente</h3>
+                    <p data-translate="card2_p">Diga adeus à incerteza! Você acompanha o andamento de cada solicitação, desde o envio até a resolução final. Com o CidaLink, a transparência não é promessa, é regra.</p>
                 </div>
 
                 <div class="carditem">
                      <i class="fas fa-users"></i>
-                    <h3>3. Fórum de Comunidade e Colaboração</h3>
-                    <p>Sua participação vale ouro. Use o Fórum para discutir soluções com seus vizinhos e apoiar demandas. Fortaleça a voz coletiva!</p>
+                    <h3 data-translate="card3_h3">3. Fórum de Comunidade e Colaboração</h3>
+                    <p data-translate="card3_p">Sua participação vale ouro. Use o Fórum para discutir soluções com seus vizinhos e apoiar demandas. Fortaleça a voz coletiva!</p>
                 </div>
             </div>
         </div>
@@ -67,11 +96,12 @@
     
     <section class="credibilidade">
         <div class="container">
-            <h2>Transparência Que Gera Ação, Não Atraso.</h2>
-            <p>O CidaLink não é apenas um livro de reclamações. É uma ferramenta de gestão. Garantimos que sua solicitação chegue, seja respondida e que o progresso seja visível para toda a comunidade.</p>
-            <a href="#" class="ctabotao">Começe a Transformar Agora!</a>
+            <h2 data-translate="credibility_h2">Transparência Que Gera Ação, Não Atraso.</h2>
+            <p data-translate="credibility_p">O CidaLink não é apenas um livro de reclamações. É uma ferramenta de gestão. Garantimos que sua solicitação chegue, seja respondida e que o progresso seja visível para toda a comunidade.</p>
+            <a href="#" class="ctabotao" data-translate="credibility_cta">Começe a Transformar Agora!</a>
         </div>
     </section>
+
 
         <footer>
             <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
@@ -82,7 +112,11 @@
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
+
+
     </div>
+
+     <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
     
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
@@ -91,6 +125,8 @@
     </script>
 
 
+<script src="script/translate.js"></script>
+<script src="script/alternar-tema.js"></script>
 <script src="script/script.js"></script>
 
 </body>
