@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/accessibility.css">
     <link rel="stylesheet" href="../../css/styledark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>CidaLink - Página Inicial</title>
 
       <!-- Google tag (gtag.js) -->
@@ -31,80 +32,106 @@
             <div class="line3"></div>
         </div> 
 
-        </header>
+        <div class="language-selector" id="languageSelector">
+            <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+                <i class="bi bi-translate"></i>
+                <span>Português</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="language-dropdown">
+                <div class="language-option" data-lang="pt">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Português</span>
+                </div>
+                <div class="language-option" data-lang="en">
+                    <i class="bi bi-check-lg"></i>
+                    <span>English</span>
+                </div>
+                <div class="language-option" data-lang="es">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Español</span>
+                </div>
+                <div class="language-option" data-lang="fr">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Français</span>
+                </div>
+            </div>
+        </div>
 
-    <div class="contentcontainer">
-        
-        <!-- Acessibilidade: menu para simulação de daltonismo -->
-        <div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
+         <!-- Acessibilidade: menu para simulação de daltonismo -->
+         <div class="accessibility-menu">
             <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade">
                 <i class="bi bi-eye-fill"></i>
             </button>
             
             <div class="accessibility-dropdown" id="accessibilityDropdown">
                 <div class="accessibility-header">
-                    <h3>Configurações de Visão</h3>
-                    <p>Ajuste as cores para diferentes tipos de daltonismo</p>
+                    <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+                    <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
                 </div>
                 
                 <div class="accessibility-options">
                     <button class="accessibility-option" data-filter="normal">
                         <span class="color-indicator normal"></span>
-                        <span>Visão Normal</span>
+                        <span data-translate="option_normal">Visão Normal</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanopia">
                         <span class="color-indicator protanopia"></span>
-                        <span>Protanopia</span>
+                        <span data-translate="option_protanopia">Protanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanomalia">
                         <span class="color-indicator protanomalia"></span>
-                        <span>Protanomalia</span>
+                        <span data-translate="option_protanomalia">Protanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranopia">
                         <span class="color-indicator deuteranopia"></span>
-                        <span>Deuteranopia</span>
+                        <span data-translate="option_deuteranopia">Deuteranopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranomalia">
                         <span class="color-indicator deuteranomalia"></span>
-                        <span>Deuteranomalia</span>
+                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanopia">
                         <span class="color-indicator tritanopia"></span>
-                        <span>Tritanopia</span>
+                        <span data-translate="option_tritanopia">Tritanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanomalia">
                         <span class="color-indicator tritanomalia"></span>
-                        <span>Tritanomalia</span>
+                        <span data-translate="option_tritanomalia">Tritanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatopsia">
                         <span class="color-indicator acromatopsia"></span>
-                        <span>Acromatopsia</span>
+                        <span data-translate="option_acromatopsia">Acromatopsia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatomalia">
                         <span class="color-indicator acromatomalia"></span>
-                        <span>Acromatomalia</span>
+                        <span data-translate="option_acromatomalia">Acromatomalia</span>
                     </button>
                 </div>
                 
                 <div class="accessibility-footer">
                     <button class="reset-btn" id="resetAccessibility">
                         <i class="bi bi-arrow-clockwise"></i>
-                        Restaurar Cores Padrão
+                       <span data-translate="reset_colors">Restaurar Cores Padrão</span>
                     </button>
                 </div>
             </div>
         </div>
+        </header>
+
+    <div class="contentcontainer">
+       
         
         <aside class="menu">
-            <h2 class="menutitulo">Menu</h2>
+            <h2 class="menutitulo" data-translate="menu_title">Menu</h2>
         <nav>
-            <a href="notificacoes.html">Notificações <span class="notificacaop">9</span></a>
-            <a href="inicial.html" class="pagatual">Página Inicial</a>
-            <a href="ocorrencia.html">Criar Ocorrência</a>
-            <a href="mapa.html">Mapa</a>
-            <a href="chat.html">Bate-papo</a>
-            <a href="perfil.html">Meu Perfil</a>
-            <a href="../../index.html">Sair</a>
+            <a href="notificacoes.html" data-translate="menu_notifications">Notificações <span class="notificacaop">9</span></a>
+            <a href="inicial.html" class="pagatual" data-translate="menu_home">Página Inicial</a>
+            <a href="ocorrencia.html" data-translate="menu_create_occurrence">Criar Ocorrência</a>
+            <a href="mapa.html" data-translate="menu_map">Mapa</a>
+            <a href="chat.html" data-translate="menu_chat">Bate-papo</a>
+            <a href="perfil.html" data-translate="menu_profile">Meu Perfil</a>
+            <a href="../../index.html" data-translate="menu_logout">Sair</a>
         </nav>
         </aside>
 
@@ -114,12 +141,12 @@
                 <div class="ocheader">
                     <div class="perfilcid">C1</div>
                     <div class="cidinfo">
-                        <strong>Cidadão 1</strong>
-                        <span>Bairro Tal</span>
+                        <strong data-translate="cid_feed1">Cidadão 1</strong>
+                        <span data-translate="cid_bairro1">Bairro Tal</span>
                     </div>
                 </div>
                 <div class="ocbody">
-                    <p class="ocdescricao">
+                    <p class="ocdescricao" data-translate="ocdesc1">
                         Sérios problemas de iluminação na Rua B, Postes com lampadas sem funcionar!
                     </p>
                     <div class="Foto">
@@ -136,12 +163,12 @@
                 <div class="ocheader">
                     <div class="perfilcid">C2</div>
                     <div class="cidinfo">
-                        <strong>Cidadão 2</strong>
-                        <span>Centro</span>
+                        <strong data-translate="cid_feed2">Cidadão 2</strong>
+                        <span data-translate="cid_bairro2">Centro</span>
                     </div>
                 </div>
                 <div class="ocbody">
-                    <p class="ocdescricao">
+                    <p class="ocdescricao"  data-translate="ocdesc2">
                         Descarte irregular de lixo na Av. C! O acúmulo está atraindo insetos.
                     </p>
                     <div class=Foto>
@@ -182,14 +209,15 @@
     </div>
 
 
-        <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+        <a  class="mensagenflut" href="chat.html" data-translate="float_button_messages">Mensagens<span class="notificacaop">2</span></a>
         <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
 
-    <footer><p>&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
+    <footer><p data-translate="footer_text">&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
     
      <script src="../../script/script.js"></script>
      <script src="../../script/accessibility.js"></script>
      <script src="../../script/alternar-tema.js"></script>
+     <script src="../../script/translate.js"></script>
    
 
         

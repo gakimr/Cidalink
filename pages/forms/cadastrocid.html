@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/accessibility.css">
     <link rel="stylesheet" href="../../css/styledark.css">
-    <title>CidaLink - Cadastro Cidadão</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title data-translate="title_citizen_register">CidaLink - Cadastro Cidadão</title>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
   <script>
@@ -25,6 +26,33 @@
             <img id="logo" src="../../img/Logo.svg" alt="CidaLink Logo">
             <p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
         </div>
+
+        
+        <div class="language-selector" id="languageSelector">
+            <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+                <i class="bi bi-translate"></i>
+                <span>Português</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="language-dropdown">
+                <div class="language-option" data-lang="pt">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Português</span>
+                </div>
+                <div class="language-option" data-lang="en">
+                    <i class="bi bi-check-lg"></i>
+                    <span>English</span>
+                </div>
+                <div class="language-option" data-lang="es">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Español</span>
+                </div>
+                <div class="language-option" data-lang="fr">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Français</span>
+                </div>
+            </div>
+        </div>
         
         <!-- Acessibilidade: menu para simulação de daltonismo -->
         <div class="accessibility-menu">
@@ -34,53 +62,53 @@
             
             <div class="accessibility-dropdown" id="accessibilityDropdown">
                 <div class="accessibility-header">
-                    <h3>Configurações de Visão</h3>
-                    <p>Ajuste as cores para diferentes tipos de daltonismo</p>
+                    <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+                    <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
                 </div>
                 
                 <div class="accessibility-options">
                     <button class="accessibility-option" data-filter="normal">
                         <span class="color-indicator normal"></span>
-                        <span>Visão Normal</span>
+                        <span data-translate="option_normal">Visão Normal</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanopia">
                         <span class="color-indicator protanopia"></span>
-                        <span>Protanopia</span>
+                        <span data-translate="option_protanopia">Protanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanomalia">
                         <span class="color-indicator protanomalia"></span>
-                        <span>Protanomalia</span>
+                        <span data-translate="option_protanomalia">Protanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranopia">
                         <span class="color-indicator deuteranopia"></span>
-                        <span>Deuteranopia</span>
+                        <span data-translate="option_deuteranopia">Deuteranopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranomalia">
                         <span class="color-indicator deuteranomalia"></span>
-                        <span>Deuteranomalia</span>
+                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanopia">
                         <span class="color-indicator tritanopia"></span>
-                        <span>Tritanopia</span>
+                        <span data-translate="option_tritanopia">Tritanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanomalia">
                         <span class="color-indicator tritanomalia"></span>
-                        <span>Tritanomalia</span>
+                        <span data-translate="option_tritanomalia">Tritanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatopsia">
                         <span class="color-indicator acromatopsia"></span>
-                        <span>Acromatopsia</span>
+                        <span data-translate="option_acromatopsia">Acromatopsia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatomalia">
                         <span class="color-indicator acromatomalia"></span>
-                        <span>Acromatomalia</span>
+                        <span data-translate="option_acromatomalia">Acromatomalia</span>
                     </button>
                 </div>
                 
                 <div class="accessibility-footer">
                     <button class="reset-btn" id="resetAccessibility">
                         <i class="bi bi-arrow-clockwise"></i>
-                        Restaurar Cores Padrão
+                       <span data-translate="reset_colors">Restaurar Cores Padrão</span>
                     </button>
                 </div>
             </div>
@@ -89,37 +117,37 @@
 
      <main class="cardcadastro">
         <div class="cardform">
-            <h2>Cadastro Cidadão</h2>
+            <h2 data-translate="h2_citizen_register">Cadastro Cidadão</h2>
             
             <form id="cadastroFormCidadao"> 
                 
                 <div class="inputgp">
-                    <label for="nome" class="obrigatorio">Nome Completo</label>
+                    <label for="nome" class="obrigatorio" data-translate="label_fullname">Nome Completo</label>
                     <input type="text" id="nome" required>
                 </div>
                 <div class="inputgp">
-                    <label for="cpf" class="obrigatorio">CPF</label>
+                    <label for="cpf" class="obrigatorio" data-translate="label_cpf">CPF</label>
                    <input type="text" id="cpf" required maxlength="14">
                 </div>
                 <div class="inputgp">
-                <label for="email" class="obrigatorio">E-mail</label>
+                <label for="email" class="obrigatorio" data-translate="label_email">E-mail</label>
                  <input type="email" id="email"  autocomplete="email" required>
                 </div>
                 <div class="inputgp">
-                    <label for="senha">Senha</label>
+                    <label for="senha"data-translate="label_password">Senha</label>
                      <input type="password" id="senha" required>
                 </div>
                 <div class="inputgp">
-                    <label for="csenha">Confirmar Senha</label>
+                    <label for="csenha" data-translate="label_confirm_password">Confirmar Senha</label>
                     <input type="password" id="csenha" required>
                 </div>
                 
-                <button type="submit" class="btnCadastro">Cadastrar</button>
+                <button type="submit" class="btnCadastro" data-translate="btn_register">Cadastrar</button>
                 
             </form> 
             <div class="ptlogin">
-                <p>Já possui uma conta?</p>
-                    <button class="btnCd" id="btn_LoginCidadao">Login</button>
+                <p data-translate="p_already_have_account">Já possui uma conta?</p>
+                    <button class="btnCd" id="btn_LoginCidadao" data-translate="btn_login">Login</button>
             </div>
         </div>
     </main>
@@ -127,12 +155,13 @@
     <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
 
      <footer>
-        <p>&copy; 2025 Cidalink. Todos os direitos reservados.</p>
+        <p data-translate="footer_text">&copy; 2025 Cidalink. Todos os direitos reservados.</p>
     </footer>
 
     <script src="../../script/script.js"></script>
     <script src="../../script/accessibility.js"></script>
     <script src="../../script/alternar-tema.js"></script>
+    <script src="../../script/translate.js"></script>
     
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
