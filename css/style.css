@@ -1980,39 +1980,3 @@ language-selector {
     }
 
 }
-.fatec-fixed-banner {
-    position: fixed; /* Torna o banner flutuante */
-    bottom: 20px; /* Distância do fundo da página */
-    left: 20px; /* Distância da lateral direita */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    display: block;
-    width: 150px; /* Largura do banner (ajuste se necessário) */
-    height: auto;
-    border-radius: 8px; /* Cantos arredondados */
-    overflow: hidden; 
-    transition: transform 0.3s ease;
-}
-
-.fatec-fixed-banner:hover {
-    transform: scale(1.05); /* Pequeno efeito de zoom no hover */
-}
-
-.fatec-fixed-banner img {
-    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
-    height: auto;
-    display: block; 
-}
-
-/* Opcional: Ajustar em telas pequenas para não atrapalhar */
-@media (max-width: 900px) {
-    .fatec-fixed-banner {
-        width: 120px;
-        right: 10px;
-        bottom: 10px;
-    }
-}
-@media (max-width: 600px) {
-    .fatec-fixed-banner {
-        width: 100px;
-    }
-}
