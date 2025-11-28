@@ -113,10 +113,12 @@ body.acromatomalia { filter: grayscale(50%); }
 /* Ajustes responsivos: em telas pequenas o menu fica estático e aparece após o logo */
 @media (max-width: 600px) {
     header .accessibility-menu {
-        position: static;
-        transform: none;
-        margin-left: auto;
-        display: inline-block;
+    right: 75px;
     }
+    
     .accessibility-dropdown { right: 8px; left: auto; min-width: 220px; }
+
+    
+
+
 }

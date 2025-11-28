@@ -1,3 +1,18 @@
+//traduzir pop ups mapa
+function getTranslation(key) {
+    // 1. Pega o idioma atual salvo no localStorage
+    const lang = localStorage.getItem('preferred-language') || 'pt';
+    
+    // 2. Acessa o objeto de traduções global (window.translations)
+    const translations = window.translations || {}; 
+
+    // 3. Retorna a tradução (ou a chave, caso não encontre)
+    if (translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+    }
+    return key; 
+}
+
 
 function cpfMask(input) {
     let value = input.value.replace(/\D/g, ""); 
@@ -99,12 +114,18 @@ if (btnEntrarAdmin) {
 
     mapMarkers.forEach(marker => {
         marker.addEventListener('click', function() {
-            const title = this.dataset.title;
-            const description = this.dataset.description;
+            // *** MUDANÇA PRINCIPAL AQUI: LENDO AS NOVAS CHAVES E TRADUZINDO ***
+            const titleKey = this.dataset.translateTitle; // Pega a chave do título
+            const descriptionKey = this.dataset.translateDescription; // Pega a chave da descrição
+            
+            // Busca o texto traduzido usando a função
+            const title = getTranslation(titleKey); 
+            const description = getTranslation(descriptionKey); 
 
             popupTitle.textContent = title;
             popupDescription.textContent = description;
 
+            // Restante da sua lógica de posicionamento
             const markerRect = this.getBoundingClientRect();
             const mapContainerRect = this.parentElement.getBoundingClientRect();
 
@@ -120,7 +141,7 @@ if (btnEntrarAdmin) {
             occurrencePopup.style.display = 'none';
         }
     });
-
+    
 
   
     const formCidadao = document.getElementById('cadastroFormCidadao');

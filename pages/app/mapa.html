@@ -34,6 +34,32 @@
             <div class="line3"></div>
         </div> 
 
+          <div class="language-selector" id="languageSelector">
+            <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+                <i class="bi bi-translate"></i>
+                <span>Português</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="language-dropdown">
+                <div class="language-option" data-lang="pt">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Português</span>
+                </div>
+                <div class="language-option" data-lang="en">
+                    <i class="bi bi-check-lg"></i>
+                    <span>English</span>
+                </div>
+                <div class="language-option" data-lang="es">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Español</span>
+                </div>
+                <div class="language-option" data-lang="fr">
+                    <i class="bi bi-check-lg"></i>
+                    <span>Français</span>
+                </div>
+            </div>
+        </div>
+
     </header>
 
  <div class="contentcontainer">
@@ -110,14 +136,14 @@
         </aside>
 
          <main class="maincontainer">
-            <h2 class="sectitulo">Mapa de Ocorrências na Cidade</h2>
+            <h2 class="sectitulo" data-translate="map_title">Mapa de Ocorrências na Cidade</h2>
 
-            <div class="mapacontainer">
-                <div class="mapamarc marcador1" data-title="Buraco na Rua A" data-description="Grande buraco próximo à praça central."></div>
-                <div class="mapamarc marcador2" data-title="Lâmpada Queimada" data-description="Poste de luz na Rua B está sem funcionar."></div>
-                <div class="mapamarc marcador3" data-title="Lixo Acumulado" data-description="Ponto de descarte irregular na Av. C."></div>
-                <div class="mapamarc marcador4" data-title="Vazamento de Água" data-description="Vazamento significativo na Rua D"></div>
-                <div class="mapamarc marcador5" data-title="Pichação" data-description="Muro de escola pichado na Rua E."></div>
+          <div class="mapacontainer">
+                <div class="mapamarc marcador1" data-translate-title="marker1_title" data-translate-description="marker1_desc"></div>
+                <div class="mapamarc marcador2" data-translate-title="marker2_title" data-translate-description="marker2_desc"></div>
+                <div class="mapamarc marcador3" data-translate-title="marker3_title" data-translate-description="marker3_desc"></div>
+                <div class="mapamarc marcador4" data-translate-title="marker4_title" data-translate-description="marker4_desc"></div>
+                <div class="mapamarc marcador5" data-translate-title="marker5_title" data-translate-description="marker5_desc"></div>
 
                 <div id="occurrencePopup" class="ocorrenciapopup">
                     <h4 id="popupTitulo"></h4>
@@ -127,11 +153,11 @@
             
             <br>
             <section class="ocorrenclegend">
-                <h3>Legenda:</h3>
+                <h3 data-translate="map_legend_title">Legenda:</h3>
                 <ul>
-                    <li><span class="legcor" style="background-color: #FF4500;"></span> Ocorrências Pendentes</li>
-                    <li><span class="legcor" style="background-color:#8BC34A ;"></span> Ocorrências Resolvidas</li>
-                    <li><span class="legcor" style="background-color: #FFC107;"></span> Ocorrências em Andamento</li>
+                    <li><span class="legcor" style="background-color: #FF4500;" ></span><span  data-translate="map_pending">Ocorrências Pendentes</span></li>
+                    <li><span class="legcor" style="background-color:#8BC34A ;"></span data-translate="map_resolved"><span>Ocorrências Resolvidas</span></li>
+                    <li><span class="legcor" style="background-color: #FFC107;"></span> <span data-translate="map_in_progress">Ocorrências em Andamento</span></li>
                 </ul>
             </section>
 

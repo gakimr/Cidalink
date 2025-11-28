@@ -7,7 +7,7 @@
      <link rel="stylesheet" href="../../css/styledark.css">
     <link rel="stylesheet" href="../../css/accessibility.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>CidaLink - Criar Ocorrência</title>
+    <title data-translate="title_create_occurrence">CidaLink - Criar Ocorrência</title>
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
 <script>
@@ -137,34 +137,34 @@
         </aside>
 
         <div class="cardFormOc">
-            <h2>Criar Nova Ocorrência</h2>
+            <h2 data-translate="h2_create_occurrence">Criar Nova Ocorrência</h2>
             <form action="#" method="POST">
                 <div class="inputgp">
-                    <label for="tipoOcorrencia">Criar Ocorrência</label>
+                    <label for="tipoOcorrencia" data-translate="label_select_occurrence_type">Criar Ocorrência</label>
                 <select id="tipoOcorrencia" name="tipoOcorrencia" required>
-                    <option value="">Selecione o tipo</option>
-                    <option value="buraco">Buraco na Rua</option>
-                    <option value="iluminacao">Iluminação Pública</option>
-                    <option value="lixo">Acúmulo de Lixo</option>
-                    <option value="saneamento">Problemas de Saneamento</option>
-                    <option value="outro">Outro</option>
+                    <option value="" data-translate="option_select_type">Selecione o tipo</option>
+                    <option value="buraco" data-translate="option_pothole">Buraco na Rua</option>
+                    <option value="iluminacao" data-translate="option_lighting">Iluminação Pública</option>
+                    <option value="lixo" data-translate="option_trash" >Acúmulo de Lixo</option>
+                    <option value="saneamento" data-translate="option_sanitation">Problemas de Saneamento</option>
+                    <option value="outro" data-translate="option_other">Outro</option>
                 </select>
 
 
                 </div>
                 <div class="inputgp">
-                    <label for="descricao">Descrição Detalhada</label>
+                    <label for="descricao" data-translate="label_detailed_description">Descrição Detalhada</label>
                     <textarea id="descricao" name="descricao" rows="4" placeholder="" required></textarea>
                 </div>
                 <div class="inputgp">
-                    <label for="localizacao">Localização (Endereço ou Ponto de Referência)</label>
+                    <label for="localizacao" data-translate="label_location">Localização (Endereço ou Ponto de Referência)</label>
                     <input type="text" id="localizacao" name="localizacao" placeholder="" required>
                 </div>
                 <div class="inputgp">
-                    <label for="anexo">Anexar Foto</label>
+                    <label for="anexo" data-translate="label_attach_photo">Anexar Foto</label>
                     <input type="file" id="anexo" name="anexo">
                 </div>
-                <button type="submit" class="btnoc">Registrar Ocorrência</button>
+                <button type="submit" class="btnoc" data-translate="btn_register_occurrence">Registrar Ocorrência</button>
             </form>
         </div>
     </div>
