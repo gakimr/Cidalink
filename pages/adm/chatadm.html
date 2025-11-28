@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../css/style.css">
        <link rel="stylesheet" href="../../css/accessibility.css">
         <link rel="stylesheet" href="../../css/styledark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>CidaLink - Bate-papos</title>
 
       <!-- Google tag (gtag.js) -->
@@ -31,90 +32,116 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div> 
+        
+        <div class="language-selector" id="languageSelector">
+        <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+            <i class="bi bi-translate"></i>
+            <span>Português</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="language-dropdown">
+            <div class="language-option" data-lang="pt">
+                <i class="bi bi-check-lg"></i>
+                <span>Português</span>
+            </div>
+            <div class="language-option" data-lang="en">
+                <i class="bi bi-check-lg"></i>
+                <span>English</span>
+            </div>
+            <div class="language-option" data-lang="es">
+                <i class="bi bi-check-lg"></i>
+                <span>Español</span>
+            </div>
+            <div class="language-option" data-lang="fr">
+                <i class="bi bi-check-lg"></i>
+                <span>Français</span>
+            </div>
+        </div>
+    </div>
         </header>
 
     <div class="contentcontainer">
           <!-- Acessibilidade: menu para simulação de daltonismo -->
         <div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
-            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade">
+            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade" data-translate="accessibility_btn_aria">
                 <i class="bi bi-eye-fill"></i>
             </button>
             
             <div class="accessibility-dropdown" id="accessibilityDropdown">
-                <div class="accessibility-header">
-                    <h3>Configurações de Visão</h3>
-                    <p>Ajuste as cores para diferentes tipos de daltonismo</p>
-                </div>
+                    <div class="accessibility-header">
+                        <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+                        <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
+                    </div>
                 
                 <div class="accessibility-options">
                     <button class="accessibility-option" data-filter="normal">
                         <span class="color-indicator normal"></span>
-                        <span>Visão Normal</span>
+                        <span data-translate="option_normal">Visão Normal</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanopia">
                         <span class="color-indicator protanopia"></span>
-                        <span>Protanopia</span>
+                        <span data-translate="option_protanopia">Protanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanomalia">
                         <span class="color-indicator protanomalia"></span>
-                        <span>Protanomalia</span>
+                        <span data-translate="option_protanomalia">Protanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranopia">
                         <span class="color-indicator deuteranopia"></span>
-                        <span>Deuteranopia</span>
+                        <span data-translate="option_deuteranopia">Deuteranopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranomalia">
                         <span class="color-indicator deuteranomalia"></span>
-                        <span>Deuteranomalia</span>
+                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanopia">
                         <span class="color-indicator tritanopia"></span>
-                        <span>Tritanopia</span>
+                        <span data-translate="option_tritanopia">Tritanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanomalia">
                         <span class="color-indicator tritanomalia"></span>
-                        <span>Tritanomalia</span>
+                        <span data-translate="option_tritanomalia">Tritanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatopsia">
                         <span class="color-indicator acromatopsia"></span>
-                        <span>Acromatopsia</span>
+                        <span data-translate="option_acromatopsia">Acromatopsia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatomalia">
                         <span class="color-indicator acromatomalia"></span>
-                        <span>Acromatomalia</span>
+                        <span data-translate="option_acromatomalia">Acromatomalia</span>
                     </button>
                 </div>
                 
                 <div class="accessibility-footer">
                     <button class="reset-btn" id="resetAccessibility">
                         <i class="bi bi-arrow-clockwise"></i>
-                        Restaurar Cores Padrão
+                        <span data-translate="reset_colors">Restaurar Cores Padrão</span>
                     </button>
                 </div>
             </div>
         </div>
         
         <aside class="menu">
-            <h2 class="menutitulo">Menu</h2>
-        <nav>
-          <a href="../adm/notificacoesadm.html" >Notificações <span class="notificacaop">9</span></a>
-            <a href="../adm/inicialadm.html">Página Inicial</a>
-            <a href="../adm/gerenciaroc.html">Gerenciar Ocorrências</a>
-            <a href="../adm/mapaadm.html">Mapa</a>
-            <a href="../adm/chatadm.html"  class="pagatual">Bate-papo</a>
-            <a href="../adm/perfiladm.html">Meu Perfil</a>
-            <a href="../../index.html">Sair</a>
-        </nav>
+                        <h2 class="menutitulo" data-translate="menu_title">Menu</h2>
+                <nav>
+                    <a href="../adm/notificacoesadm.html"><span data-translate="menu_notifications">Notificações</span> <span class="notificacaop">9</span></a>
+                        <a href="../adm/inicialadm.html"><span data-translate="menu_home">Página Inicial</span></a>
+                        <a href="../adm/gerenciaroc.html"><span data-translate="menu_gerenciar">Gerenciar Ocorrências</span></a>
+                        <a href="../adm/mapaadm.html"><span data-translate="menu_map">Mapa</span></a>
+                        <a href="../adm/chatadm.html"  class="pagatual"><span data-translate="menu_chat">Bate-papo</span></a>
+                        <a href="../adm/perfiladm.html"><span data-translate="menu_profile">Meu Perfil</span></a>
+                        <a href="../../index.html"><span data-translate="menu_logout">Sair</span></a>
+                </nav>
         </aside>
 
          <main class="containerchat">
         <section class="containercontato">
-            <h3 class="conversas">Conversas</h3>
+            <h3 class="conversas" data-translate="chat_conversations_title">Conversas</h3>
             <div class="contato">
                 <div class="fotochat">AD</div>
                 <div class="informachat">
-                <span class="nomechat">Ana Dias</span>
-                <span class="menssagem">Você:Ok, disponha!</span>
+                <span class="nomechat" data-translate="chat_name_anadias">Ana Dias</span>
+                <span class="menssagem" data-translate="chat_contact_admin_last_msg">Você:Ok, disponha!</span>
                 <span class="horariochat">10:30</span> 
                 </div>
             </div>
@@ -122,8 +149,8 @@
             <div class="contato">
                 <div class="fotochat">AM</div>
                 <div class="informachat">
-                <span class="nomechat">Ana Maria</span>
-                <span class="menssagem">Alguém sabe aonde...?</span>
+                <span class="nomechat" data-translate="chat_name_anamaria">Ana Maria</span>
+                <span class="menssagem" data-translate="chat_contact_anamaria_last_msg">Alguém sabe aonde...?</span>
                 <span class="horariochat">Ontem</span> 
                 </div>
             </div>
@@ -132,8 +159,8 @@
             <div class="contato">
                 <div class="fotochat">JP</div>
                 <div class="informachat">
-                <span class="nomechat">José Porto</span>
-                <span class="menssagem">Você: ok, obrigado!</span>
+                <span class="nomechat" data-translate="chat_name_joseporto">José Porto</span>
+                <span class="menssagem" data-translate="chat_contact_joseporto_last_msg">Você: ok, obrigado!</span>
                 <span class="horariochat">10:30</span> 
                 </div>
             </div>
@@ -146,28 +173,28 @@
         </div>
         <section class="conversaberta">
             <div class="balao1">
-                <span class="nome">Ana Dias</span>
-                <p class="menssage">Olá, Eu tenho uma dúvida</p>
+                <span class="nome" data-translate="chat_name_anadias">Ana Dias</span>
+                <p class="menssage" data-translate="chat_msg_user_doubt">Olá, Eu tenho uma dúvida</p>
                 <Span class="hora">10:00</Span>
             </div>
             <div class="balao2">
-                <span class="nomew">Você:</span>
-                <p class="menssagew">Como posso te ajudar?</p>
+                <span class="nomew" data-translate="chat_msg_user_prefix">Você:</span>
+                <p class="menssagew" data-translate="chat_msg_admin_greeting">Como posso te ajudar?</p>
                 <Span class="hora1">10:02</Span>
             </div>
             <div class="balao3">
-                <span class="nome">Ana Dias</span>
-                <p class="menssage">Era sobre minha postagem mas vi que foi atualizada, obrigada!.</p>
+                <span class="nome" data-translate="chat_name_anadias">Ana Dias</span>
+                <p class="menssage" data-translate="chat_msg_admin_response">Era sobre minha postagem mas vi que foi atualizada, obrigada!.</p>
                 <Span class="hora2">10:05</Span>
             </div>
             <div class="balao4">
-                <span class="nomew">Você:</span>
-                <p class="menssagew">Ok,disponha!</p>
+                <span class="nomew" data-translate="chat_msg_user_prefix">Você:</span>
+                <p class="menssagew" data-translate="chat_msg_user_thanks">Ok,disponha!</p>
                 <Span class="hora3">10:07</Span>
             </div>
               <div class="confirmamenssage">
-            <textarea class="digitar" autocomplete="off" placeholder="Digite sua menssagem..." required></textarea>
-            <button class="enviarmnsg">Enviar</button>
+            <textarea class="digitar" autocomplete="off" placeholder="Digite sua menssagem..." data-translate="chat_input_placeholder" required></textarea>
+            <button class="enviarmnsg" data-translate="chat_send_button">Enviar</button>
         </div>
         </section>
         </div>
@@ -175,11 +202,12 @@
 
     </div>
 <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
-    <footer><p>&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
+    <footer><p data-translate="footer_text">&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
 
-    <script src="../../script/script.js"></script>
-    <script src="../../script/accessibility.js"></script>
+    <script src="../../script/translate.js"></script>
     <script src="../../script/alternar-tema.js"></script>
+    <script src="../../script/accessibility.js"></script>
+    <script src="../../script/script.js"></script>
 
         
         <div vw class="enabled">

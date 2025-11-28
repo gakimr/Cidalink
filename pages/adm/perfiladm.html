@@ -7,6 +7,7 @@
      <link rel="stylesheet" href="../../css/accessibility.css">
     <link rel="stylesheet" href="../../css/styleadm.css">
      <link rel="stylesheet" href="../../css/styledark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Perfil do Administrador</title>
 
        <!-- Google tag (gtag.js) -->
@@ -32,101 +33,126 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div> 
+    <div class="language-selector" id="languageSelector">
+        <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+            <i class="bi bi-translate"></i>
+            <span>Português</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="language-dropdown">
+            <div class="language-option" data-lang="pt">
+                <i class="bi bi-check-lg"></i>
+                <span>Português</span>
+            </div>
+            <div class="language-option" data-lang="en">
+                <i class="bi bi-check-lg"></i>
+                <span>English</span>
+            </div>
+            <div class="language-option" data-lang="es">
+                <i class="bi bi-check-lg"></i>
+                <span>Español</span>
+            </div>
+            <div class="language-option" data-lang="fr">
+                <i class="bi bi-check-lg"></i>
+                <span>Français</span>
+            </div>
+        </div>
+    </div>
     </header>
 
      <div class="contentcontainer">
           <!-- Acessibilidade: menu para simulação de daltonismo -->
         <div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
-            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade">
+            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade" data-translate="accessibility_btn_aria">
                 <i class="bi bi-eye-fill"></i>
             </button>
             
             <div class="accessibility-dropdown" id="accessibilityDropdown">
                 <div class="accessibility-header">
-                    <h3>Configurações de Visão</h3>
-                    <p>Ajuste as cores para diferentes tipos de daltonismo</p>
+                    <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+                    <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
                 </div>
                 
                 <div class="accessibility-options">
                     <button class="accessibility-option" data-filter="normal">
                         <span class="color-indicator normal"></span>
-                        <span>Visão Normal</span>
+                        <span data-translate="option_normal">Visão Normal</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanopia">
                         <span class="color-indicator protanopia"></span>
-                        <span>Protanopia</span>
+                        <span data-translate="option_protanopia">Protanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanomalia">
                         <span class="color-indicator protanomalia"></span>
-                        <span>Protanomalia</span>
+                        <span data-translate="option_protanomalia">Protanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranopia">
                         <span class="color-indicator deuteranopia"></span>
-                        <span>Deuteranopia</span>
+                        <span data-translate="option_deuteranopia">Deuteranopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranomalia">
                         <span class="color-indicator deuteranomalia"></span>
-                        <span>Deuteranomalia</span>
+                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanopia">
                         <span class="color-indicator tritanopia"></span>
-                        <span>Tritanopia</span>
+                        <span data-translate="option_tritanopia">Tritanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanomalia">
                         <span class="color-indicator tritanomalia"></span>
-                        <span>Tritanomalia</span>
+                        <span data-translate="option_tritanomalia">Tritanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatopsia">
                         <span class="color-indicator acromatopsia"></span>
-                        <span>Acromatopsia</span>
+                        <span data-translate="option_acromatopsia">Acromatopsia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatomalia">
                         <span class="color-indicator acromatomalia"></span>
-                        <span>Acromatomalia</span>
+                        <span data-translate="option_acromatomalia">Acromatomalia</span>
                     </button>
                 </div>
                 
                 <div class="accessibility-footer">
                     <button class="reset-btn" id="resetAccessibility">
                         <i class="bi bi-arrow-clockwise"></i>
-                        Restaurar Cores Padrão
+                        <span data-translate="reset_colors">Restaurar Cores Padrão</span>
                     </button>
                 </div>
             </div>
         </div>
         
         <aside class="menu">
-            <h2 class="menutitulo">Menu</h2>
+            <h2 class="menutitulo" data-translate="menu_title">Menu</h2>
         <nav>
-           <a href="../adm/notificacoesadm.html" >Notificações <span class="notificacaop">9</span></a>
-            <a href="../adm/inicialadm.html">Página Inicial</a>
-            <a href="../adm/gerenciaroc.html">Gerenciar Ocorrências</a>
-            <a href="../adm/mapaadm.html">Mapa</a>
-            <a href="../adm/chatadm.html">Bate-papo</a>
-            <a href="../adm/perfiladm.html" class="pagatual">Meu Perfil</a>
-            <a href="../../index.html">Sair</a>
+           <a href="../adm/notificacoesadm.html"><span data-translate="menu_notifications">Notificações</span> <span class="notificacaop">9</span></a>
+            <a href="../adm/inicialadm.html"><span data-translate="menu_home">Página Inicial</span></a>
+            <a href="../adm/gerenciaroc.html"><span data-translate="menu_gerenciar">Gerenciar Ocorrências</span></a>
+            <a href="../adm/mapaadm.html"><span data-translate="menu_map">Mapa</span></a>
+            <a href="../adm/chatadm.html"><span data-translate="menu_chat">Bate-papo</span></a>
+            <a href="../adm/perfiladm.html" class="pagatual"><span data-translate="menu_profile">Meu Perfil</span></a>
+            <a href="../../index.html"><span data-translate="menu_logout">Sair</span></a>
         </nav>
         </aside>
 
     <div class="content">
 
-        <h1>Perfil do Administrador</h1>
+        <h1 data-translate="h1_profile_title">Perfil do Administrador</h1>
 
         <div class="card">
-            <button class="edit-btn">Editar</button>
+            <button class="edit-btn" data-translate="btn_edit_profile">Editar</button>
             <div class="profile-circle">AD</div>
 
-            <label>Nome Completo</label>
+            <label data-translate="label_fullname">Nome Completo</label>
             <input type="text" value="Administrador do Sistema" disabled>
 
-            <label>E-mail</label>
+            <label data-translate="label_email">E-mail</label>
             <input type="email" value="admin@cidade.com" disabled>
 
-            <label>Nível de Acesso</label>
+            <label data-translate="label_position">Nível de Acesso</label>
             <input type="text" value="Administrador Master" disabled>
         </div>
 
-        <h2>Estatísticas Gerais</h2>
+        <h2 data-translate="h2_registration_data">Estatísticas Gerais</h2>
         <div class="stats">
             <div class="stat-card">
                 <h3>Usuários Ativos</h3>
@@ -142,7 +168,7 @@
             </div>
         </div>
 
-        <h2 class="Pacoes">Ações Recentes</h2>
+        <h2 class="Pacoes" data-translate="h2_my_occurrences">Ações Recentes</h2>
 
         <div class="list-item">
             <strong>Usuário "Maria" foi bloqueado.</strong><br>
@@ -162,8 +188,11 @@
     </div>
 </div>
 <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
- <footer><p>&copy; 2025 Cidalink.</p></footer>
+ <footer><p data-translate="footer_text">&copy; 2025 Cidalink.</p></footer>
 
+ <script src="../../script/translate.js"></script>
+ <script src="../../script/alternar-tema.js"></script>
+ <script src="../../script/accessibility.js"></script>
  <script src="../../script/script.js"></script>
 
   <div vw class="enabled">

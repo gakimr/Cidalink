@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../css/styleadm.css">
        <link rel="stylesheet" href="../../css/accessibility.css">
         <link rel="stylesheet" href="../../css/styledark.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>CidaLink - Gerenciar Ocorrências</title>
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
@@ -31,152 +32,177 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div> 
+        <div class="language-selector" id="languageSelector">
+        <button class="language-btn" aria-label="Selecionar idioma" data-translate="select_language">
+            <i class="bi bi-translate"></i>
+            <span>Português</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="language-dropdown">
+            <div class="language-option" data-lang="pt">
+                <i class="bi bi-check-lg"></i>
+                <span>Português</span>
+            </div>
+            <div class="language-option" data-lang="en">
+                <i class="bi bi-check-lg"></i>
+                <span>English</span>
+            </div>
+            <div class="language-option" data-lang="es">
+                <i class="bi bi-check-lg"></i>
+                <span>Español</span>
+            </div>
+            <div class="language-option" data-lang="fr">
+                <i class="bi bi-check-lg"></i>
+                <span>Français</span>
+            </div>
+        </div>
+    </div>
         </header>
 
     <div class="contentcontainer">
             <div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
-            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade">
+            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade" data-translate="accessibility_btn_aria">
                 <i class="bi bi-eye-fill"></i>
             </button>
             
             <div class="accessibility-dropdown" id="accessibilityDropdown">
                 <div class="accessibility-header">
-                    <h3>Configurações de Visão</h3>
-                    <p>Ajuste as cores para diferentes tipos de daltonismo</p>
+                    <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+                    <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
                 </div>
                 
                 <div class="accessibility-options">
                     <button class="accessibility-option" data-filter="normal">
                         <span class="color-indicator normal"></span>
-                        <span>Visão Normal</span>
+                        <span data-translate="option_normal">Visão Normal</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanopia">
                         <span class="color-indicator protanopia"></span>
-                        <span>Protanopia</span>
+                        <span data-translate="option_protanopia">Protanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="protanomalia">
                         <span class="color-indicator protanomalia"></span>
-                        <span>Protanomalia</span>
+                        <span data-translate="option_protanomalia">Protanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranopia">
                         <span class="color-indicator deuteranopia"></span>
-                        <span>Deuteranopia</span>
+                        <span data-translate="option_deuteranopia">Deuteranopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="deuteranomalia">
                         <span class="color-indicator deuteranomalia"></span>
-                        <span>Deuteranomalia</span>
+                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanopia">
                         <span class="color-indicator tritanopia"></span>
-                        <span>Tritanopia</span>
+                        <span data-translate="option_tritanopia">Tritanopia</span>
                     </button>
                     <button class="accessibility-option" data-filter="tritanomalia">
                         <span class="color-indicator tritanomalia"></span>
-                        <span>Tritanomalia</span>
+                        <span data-translate="option_tritanomalia">Tritanomalia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatopsia">
                         <span class="color-indicator acromatopsia"></span>
-                        <span>Acromatopsia</span>
+                        <span data-translate="option_acromatopsia">Acromatopsia</span>
                     </button>
                     <button class="accessibility-option" data-filter="acromatomalia">
                         <span class="color-indicator acromatomalia"></span>
-                        <span>Acromatomalia</span>
+                        <span data-translate="option_acromatomalia">Acromatomalia</span>
                     </button>
                 </div>
                 
                 <div class="accessibility-footer">
                     <button class="reset-btn" id="resetAccessibility">
                         <i class="bi bi-arrow-clockwise"></i>
-                        Restaurar Cores Padrão
+                        <span data-translate="reset_colors">Restaurar Cores Padrão</span>
                     </button>
                 </div>
             </div>
         </div>
         
         <aside class="menu">
-            <h2 class="menutitulo">Menu</h2>
+            <h2 class="menutitulo" data-translate="menu_title">Menu</h2>
         <nav>
-            <a href="../adm/notificacoesadm.html" >Notificações <span class="notificacaop">9</span></a>
-            <a href="../adm/inicialadm.html">Página Inicial</a>
-            <a href="../adm/gerenciaroc.html"  class="pagatual">Gerenciar Ocorrências</a>
-            <a href="../adm/mapaadm.html">Mapa</a>
-            <a href="../adm/chatadm.html">Bate-papo</a>
-            <a href="../adm/perfiladm.html">Meu Perfil</a>
-            <a href="../../index.html">Sair</a>
+            <a href="../adm/notificacoesadm.html"><span data-translate="menu_notifications">Notificações</span> <span class="notificacaop">9</span></a>
+            <a href="../adm/inicialadm.html"><span data-translate="menu_home">Página Inicial</span></a>
+            <a href="../adm/gerenciaroc.html"  class="pagatual"><span data-translate="menu_gerenciar">Gerenciar Ocorrências</span></a>
+            <a href="../adm/mapaadm.html"><span data-translate="menu_map">Mapa</span></a>
+            <a href="../adm/chatadm.html"><span data-translate="menu_chat">Bate-papo</span></a>
+            <a href="../adm/perfiladm.html"><span data-translate="menu_profile">Meu Perfil</span></a>
+            <a href="../../index.html"><span data-translate="menu_logout">Sair</span></a>
         </nav>
         </aside>
 
         <main class="maincontainer">
-            <h1 class="titulopagina">Gerenciamento de Ocorrências</h1>
+            <h1 class="titulopagina" data-translate="manage_occurrences_title">Gerenciamento de Ocorrências</h1>
             
             <section class="stats-cards">
                 <div class="stat-card pendente">
-                    <h3>Pendentes</h3>
+                    <h3 data-translate="stats_pending">Pendentes</h3>
                     <p>32</p>
                 </div>
                 <div class="stat-card em-andamento">
-                    <h3>Em Andamento</h3>
+                    <h3 data-translate="stats_in_progress">Em Andamento</h3>
                     <p>15</p>
                 </div>
                 <div class="stat-card resolvida">
-                    <h3>Resolvidas (Hoje)</h3>
+                    <h3 data-translate="stats_resolved">Resolvidas (Hoje)</h3>
                     <p>5</p>
                 </div>
             </section>
 
             <section class="filtros">
-                <input type="text" placeholder="Buscar por ID, Cidadão ou Bairro..." class="inputbusca">
+                <input type="text" placeholder="Buscar por ID, Cidadão ou Bairro..." class="inputbusca" data-translate-placeholder="filters_search_placeholder">
                 <select>
-                    <option value="">Status: Todos</option>
-                    <option value="pendente">Pendente</option>
-                    <option value="andamento">Em Andamento</option>
-                    <option value="resolvida">Resolvida</option>
+                    <option value="" data-translate="filter_status_all">Status: Todos</option>
+                    <option value="pendente" data-translate="filter_status_pending">Pendente</option>
+                    <option value="andamento" data-translate="filter_status_in_progress">Em Andamento</option>
+                    <option value="resolvida" data-translate="filter_status_resolved">Resolvida</option>
                 </select>
                 <select>
-                    <option value="">Prioridade: Todas</option>
-                    <option value="alta">Alta</option>
-                    <option value="media">Média</option>
-                    <option value="baixa">Baixa</option>
+                    <option value="" data-translate="filter_priority_all">Prioridade: Todas</option>
+                    <option value="alta" data-translate="priority_high">Alta</option>
+                    <option value="media" data-translate="priority_medium">Média</option>
+                    <option value="baixa" data-translate="priority_low">Baixa</option>
                 </select>
-                <button class="btnoc">Aplicar Filtros</button>
+                <button class="btnoc" data-translate="apply_filters_btn">Aplicar Filtros</button>
             </section>
 
             <section class="tabela-container">
                 <table class="tabela-ocorrencias">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Descrição (Resumo)</th>
-                            <th>Status</th>
-                            <th>Prioridade</th>
-                            <th>Bairro</th>
-                            <th>Ação</th>
+                            <th data-translate="table_th_id">ID</th>
+                            <th data-translate="table_th_description">Descrição (Resumo)</th>
+                            <th data-translate="table_th_status">Status</th>
+                            <th data-translate="table_th_priority">Prioridade</th>
+                            <th data-translate="table_th_neighborhood">Bairro</th>
+                            <th data-translate="table_th_action">Ação</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr data-status="pendente">
                             <td>#00101</td>
-                            <td>Iluminação falha na Rua B.</td>
-                            <td class="status-pendente">Pendente</td>
-                            <td class="prioridade-alta">Alta</td>
-                            <td>Bairro Tal</td>
-                            <td><button class="btnadmin-small">Detalhes</button></td>
+                            <td data-translate="ocdesc1">Iluminação falha na Rua B.</td>
+                            <td class="status-pendente" data-translate="status_pending_label">Pendente</td>
+                            <td class="prioridade-alta" data-translate="priority_high">Alta</td>
+                            <td data-translate="cid_bairro1">Bairro Tal</td>
+                            <td><button class="btnadmin-small" data-translate="details_button">Detalhes</button></td>
                         </tr>
                         <tr data-status="andamento">
                             <td>#00095</td>
-                            <td>Descarte irregular de lixo na Av. C.</td>
-                            <td class="status-andamento">Em Andamento</td>
-                            <td class="prioridade-media">Média</td>
-                            <td>Centro</td>
-                            <td><button class="btnadmin-small">Detalhes</button></td>
+                            <td data-translate="ocdesc2">Descarte irregular de lixo na Av. C.</td>
+                            <td class="status-andamento" data-translate="status_in_progress_label">Em Andamento</td>
+                            <td class="prioridade-media" data-translate="priority_medium">Média</td>
+                            <td data-translate="cid_bairro2">Centro</td>
+                            <td><button class="btnadmin-small" data-translate="details_button">Detalhes</button></td>
                         </tr>
                         <tr data-status="resolvida">
                             <td>#00088</td>
-                            <td>Buraco na rodovia...</td>
-                            <td class="status-resolvida">Resolvida</td>
-                            <td class="prioridade-baixa">Baixa</td>
-                            <td>Avenida Principal</td>
-                            <td><button class="btnadmin-small">Detalhes</button></td>
+                            <td data-translate="ocdesc3">Buraco na rodovia...</td>
+                            <td class="status-resolvida" data-translate="status_resolved_label">Resolvida</td>
+                            <td class="prioridade-baixa" data-translate="priority_low">Baixa</td>
+                            <td data-translate="cid_bairro3">Avenida Principal</td>
+                            <td><button class="btnadmin-small" data-translate="details_button">Detalhes</button></td>
                         </tr>
                         </tbody>
                 </table>
@@ -186,11 +212,12 @@
 
         <a  class="mensagenflut" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
 <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
-    <footer><p>&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
+    <footer><p data-translate="footer_text">&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
     
-     <script src="../../script/script.js"></script>
-     <script src="../../script/accessibility.js"></script>
-     <script src="../../script/alternar-tema.js"></script>
+    <script src="../../script/translate.js"></script>
+    <script src="../../script/alternar-tema.js"></script>
+    <script src="../../script/accessibility.js"></script>
+    <script src="../../script/script.js"></script>
    
 
         
