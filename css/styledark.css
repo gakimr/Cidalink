@@ -1,6 +1,6 @@
 
 body.modo-escuro {
-    background-color: #2c2c2c; /* Cinza escuro agradável para o body */
+    background-color: #2c2c2c;
     color: #e0e0e0;
 }
 
@@ -95,7 +95,7 @@ body.modo-escuro .conversas {
 }
 
 body.modo-escuro footer {
-    background-color: #1b5e20; /* Verde escuro mais agradável (Material Design) */
+    background-color: #1b5e20; 
     color: #e0e0e0;
 }
 
@@ -130,7 +130,7 @@ body.modo-escuro #botao-tema {
     color: #000;
 }
 
-/* Modo Escuro - Adições para header e footer em verde escuro */
+
 body.modo-escuro header {
     background-color: #1b5e20; 
 }

@@ -1,10 +1,6 @@
-/* language.js */
-
-// ATENÇÃO: O objeto translations é declarado globalmente (window.translations)
-// para ser acessível em outros scripts (como script.js)
 window.translations = {
     'pt': {
-        'banner_h1': 'Cidalink: A cidadania ativa começa por você.',
+        'banner_h1': 'Sua voz tem poder. Use!',
         'banner_p': 'Reporte, acompanhe e resolva problemas urbanos. Dê o primeiro passo.',
         'btn_citizen': 'Acessar Cidadão',
         'btn_admin': 'Acessar Administrador',
@@ -18,7 +14,7 @@ window.translations = {
         'credibility_h2': 'Transparência Que Gera Ação, Não Atraso.',
         'credibility_p': 'O CidaLink não é apenas um livro de reclamações. É uma ferramenta de gestão. Garantimos que sua solicitação chegue, seja respondida e que o progresso seja visível para toda a comunidade.',
         'credibility_cta': 'Começe a Transformar Agora!',
-        'footer_text': '2025 Cidalink. Todos os direitos reservados.',
+        'footer_text': 'Cidalink. Todos os direitos reservados.',
         'select_language': 'Selecionar idioma',
         //Cadastros e Acessibilidade
         'title_citizen_register': 'CidaLink - Cadastro Cidadão',
@@ -199,7 +195,7 @@ window.translations = {
 
     },
     'en': {
-        'banner_h1': 'CidaLink: Active citizenship starts with you.',
+        'banner_h1':'Your voice has power. Use it!',
         'banner_p': 'Report, track, and solve urban issues. Take the first step.',
         'btn_citizen': 'Access Citizen',
         'btn_admin': 'Access Administrator',
@@ -213,7 +209,7 @@ window.translations = {
         'credibility_h2': 'Transparency That Drives Action, Not Delay.',
         'credibility_p': 'CidaLink is not just a complaint book. It is a management tool. We ensure your request arrives, is answered, and that progress is visible to the entire community.',
         'credibility_cta': 'Start Transforming Now!',
-        'footer_text': '2025 Cidalink. All rights reserved.',
+        'footer_text': 'Cidalink. All rights reserved.',
         'select_language': 'Select language',
         // Cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Citizen Registration',
@@ -391,7 +387,7 @@ window.translations = {
 
     },
     'es': {
-        'banner_h1': 'CidaLink: La ciudadanía activa comienza contigo.',
+        'banner_h1': 'Tu voz tiene poder. ¡Úsala!',
         'banner_p': 'Reporta, rastrea y resuelve problemas urbanos. Da el primer paso.',
         'btn_citizen': 'Acceder Ciudadano',
         'btn_admin': 'Acceder Administrador',
@@ -405,7 +401,7 @@ window.translations = {
         'credibility_h2': 'Transparencia Que Genera Acción, No Demora.',
         'credibility_p': 'CidaLink no es solo un libro de quejas. Es una herramienta de gestión. Garantizamos que tu solicitud llegue, sea respondida y que el progreso sea visible para toda la comunidad.',
         'credibility_cta': '¡Empieza a Transformar Ahora!',
-        'footer_text': '2025 Cidalink. Todos los derechos reservados.',
+        'footer_text': 'Cidalink. Todos los derechos reservados.',
         'select_language': 'Seleccionar idioma',
         //Cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Registro Ciudadano',
@@ -582,7 +578,7 @@ window.translations = {
 
     },
     'fr': {
-        'banner_h1': 'CidaLink: La citoyenneté active commence avec vous.',
+        'banner_h1': 'Ta voix a du pouvoir. Utilise-la !',
         'banner_p': 'Signalez, suivez et résolvez les problèmes urbains. Faites le premier pas.',
         'btn_citizen': 'Accéder Citoyen',
         'btn_admin': 'Accéder Administrateur',
@@ -596,7 +592,7 @@ window.translations = {
         'credibility_h2': 'Transparência Qui Génère de l\'Action, Pas de Retard.',
         'credibility_p': 'CidaLink n\'est pas seulement un livre de plaintes. C\'est un outil de gestion. Nous nous assurons que votre demande arrive, qu\'elle soit traitée et que les progrès soient visibles pour toute la communauté.',
         'credibility_cta': 'Commencez à Transformer Maintenant !',
-        'footer_text': '2025 Cidalink. Tous droits réservés.',
+        'footer_text': 'Cidalink. Tous droits réservés.',
         'select_language': 'Sélectionner la langue',
         //cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Inscription Citoyen',
@@ -776,10 +772,10 @@ window.translations = {
 };
 
 function changeLanguage(lang) {
-    // O objeto de traduções agora é global (window.translations)
+    
     const translations = window.translations;
     
-    // Aplicar traduções
+   
     if (translations[lang]) {
         const translation = translations[lang];
         
@@ -801,17 +797,15 @@ function changeLanguage(lang) {
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    /* =================================================
-        Bloco do Seletor de Idioma (Início)
-        =================================================
-    */
+ 
+
     const languageSelector = document.getElementById('languageSelector');
     if (languageSelector) { 
         const languageBtn = languageSelector.querySelector('.language-btn');
         const languageOptions = languageSelector.querySelectorAll('.language-option');
         const currentLangText = languageBtn.querySelector('span');
         
-        // Abrir/fechar dropdown
+      
         languageBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             languageSelector.classList.toggle('active');
@@ -822,45 +816,40 @@ document.addEventListener('DOMContentLoaded', function() {
             option.addEventListener('click', function() {
                 const lang = this.getAttribute('data-lang');
                 
-                // Remover classe active de todas as opções
                 languageOptions.forEach(opt => opt.classList.remove('active'));
-                // Adicionar classe active à opção selecionada
+                
                 this.classList.add('active');
 
-                // Atualizar texto do botão
+               
                 const langText = this.querySelector('span').textContent;
                 currentLangText.textContent = langText;
                 
-                // Fechar dropdown
+               
                 languageSelector.classList.remove('active');
                 
-                // Salvar preferência no localStorage
                 localStorage.setItem('preferred-language', lang);
                 
-                // Mudar o conteúdo do site (A função changeLanguage é global)
                 changeLanguage(lang);
             });
         });
 
-        // Fechar dropdown ao clicar fora
+       
         document.addEventListener('click', function() {
             languageSelector.classList.remove('active');
         });
 
-        // Prevenir fechamento ao clicar dentro do dropdown
+
         languageSelector.querySelector('.language-dropdown').addEventListener('click', function(e) {
             e.stopPropagation();
         });
 
-        // Carregar idioma salvo (Executa a lógica de tradução na inicialização)
         const savedLang = localStorage.getItem('preferred-language') || 'pt';
         const savedOption = languageSelector.querySelector(`[data-lang="${savedLang}"]`);
         
-        // Simular um clique na opção salva para aplicar a linguagem
+    
         if (savedOption) {
             savedOption.click(); 
         } else {
-            // Garante que o 'pt' (padrão) seja aplicado e marcado, se nada for salvo.
             changeLanguage('pt');
             languageSelector.querySelector(`[data-lang="pt"]`).classList.add('active'); 
         }
