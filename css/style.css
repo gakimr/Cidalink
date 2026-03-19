@@ -42,7 +42,9 @@ header{
     background-color: var(--verdeclaro);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
    
    
 }
@@ -52,6 +54,9 @@ header .logocontainer{
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header img{
@@ -1347,69 +1352,7 @@ color: var(--verdecida);
     background-color: #ffcccb;
 }
 
-/* =========== SELETOR DE IDIOMA =========== */
 
-/* Ajuste o header para permitir a colocação do seletor nas laterais */
-header {
-    /* Mantém a altura e cor originais */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Permite elementos nos cantos */
-    padding: 0 15px; /* Adiciona espaçamento nas laterais */
-    position: relative; 
-}
-
-/* Centraliza o logo dentro do novo fluxo do header */
-header .logocontainer {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.language-selector {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    z-index: 100; /* Garante que o dropdown fique por cima de outros elementos */
-}
-
-/* ================ BOTÃO SELETOR ================ */
-.language-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.language-btn:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.language-btn i:first-child {
-    color: var(--azullink); /* Icone de tradução */
-    font-size: 1.1rem;
-}
-
-.language-btn i:last-child {
-    color: #666;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.language-selector.active .language-btn i:last-child {
-    transform: rotate(180deg);
-}
 
 /* ================ DROPDOWN ================ */
 .language-dropdown {

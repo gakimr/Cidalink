@@ -96,7 +96,7 @@ header .accessibility-menu {
 .reset-btn { display:flex; gap:8px; align-items:center; justify-content:center; width:100%; padding:10px; background:#f8f9fa; border:1px solid #ddd; border-radius:6px; cursor:pointer; }
 .reset-btn:hover { background:#e9ecef; border-color:#2196F3; }
 
-/* Filtros CSS para simular daltonismo - usa os filtros SVG inseridos no HTML */
+/* Filtros CSS para simular daltonismo */
 body.protanopia { filter: url('#protanopia'); }
 body.protanomalia { filter: url('#protanomalia'); }
 body.deuteranopia { filter: url('#deuteranopia'); }
@@ -108,9 +108,55 @@ body.acromatomalia { filter: grayscale(50%); }
 
 .svg-filters { position: absolute; width: 0; height: 0; overflow: hidden; }
 
+/* Seletor de idiomas */
+
+.language-selector {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 100; 
+}
+
+/* Botão Seletor */
+.language-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.language-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.language-btn i:first-child {
+    color: var(--azullink); 
+    font-size: 1.1rem;
+}
+
+.language-btn i:last-child {
+    color: #666;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.language-selector.active .language-btn i:last-child {
+    transform: rotate(180deg);
+}
+
 @keyframes slideDown { from { transform: translateY(-6px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-/* Ajustes responsivos: em telas pequenas o menu fica estático e aparece após o logo */
 @media (max-width: 600px) {
     header .accessibility-menu {
     right: 75px;
