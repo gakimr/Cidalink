@@ -1,18 +1,15 @@
-//traduzir pop ups mapa
+
 function getTranslation(key) {
-    // 1. Pega o idioma atual salvo no localStorage
+   
     const lang = localStorage.getItem('preferred-language') || 'pt';
     
-    // 2. Acessa o objeto de traduções global (window.translations)
     const translations = window.translations || {}; 
 
-    // 3. Retorna a tradução (ou a chave, caso não encontre)
     if (translations[lang] && translations[lang][key]) {
         return translations[lang][key];
     }
     return key; 
 }
-
 
 function cpfMask(input) {
     let value = input.value.replace(/\D/g, ""); 
@@ -21,7 +18,6 @@ function cpfMask(input) {
     value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
     input.value = value;
 }
-
 
 function handleFormValidation(event, form) {
     event.preventDefault(); 
@@ -53,7 +49,6 @@ function handleFormValidation(event, form) {
         }
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -106,43 +101,7 @@ if (btnEntrarAdmin) {
 }
 
 
-    /*Mapa */
-    const mapMarkers = document.querySelectorAll('.mapamarc');
-    const occurrencePopup = document.getElementById('occurrencePopup');
-    const popupTitle = document.getElementById('popupTitulo');
-    const popupDescription = document.getElementById('popupDescricao');
-
-    mapMarkers.forEach(marker => {
-        marker.addEventListener('click', function() {
-            // *** MUDANÇA PRINCIPAL AQUI: LENDO AS NOVAS CHAVES E TRADUZINDO ***
-            const titleKey = this.dataset.translateTitle; // Pega a chave do título
-            const descriptionKey = this.dataset.translateDescription; // Pega a chave da descrição
-            
-            // Busca o texto traduzido usando a função
-            const title = getTranslation(titleKey); 
-            const description = getTranslation(descriptionKey); 
-
-            popupTitle.textContent = title;
-            popupDescription.textContent = description;
-
-            // Restante da sua lógica de posicionamento
-            const markerRect = this.getBoundingClientRect();
-            const mapContainerRect = this.parentElement.getBoundingClientRect();
-
-            occurrencePopup.style.left = `${markerRect.left - mapContainerRect.left + markerRect.width + 10}px`;
-            occurrencePopup.style.top = `${markerRect.top - mapContainerRect.top - (occurrencePopup.offsetHeight / 2) + (markerRect.height / 2)}px`;
-            
-            occurrencePopup.style.display = 'block';
-        });
-    });
-
-    document.addEventListener('click', function(event) {
-        if (occurrencePopup && !occurrencePopup.contains(event.target) && !event.target.classList.contains('mapamarc')) {
-            occurrencePopup.style.display = 'none';
-        }
-    });
-    
-
+   
   
     const formCidadao = document.getElementById('cadastroFormCidadao');
     const formAdministrador = document.getElementById('cadastroFormAdministrador');
@@ -191,7 +150,7 @@ if (btnEntrarAdmin) {
         });
     }
 
-    /*Botão Login Cidadão (volta do Cadastro)*/
+    /*Botão Login Cidadão */
     const botaoLoginCidadao = document.getElementById('btn_LoginCidadao');
     if (botaoLoginCidadao) {
         botaoLoginCidadao.addEventListener('click', function() {
@@ -199,7 +158,7 @@ if (btnEntrarAdmin) {
         });
     }
 
-    /*Botão Login Administrador (volta do Cadastro)*/
+    /*Botão Login Administrador */
     const botaoLoginAdministrador = document.getElementById('btn_LoginAdministrador');
     if (botaoLoginAdministrador) {
         botaoLoginAdministrador.addEventListener('click', function() {
@@ -222,4 +181,10 @@ if (btnEntrarAdmin) {
             });
         });
 
-        document.querySelector('.btnstatus.status-pendente').classList.add('selected');
+        
+    const data = new Date();
+    const anoatual = data.getFullYear();
+    const Spano = document.querySelector('.yearspan');
+    Spano.textContent = anoatual;
+
+

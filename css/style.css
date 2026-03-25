@@ -42,7 +42,9 @@ header{
     background-color: var(--verdeclaro);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
    
    
 }
@@ -52,6 +54,9 @@ header .logocontainer{
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header img{
@@ -677,71 +682,30 @@ color: var(--verdecida);
     width: 100%;
 }
 
-.mapamarc {
-    position: absolute;
-    width: 1.875rem;
-    height: 1.875rem;
-    background-color: var(--vermelho);
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    cursor: pointer;
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
 
-.marcador1 {
-    top: 35%;
-    left: 30%;
-}
-.marcador2 {
-    top: 50%;
-    left: 40%;
-    background-color: var(--verdeh);
-}
-.marcador3 {
-    top: 70%;
-    left: 25%;
-}
-.marcador4 {
-    top: 40%;
-    left: 65%;
-    background-color: var(--amarelo);
-}
-.marcador5 {
-    top: 40%;
+.custom-pin {
+    width: 25px;
+    height: 25px;
+    border-radius: 50% 50% 50% 0;
+    position: absolute;
+    transform: rotate(-45deg);
     left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
-.ocorrenciapopup {
+.custom-pin::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    margin: 6px 0 0 6px;
+    background: #ffffff;
     position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.625rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-    z-index: 20;
-    min-width: 12.5rem;
-    display: none;
-    text-align: left;
+    border-radius: 50%;
 }
 
-.ocorrenciapopup h4 {
-    margin-top: 0;
-    margin-bottom: 0.3125rem;
-    color: #0056b3;
-    font-size: 1.1rem;
-}
-
-.ocorrenciapopup p {
-    margin-bottom: 0;
-    font-size: 0.9rem;
-    color: #555;
-}
 
 .ocorrenclegend {
     margin-top: 1.25rem;
@@ -1234,69 +1198,7 @@ color: var(--verdecida);
     background-color: #ffcccb;
 }
 
-/* =========== SELETOR DE IDIOMA =========== */
 
-/* Ajuste o header para permitir a colocação do seletor nas laterais */
-header {
-    /* Mantém a altura e cor originais */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Permite elementos nos cantos */
-    padding: 0 15px; /* Adiciona espaçamento nas laterais */
-    position: relative; 
-}
-
-/* Centraliza o logo dentro do novo fluxo do header */
-header .logocontainer {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.language-selector {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    z-index: 100; /* Garante que o dropdown fique por cima de outros elementos */
-}
-
-/* ================ BOTÃO SELETOR ================ */
-.language-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.language-btn:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.language-btn i:first-child {
-    color: var(--azullink); /* Icone de tradução */
-    font-size: 1.1rem;
-}
-
-.language-btn i:last-child {
-    color: #666;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.language-selector.active .language-btn i:last-child {
-    transform: rotate(180deg);
-}
 
 /* ================ DROPDOWN ================ */
 .language-dropdown {
@@ -1979,4 +1881,39 @@ language-selector {
         justify-content: center;
     }
 
+}
+.fatec-fixed-banner {
+    position: relative; /* Torna o banner flutuante */
+    bottom: 20px; /* Distância do fundo da página */
+    left: 20px; /* Distância da lateral direita */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: block;
+    width: 5rem; /* Largura do banner (ajuste se necessário) */
+    height: 4rem;
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+}
+
+.fatec-fixed-banner:hover {
+    transform: scale(1.05); /* Pequeno efeito de zoom no hover */
+}
+
+.fatec-fixed-banner img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto;
+    display: block; 
+}
+
+/* Opcional: Ajustar em telas pequenas para não atrapalhar */
+@media (max-width: 900px) {
+    .fatec-fixed-banner {
+        width: 120px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .fatec-fixed-banner {
+        width: 100px;
+    }
 }
