@@ -4,7 +4,7 @@
 // para ser acessível em outros scripts (como script.js)
 window.translations = {
     'pt': {
-        'banner_h1': 'Cidalink: A cidadania ativa começa por você.',
+        'banner_h1': 'Sua voz tem poder. Use!',
         'banner_p': 'Reporte, acompanhe e resolva problemas urbanos. Dê o primeiro passo.',
         'btn_citizen': 'Acessar Cidadão',
         'btn_admin': 'Acessar Administrador',
@@ -199,7 +199,7 @@ window.translations = {
 
     },
     'en': {
-        'banner_h1': 'CidaLink: Active citizenship starts with you.',
+        'banner_h1':'Your voice has power. Use it!',
         'banner_p': 'Report, track, and solve urban issues. Take the first step.',
         'btn_citizen': 'Access Citizen',
         'btn_admin': 'Access Administrator',
@@ -391,7 +391,7 @@ window.translations = {
 
     },
     'es': {
-        'banner_h1': 'CidaLink: La ciudadanía activa comienza contigo.',
+        'banner_h1': 'Tu voz tiene poder. ¡Úsala!',
         'banner_p': 'Reporta, rastrea y resuelve problemas urbanos. Da el primer paso.',
         'btn_citizen': 'Acceder Ciudadano',
         'btn_admin': 'Acceder Administrador',
@@ -582,7 +582,7 @@ window.translations = {
 
     },
     'fr': {
-        'banner_h1': 'CidaLink: La citoyenneté active commence avec vous.',
+        'banner_h1': 'Ta voix a du pouvoir. Utilise-la !',
         'banner_p': 'Signalez, suivez et résolvez les problèmes urbains. Faites le premier pas.',
         'btn_citizen': 'Accéder Citoyen',
         'btn_admin': 'Accéder Administrateur',
