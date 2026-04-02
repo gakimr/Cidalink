@@ -99,10 +99,7 @@ if (btnEntrarAdmin) {
         window.location.href = '../adm/inicialadm.html'; 
     });
 }
-
-
-   
-  
+    
     const formCidadao = document.getElementById('cadastroFormCidadao');
     const formAdministrador = document.getElementById('cadastroFormAdministrador');
     

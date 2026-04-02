@@ -77,39 +77,3 @@ document.addEventListener('DOMContentLoaded', function() {
         if (normalOption) { normalOption.classList.add('active'); }
     }
 });
-
-
-
-const mainBtn = document.getElementById('mainAccessibilityBtn');
-const dropdown = document.getElementById('mainAccessibilityDropdown');
-const darkModeBtn = document.getElementById('toggleDarkMode');
-
-// abrir/fechar menu
-mainBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('active');
-});
-
-// fechar ao clicar fora
-document.addEventListener('click', () => {
-    dropdown.classList.remove('active');
-});
-
-dropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
-
-// MODO ESCURO
-darkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('modo-escuro');
-
-    localStorage.setItem(
-        'modoEscuro',
-        document.body.classList.contains('modo-escuro')
-    );
-});
-
-// carregar modo escuro salvo
-if (localStorage.getItem('modoEscuro') === 'true') {
-    document.body.classList.add('modo-escuro');
-}
