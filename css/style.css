@@ -1805,7 +1805,7 @@ language-selector {
         background-color: white; 
         transform: translateX(100%); 
         transition: transform 0.3s ease-in;
-        z-index: 50;
+        z-index: 1100;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     }
     

@@ -61,65 +61,45 @@
             </div>
         </div>
     </div>
+        <!-- Acessibilidade: menu para simulação de daltonismo -->
+        <div class="accessibility-menu">
+        <button class="accessibility-btn" id="mainAccessibilityBtn">
+        <i class="bi bi-universal-access"></i>
+    </button>
+
+        <div class="accessibility-dropdown" id="mainAccessibilityDropdown">
+            
+            <div class="accessibility-header">
+                <h3>Configurações</h3>
+                <p>Ajustes de acessibilidade</p>
+            </div>
+
+            <div class="accessibility-options">
+
+                <!-- MODO ESCURO -->
+                <button class="accessibility-option" id="toggleDarkMode">
+                    🌙 Modo Escuro
+                </button>
+
+                <hr>
+
+                <!-- DALTONISMO -->
+                <button class="accessibility-option" data-filter="protanopia">Protanopia</button>
+                <button class="accessibility-option" data-filter="deuteranopia">Deuteranopia</button>
+                <button class="accessibility-option" data-filter="tritanopia">Tritanopia</button>
+
+            </div>
+
+            <div class="accessibility-footer">
+                <button class="reset-btn" id="resetAccessibility">Resetar</button>
+            </div>
+
+        </div>
+    </div>
         </header>
 
     <div class="contentcontainer">
-          <!-- Acessibilidade: menu para simulação de daltonismo -->
-        <div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
-            <button class="accessibility-btn" id="accessibilityBtn" aria-label="Configurações de acessibilidade" data-translate="accessibility_btn_aria">
-                <i class="bi bi-eye-fill"></i>
-            </button>
-            
-            <div class="accessibility-dropdown" id="accessibilityDropdown">
-                    <div class="accessibility-header">
-                        <h3 data-translate="accessibility_h3">Configurações de Visão</h3>
-                        <p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
-                    </div>
-                
-                <div class="accessibility-options">
-                 
-                    <button class="accessibility-option" data-filter="protanopia">
-                        <span class="color-indicator protanopia"></span>
-                        <span data-translate="option_protanopia">Protanopia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="protanomalia">
-                        <span class="color-indicator protanomalia"></span>
-                        <span data-translate="option_protanomalia">Protanomalia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="deuteranopia">
-                        <span class="color-indicator deuteranopia"></span>
-                        <span data-translate="option_deuteranopia">Deuteranopia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="deuteranomalia">
-                        <span class="color-indicator deuteranomalia"></span>
-                        <span data-translate="option_deuteranomalia">Deuteranomalia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="tritanopia">
-                        <span class="color-indicator tritanopia"></span>
-                        <span data-translate="option_tritanopia">Tritanopia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="tritanomalia">
-                        <span class="color-indicator tritanomalia"></span>
-                        <span data-translate="option_tritanomalia">Tritanomalia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="acromatopsia">
-                        <span class="color-indicator acromatopsia"></span>
-                        <span data-translate="option_acromatopsia">Acromatopsia</span>
-                    </button>
-                    <button class="accessibility-option" data-filter="acromatomalia">
-                        <span class="color-indicator acromatomalia"></span>
-                        <span data-translate="option_acromatomalia">Acromatomalia</span>
-                    </button>
-                </div>
-                
-                <div class="accessibility-footer">
-                    <button class="reset-btn" id="resetAccessibility">
-                        <i class="bi bi-arrow-clockwise"></i>
-                        <span data-translate="reset_colors">Restaurar Cores Padrão</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+         
         
         <aside class="menu">
                         <h2 class="menutitulo" data-translate="menu_title">Menu</h2>
@@ -201,7 +181,7 @@
     </main>
 
     </div>
-<button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
+
     <footer><p data-translate="footer_text">&copy; 2025 Cidalink. Todos os direitos reservados.</p></footer>
 
     <script src="../../script/translate.js"></script>
