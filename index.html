@@ -119,7 +119,7 @@
 
     <main class="banner">
          <div class="bannercontainer">
-            <h1 data-translate="banner_h1">Cidalink: A cidadania ativa começa por aqui!</h1>
+            <h1 data-translate="banner_h1">Cidalink: Sua voz tem poder.Use!</h1>
             <p data-translate="banner_p">A plataforma que conecta você, seus vizinhos e a prefeitura para transformar problemas em soluções
                 simples, Fácil e direto! </p>
             <div class="botoes">
@@ -128,31 +128,59 @@
             </div>
         </main>
 
-      <section class="secaocards">
-        <div class="container">
-            <h2 class="seccardstitulo" data-translate="cards_title">Como o CidaLink transforma a sua cidade:</h2>
-            <div class="cardsgrid"> 
+    <section class="depoimentos">
+    <h2>A Voz da Comunidade</h2>
 
-                <div class="carditem" >
-                    <i class="fas fa-camera"></i>
-                    <h3 data-translate="card1_h3">1. Reporte Fácil e Imediato</h3>
-                    <p data-translate="card1_p">Chega de burocracia. Viu um problema? Tire uma foto, descreva o ocorrido e envie. Sua solicitação é registrada em segundos.</p>
-                </div>
+    <div class="depoimentos-grid">
 
-                <div class="carditem">
-                     <i class="fas fa-sync-alt"></i>
-                    <h3 data-translate="card2_h3">2. Acompanhamento Transparente</h3>
-                    <p data-translate="card2_p">Diga adeus à incerteza! Você acompanha o andamento de cada solicitação, desde o envio até a resolução final. Com o CidaLink, a transparência não é promessa, é regra.</p>
-                </div>
-
-                <div class="carditem">
-                     <i class="fas fa-users"></i>
-                    <h3 data-translate="card3_h3">3. Fórum de Comunidade e Colaboração</h3>
-                    <p data-translate="card3_p">Sua participação vale ouro. Use o Fórum para discutir soluções com seus vizinhos e apoiar demandas. Fortaleça a voz coletiva!</p>
-                </div>
-            </div>
+        <div class="depoimento">
+            <img src="img/cebolinha.jpg" class="avatar">
+            <p class="estrelas">★★★★★</p>
+            <p>"Muito fácil de usar, consegui resolver um problema na minha rua!"</p>
+            <h4>João Silva</h4>
         </div>
-    </section>
+
+        <div class="depoimento">
+            <img src="img/draculaura.jpg" class="avatar">
+            <p class="estrelas">★★★★★</p>
+            <p>"Finalmente um app que funciona de verdade na cidade."</p>
+            <h4>Maria Souza</h4>
+        </div>
+
+        <div class="depoimento">
+            <img src="img/foguinho.jpg" class="avatar">
+            <p class="estrelas">★★★★☆</p>
+            <p>"Acompanhar o status em tempo real faz toda diferença."</p>
+            <h4>Carlos Lima</h4>
+        </div>
+
+    </div>
+</section>
+    <section class="secaocards">
+    <div class="container">
+
+        <div class="carrossel">
+
+
+            <div class="cardsgrid">
+                <a href="#" class="carditem">
+                    <img src="img/card_1.png" alt="">
+                </a>
+
+                <a href="#" class="carditem">
+                    <img src="img/card_2.png" alt="">
+                </a>
+
+                <a href="#" class="carditem">
+                    <img src="img/card_3.png" alt="">
+                </a>
+            </div>
+           
+
+        </div>
+    </div>
+</section>
+
 
     
     <section class="credibilidade">
@@ -181,12 +209,50 @@
     </div>
 
      <button id="botao-tema" aria-label="Alternar modo escuro">🌙</button>
-    
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+<script>
+
+    
+
+        const grid = document.querySelector('.cardsgrid');
+        const cards = document.querySelectorAll('.carditem');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+        const carrossel = document.querySelector('.carrossel');
+
+        let index = 0;
+        let intervalo;
+
+        function atualizar() {
+        grid.style.transform = `translateX(-${index * 100}%)`;
+    
+        }
+
+
+        function iniciarAuto() {
+        intervalo = setInterval(() => {
+        index++;
+        if (index >= cards.length) index = 0;
+        atualizar();
+        }, 3000);
+
+        }
+
+        function pararAuto() {
+        clearInterval(intervalo);
+        }
+
+       carrossel.addEventListener('mouseover', pararAuto);
+       carrossel.addEventListener('mouseout', iniciarAuto);
+
+       iniciarAuto();
+</script>
+    
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+     new window.VLibras.Widget('https://vlibras.gov.br/app');
+ </script>
 
 
 <script src="script/translate.js"></script>
