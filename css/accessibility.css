@@ -170,7 +170,7 @@ hr {
 
 @media (max-width: 600px) {
     header .accessibility-menu {
-    right: 75px;
+    right: 55px;
     }
     
     .accessibility-dropdown { right: 8px; left: auto; min-width: 220px; }
