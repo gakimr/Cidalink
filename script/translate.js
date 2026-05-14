@@ -14,7 +14,7 @@ window.translations = {
         'credibility_h2': 'Transparência Que Gera Ação, Não Atraso.',
         'credibility_p': 'O CidaLink não é apenas um livro de reclamações. É uma ferramenta de gestão. Garantimos que sua solicitação chegue, seja respondida e que o progresso seja visível para toda a comunidade.',
         'credibility_cta': 'Começe a Transformar Agora!',
-        'footer_text': 'Cidalink. Todos os direitos reservados.',
+        'footer_text': '&copy; <span class="current-year"></span> Cidalink. Todos os direitos reservados.',
         'select_language': 'Selecionar idioma',
         //Cadastros e Acessibilidade
         'title_citizen_register': 'CidaLink - Cadastro Cidadão',
@@ -209,7 +209,7 @@ window.translations = {
         'credibility_h2': 'Transparency That Drives Action, Not Delay.',
         'credibility_p': 'CidaLink is not just a complaint book. It is a management tool. We ensure your request arrives, is answered, and that progress is visible to the entire community.',
         'credibility_cta': 'Start Transforming Now!',
-        'footer_text': 'Cidalink. All rights reserved.',
+        'footer_text': '&copy; <span class="current-year"></span> Cidalink. All rights reserved.',
         'select_language': 'Select language',
         // Cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Citizen Registration',
@@ -401,7 +401,7 @@ window.translations = {
         'credibility_h2': 'Transparencia Que Genera Acción, No Demora.',
         'credibility_p': 'CidaLink no es solo un libro de quejas. Es una herramienta de gestión. Garantizamos que tu solicitud llegue, sea respondida y que el progreso sea visible para toda la comunidad.',
         'credibility_cta': '¡Empieza a Transformar Ahora!',
-        'footer_text': 'Cidalink. Todos los derechos reservados.',
+        'footer_text': '&copy; <span class="current-year"></span> Cidalink. Todos los derechos reservados.',
         'select_language': 'Seleccionar idioma',
         //Cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Registro Ciudadano',
@@ -592,7 +592,7 @@ window.translations = {
         'credibility_h2': 'Transparência Qui Génère de l\'Action, Pas de Retard.',
         'credibility_p': 'CidaLink n\'est pas seulement un livre de plaintes. C\'est un outil de gestion. Nous nous assurons que votre demande arrive, qu\'elle soit traitée et que les progrès soient visibles pour toute la communauté.',
         'credibility_cta': 'Commencez à Transformer Maintenant !',
-        'footer_text': 'Cidalink. Tous droits réservés.',
+        'footer_text': '&copy; <span class="current-year"></span> Cidalink. Tous droits réservés.',
         'select_language': 'Sélectionner la langue',
         //cadastros e acessibilidade
         'title_citizen_register': 'CidaLink - Inscription Citoyen',
@@ -771,6 +771,12 @@ window.translations = {
     }
 };
 
+function updateFooterYears() {
+    document.querySelectorAll('.current-year, #current-year').forEach(function(element) {
+        element.textContent = new Date().getFullYear();
+    });
+}
+
 function changeLanguage(lang) {
     
     const translations = window.translations;
@@ -792,6 +798,7 @@ function changeLanguage(lang) {
             }
         });
     }
+    updateFooterYears();
 }
 
 
@@ -856,3 +863,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
    
 });
+
+document.addEventListener('DOMContentLoaded', updateFooterYears);

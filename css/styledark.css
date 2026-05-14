@@ -165,3 +165,23 @@ body.modo-escuro .mensagenflut{
 body.modo-escuro .mensagenflut{
     color: var(--cinza);
 }
+
+/* Bottom Navigation Bar no modo escuro */
+@media (max-width: 950px) {
+    body.modo-escuro .menu,
+    body.modo-escuro .menu.nav-active {
+        background: rgba(37, 37, 37, 0.97) !important;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45) !important;
+    }
+
+    body.modo-escuro .menu nav a {
+        color: #e5e7eb !important;
+        background: transparent !important;
+    }
+
+    body.modo-escuro .menu nav a:hover,
+    body.modo-escuro .menu nav a.pagatual {
+        background: var(--azullink) !important;
+        color: #fff !important;
+    }
+}
