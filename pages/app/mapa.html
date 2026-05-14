@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/accessibility.css" rel="stylesheet"/>
+<link href="../../css/styledark.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<title>CidaLink - Mapa</title>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+</head>
+<body>
+<header style="position: relative;">
+<div class="logocontainer">
+<img alt="CidaLink Logo" id="logo" src="../../img/Logo.svg"/>
+<p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+</div>
+<div class="hamburger">
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+</div>
+<div class="language-selector" id="languageSelector">
+<button aria-label="Selecionar idioma" class="language-btn" data-translate="select_language">
+<i class="bi bi-translate"></i>
+<span>Português</span>
+<i class="bi bi-chevron-down"></i>
+</button>
+<div class="language-dropdown">
+<div class="language-option" data-lang="pt">
+<i class="bi bi-check-lg"></i>
+<span>Português</span>
+</div>
+<div class="language-option" data-lang="en">
+<i class="bi bi-check-lg"></i>
+<span>English</span>
+</div>
+<div class="language-option" data-lang="es">
+<i class="bi bi-check-lg"></i>
+<span>Español</span>
+</div>
+<div class="language-option" data-lang="fr">
+<i class="bi bi-check-lg"></i>
+<span>Français</span>
+</div>
+</div>
+</div>
+</header>
+<div class="contentcontainer">
+<!-- Acessibilidade: menu para simulação de daltonismo -->
+<div class="accessibility-menu" style="position: absolute; top: 0; right: 16px; z-index: 1100;">
+<button aria-label="Configurações de acessibilidade" class="accessibility-btn" id="accessibilityBtn">
+<i class="bi bi-eye-fill"></i>
+</button>
+<div class="accessibility-dropdown" id="accessibilityDropdown">
+<div class="accessibility-header">
+<h3>Configurações de Visão</h3>
+<p>Ajuste as cores para diferentes tipos de daltonismo</p>
+</div>
+<div class="accessibility-options">
+<button class="accessibility-option" data-filter="normal">
+<span class="color-indicator normal"></span>
+<span>Visão Normal</span>
+</button>
+<button class="accessibility-option" data-filter="protanopia">
+<span class="color-indicator protanopia"></span>
+<span>Protanopia</span>
+</button>
+<button class="accessibility-option" data-filter="protanomalia">
+<span class="color-indicator protanomalia"></span>
+<span>Protanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranopia">
+<span class="color-indicator deuteranopia"></span>
+<span>Deuteranopia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranomalia">
+<span class="color-indicator deuteranomalia"></span>
+<span>Deuteranomalia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanopia">
+<span class="color-indicator tritanopia"></span>
+<span>Tritanopia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanomalia">
+<span class="color-indicator tritanomalia"></span>
+<span>Tritanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatopsia">
+<span class="color-indicator acromatopsia"></span>
+<span>Acromatopsia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatomalia">
+<span class="color-indicator acromatomalia"></span>
+<span>Acromatomalia</span>
+</button>
+</div>
+<div class="accessibility-footer">
+<button class="reset-btn" id="resetAccessibility">
+<i class="bi bi-arrow-clockwise"></i>
+                        Restaurar Cores Padrão
+                    </button>
+</div>
+</div>
+</div>
+<aside class="menu">
+<h2 class="menutitulo">Menu</h2>
+<nav>
+<a data-translate="menu_notifications" href="notificacoes.html">Notificações <span class="notificacaop">9</span></a>
+<a data-translate="menu_home" href="inicial.html">Página Inicial</a>
+<a data-translate="menu_create_occurrence" href="ocorrencia.html">Criar Ocorrência</a>
+<a class="pagatual" data-translate="menu_map" href="mapa.html">Mapa</a>
+<a data-translate="menu_chat" href="chat.html">Bate-papo</a>
+<a data-translate="menu_profile" href="perfil.html">Meu Perfil</a>
+<a data-translate="menu_logout" href="../../index.html">Sair</a>
+</nav>
+</aside>
+<main class="maincontainer">
+<h2 class="sectitulo" data-translate="map_title">Mapa de Ocorrências na Cidade</h2>
+<div class="mapacontainer">
+<div class="mapamarc marcador1" data-translate-description="marker1_desc" data-translate-title="marker1_title"></div>
+<div class="mapamarc marcador2" data-translate-description="marker2_desc" data-translate-title="marker2_title"></div>
+<div class="mapamarc marcador3" data-translate-description="marker3_desc" data-translate-title="marker3_title"></div>
+<div class="mapamarc marcador4" data-translate-description="marker4_desc" data-translate-title="marker4_title"></div>
+<div class="mapamarc marcador5" data-translate-description="marker5_desc" data-translate-title="marker5_title"></div>
+<div class="ocorrenciapopup" id="occurrencePopup">
+<h4 id="popupTitulo"></h4>
+<p id="popupDescricao"></p>
+</div>
+</div>
+<br/>
+<section class="ocorrenclegend">
+<h3 data-translate="map_legend_title">Legenda:</h3>
+<ul>
+<li><span class="legcor" style="background-color: #FF4500;"></span><span data-translate="map_pending">Ocorrências Pendentes</span></li>
+<li><span class="legcor" style="background-color:#8BC34A ;"></span><span>Ocorrências Resolvidas</span></li>
+<li><span class="legcor" style="background-color: #FFC107;"></span> <span data-translate="map_in_progress">Ocorrências em Andamento</span></li>
+</ul>
+</section>
+</main>
+</div>
+<button aria-label="Alternar modo escuro" id="botao-tema">🌙</button>
+<script src="../../script/alternar-tema.js"></script>
+<script src="../../script/accessibility.js"></script>
+<script src="../../script/translate.js"></script>
+<a class="mensagenflut" data-translate="float_button_messages" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+<footer>
+<a class="fatec-fixed-banner" href="https://fatectq.cps.sp.gov.br/" target="_blank"><img alt="Fatec Taquaritinga" src="../../img/fatec.png"/></a>
+<p data-translate="footer_text">© <span class="current-year"></span> Cidalink. Todos os direitos reservados.</p>
+</footer>
+<script src="../../script/script.js"></script>
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper="">
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+<!-- SVG Filters para simulação de daltonismo -->
+<svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+<filter id="protanopia">
+<fecolormatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="protanomalia">
+<fecolormatrix type="matrix" values="0.817 0.183 0 0 0  0.333 0.667 0 0 0  0 0.125 0.875 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranopia">
+<fecolormatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranomalia">
+<fecolormatrix type="matrix" values="0.8 0.2 0 0 0  0.258 0.742 0 0 0  0 0.142 0.858 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanopia">
+<fecolormatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanomalia">
+<fecolormatrix type="matrix" values="0.967 0.033 0 0 0  0 0.733 0.267 0 0  0 0.183 0.817 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</svg>
+</body>
+</html>

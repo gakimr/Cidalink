@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/styledark.css" rel="stylesheet"/>
+<link href="../../css/accessibility.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<title data-translate="title_profile">CidaLink - Perfil</title>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+</head>
+<body style="background-color:rgb(250, 250, 250)">
+<header style="position: relative;">
+<div class="logocontainer">
+<img alt="CidaLink Logo" id="logo" src="../../img/Logo.svg"/>
+<p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+</div>
+<div class="hamburger">
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+</div>
+<div class="language-selector" id="languageSelector">
+<button aria-label="Selecionar idioma" class="language-btn" data-translate="select_language">
+<i class="bi bi-translate"></i>
+<span>Português</span>
+<i class="bi bi-chevron-down"></i>
+</button>
+<div class="language-dropdown">
+<div class="language-option" data-lang="pt">
+<i class="bi bi-check-lg"></i>
+<span>Português</span>
+</div>
+<div class="language-option" data-lang="en">
+<i class="bi bi-check-lg"></i>
+<span>English</span>
+</div>
+<div class="language-option" data-lang="es">
+<i class="bi bi-check-lg"></i>
+<span>Español</span>
+</div>
+<div class="language-option" data-lang="fr">
+<i class="bi bi-check-lg"></i>
+<span>Français</span>
+</div>
+</div>
+</div>
+<!-- Acessibilidade: menu para simulação de daltonismo -->
+<div class="accessibility-menu">
+<button aria-label="Configurações de acessibilidade" class="accessibility-btn" id="accessibilityBtn">
+<i class="bi bi-eye-fill"></i>
+</button>
+<div class="accessibility-dropdown" id="accessibilityDropdown">
+<div class="accessibility-header">
+<h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+<p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
+</div>
+<div class="accessibility-options">
+<button class="accessibility-option" data-filter="normal">
+<span class="color-indicator normal"></span>
+<span data-translate="option_normal">Visão Normal</span>
+</button>
+<button class="accessibility-option" data-filter="protanopia">
+<span class="color-indicator protanopia"></span>
+<span data-translate="option_protanopia">Protanopia</span>
+</button>
+<button class="accessibility-option" data-filter="protanomalia">
+<span class="color-indicator protanomalia"></span>
+<span data-translate="option_protanomalia">Protanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranopia">
+<span class="color-indicator deuteranopia"></span>
+<span data-translate="option_deuteranopia">Deuteranopia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranomalia">
+<span class="color-indicator deuteranomalia"></span>
+<span data-translate="option_deuteranomalia">Deuteranomalia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanopia">
+<span class="color-indicator tritanopia"></span>
+<span data-translate="option_tritanopia">Tritanopia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanomalia">
+<span class="color-indicator tritanomalia"></span>
+<span data-translate="option_tritanomalia">Tritanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatopsia">
+<span class="color-indicator acromatopsia"></span>
+<span data-translate="option_acromatopsia">Acromatopsia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatomalia">
+<span class="color-indicator acromatomalia"></span>
+<span data-translate="option_acromatomalia">Acromatomalia</span>
+</button>
+</div>
+<div class="accessibility-footer">
+<button class="reset-btn" id="resetAccessibility">
+<i class="bi bi-arrow-clockwise"></i>
+<span data-translate="reset_colors">Restaurar Cores Padrão</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<aside class="menu">
+<h2 class="menutitulo">Menu</h2>
+<nav>
+<a data-translate="menu_notifications" href="notificacoes.html">Notificações <span class="notificacaop">9</span></a>
+<a data-translate="menu_home" href="inicial.html">Página Inicial</a>
+<a data-translate="menu_create_occurrence" href="ocorrencia.html">Criar Ocorrência</a>
+<a data-translate="menu_map" href="mapa.html">Mapa</a>
+<a data-translate="menu_chat" href="chat.html">Bate-papo</a>
+<a class="pagatual" data-translate="menu_profile" href="perfil.html">Meu Perfil</a>
+<a data-translate="menu_logout" href="../../index.html">Sair</a>
+</nav>
+</aside>
+<main class="perfil-container">
+<h1 data-translate="h1_profile_title">Meu Perfil</h1>
+<section class="card-perfil">
+<div class="perfil-header">
+<h2 data-translate="h2_registration_data">Dados Cadastrais</h2>
+<button class="btnEditar" data-translate="btn_edit_profile" id="btnEditar"><i class="fas fa-edit"></i> Editar</button>
+</div>
+<form id="perfilForm">
+<div class="foto-perfil-area">
+<img alt="Foto de Perfil" class="foto-perfil" id="fotoPerfil" src="https://placehold.co/100x100/A0E0A0/000?text=JD"/>
+<input accept="image/*" id="uploadFoto" style="display: none;" type="file"/>
+<button class="btnCd" data-translate="btn_change_photo" id="btnUpload" style="display: none;" type="button">Trocar Foto</button>
+</div>
+<div class="inputgp">
+<label data-translate="label_fullname" for="nome">Nome Completo</label>
+<input disabled="" id="nome" required="" type="text" value="João da Silva"/>
+</div>
+<div class="inputgp">
+<label data-translate="label_cpf" for="cpf">CPF</label>
+<input disabled="" id="cpf" type="text" value="000.000.000-00"/>
+</div>
+<div class="inputgp">
+<label data-translate="label_email" for="email">E-mail</label>
+<input disabled="" id="email" required="" type="email" value="joaodasilva@email.com"/>
+</div>
+<button class="btnCadastro" data-translate="btn_save_changes" id="btnSalvar" style="display: none;" type="submit">Salvar Alterações</button>
+</form>
+</section>
+<section class="minhas-ocorrencias">
+<h2 data-translate="h2_my_occurrences">Minhas Ocorrências Reportadas <span>(3)</span></h2>
+<div class="lista-ocorrencias">
+<div class="card-ocorrencia status-concluido">
+<div class="oc-info">
+<h3 data-translate="oc_title_water_leak">Vazamento de Água na Rua A</h3>
+<p><strong data-translate="oc_label_protocol">Protocolo:</strong> #CID1234</p>
+<p><strong data-translate="oc_label_date">Data:</strong> 20/Out/2025</p>
+</div>
+<div class="oc-status">
+<i class="fas fa-check-circle"></i> <span data-translate="status_completed">CONCLUÍDO</span>
+</div>
+</div>
+<div class="card-ocorrencia status-analise">
+<div class="oc-info">
+<h3 data-translate="oc_title_pothole">Buraco na Avenida Principal</h3>
+<p><strong data-translate="oc_label_protocol">Protocolo:</strong> #CID1235</p>
+<p><strong data-translate="oc_label_date">Data:</strong> 05/Nov/2025</p>
+</div>
+<div class="oc-status">
+<i class="fas fa-search"></i> <span data-translate="status_in_analysis">EM ANÁLISE</span>
+</div>
+</div>
+<div class="card-ocorrencia status-rejeitado">
+<div class="oc-info">
+<h3 data-translate="oc_title_trash">Lixo Descartado Irregularmente</h3>
+<p><strong data-translate="oc_label_protocol">Protocolo:</strong> #CID1236</p>
+<p><strong data-translate="oc_label_date">Data:</strong> 07/Nov/2025</p>
+</div>
+<div class="oc-status">
+<i class="fas fa-times-circle"></i> <span data-translate="status_rejected">REJEITADO</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<button aria-label="Alternar modo escuro" id="botao-tema">🌙</button>
+<script src="../../script/alternar-tema.js"></script>
+<footer>
+<a class="fatec-fixed-banner" href="https://fatectq.cps.sp.gov.br/" target="_blank"><img alt="Fatec Taquaritinga" src="../../img/fatec.png"/></a>
+<p data-translate="footer_text">© <span class="current-year"></span> Cidalink. Todos os direitos reservados.</p>
+</footer>
+<a class="mensagenflut" data-translate="float_button_messages" href="chat.html">Mensagens<span class="notificacaop">2</span></a>
+<script src="../../script/script.js"></script>
+<script src="../../script/accessibility.js"></script>
+<script src="../../script/translate.js"></script>
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper="">
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+<svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+<filter id="protanopia">
+<fecolormatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="protanomalia">
+<fecolormatrix type="matrix" values="0.817 0.183 0 0 0  0.333 0.667 0 0 0  0 0.125 0.875 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranopia">
+<fecolormatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranomalia">
+<fecolormatrix type="matrix" values="0.8 0.2 0 0 0  0.258 0.742 0 0 0  0 0.142 0.858 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanopia">
+<fecolormatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanomalia">
+<fecolormatrix type="matrix" values="0.967 0.033 0 0 0  0 0.733 0.267 0 0  0 0.183 0.817 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</svg>
+</body>
+</html>
