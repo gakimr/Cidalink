@@ -1,3 +1,7 @@
+/* language.js */
+
+// ATENÇÃO: O objeto translations é declarado globalmente (window.translations)
+// para ser acessível em outros scripts (como script.js)
 window.translations = {
     'pt': {
         'banner_h1': 'Sua voz tem poder. Use!',
@@ -778,10 +782,10 @@ function updateFooterYears() {
 }
 
 function changeLanguage(lang) {
-    
+    // O objeto de traduções agora é global (window.translations)
     const translations = window.translations;
     
-   
+    // Aplicar traduções
     if (translations[lang]) {
         const translation = translations[lang];
         
@@ -804,15 +808,17 @@ function changeLanguage(lang) {
 
 document.addEventListener('DOMContentLoaded', function() {
     
- 
-
+    /* =================================================
+        Bloco do Seletor de Idioma (Início)
+        =================================================
+    */
     const languageSelector = document.getElementById('languageSelector');
     if (languageSelector) { 
         const languageBtn = languageSelector.querySelector('.language-btn');
         const languageOptions = languageSelector.querySelectorAll('.language-option');
         const currentLangText = languageBtn.querySelector('span');
         
-      
+        // Abrir/fechar dropdown
         languageBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             languageSelector.classList.toggle('active');
@@ -823,40 +829,45 @@ document.addEventListener('DOMContentLoaded', function() {
             option.addEventListener('click', function() {
                 const lang = this.getAttribute('data-lang');
                 
+                // Remover classe active de todas as opções
                 languageOptions.forEach(opt => opt.classList.remove('active'));
-                
+                // Adicionar classe active à opção selecionada
                 this.classList.add('active');
 
-               
+                // Atualizar texto do botão
                 const langText = this.querySelector('span').textContent;
                 currentLangText.textContent = langText;
                 
-               
+                // Fechar dropdown
                 languageSelector.classList.remove('active');
                 
+                // Salvar preferência no localStorage
                 localStorage.setItem('preferred-language', lang);
                 
+                // Mudar o conteúdo do site (A função changeLanguage é global)
                 changeLanguage(lang);
             });
         });
 
-       
+        // Fechar dropdown ao clicar fora
         document.addEventListener('click', function() {
             languageSelector.classList.remove('active');
         });
 
-
+        // Prevenir fechamento ao clicar dentro do dropdown
         languageSelector.querySelector('.language-dropdown').addEventListener('click', function(e) {
             e.stopPropagation();
         });
 
+        // Carregar idioma salvo (Executa a lógica de tradução na inicialização)
         const savedLang = localStorage.getItem('preferred-language') || 'pt';
         const savedOption = languageSelector.querySelector(`[data-lang="${savedLang}"]`);
         
-    
+        // Simular um clique na opção salva para aplicar a linguagem
         if (savedOption) {
             savedOption.click(); 
         } else {
+            // Garante que o 'pt' (padrão) seja aplicado e marcado, se nada for salvo.
             changeLanguage('pt');
             languageSelector.querySelector(`[data-lang="pt"]`).classList.add('active'); 
         }

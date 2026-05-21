@@ -1,5 +1,5 @@
 
-/*Pagina Inicial - Administrador */
+/*Pagina Inicial - Estilos de `ocfooter` para o Administrador */
 .ocfooter.admin {
     justify-content: space-between; 
     align-items: center; 
@@ -232,7 +232,7 @@
     border: 1px solid #ccc;
      }
 
-/* Cards de estatísticas */
+/* CARDS DE ESTATÍSTICAS */
 .stats {
      display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -258,7 +258,7 @@
      color:  #0322d5;
 }
 
-/* Lista de ações recentes */
+/* LISTA DE AÇÕES RECENTES */
  .list-item {
     background: #fff;
     padding: 1rem;
