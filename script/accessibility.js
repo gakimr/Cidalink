@@ -1,53 +1,50 @@
-// Controle do menu de acessibilidade para daltonismo
+
 document.addEventListener('DOMContentLoaded', function() {
     const accessibilityBtn = document.getElementById('accessibilityBtn');
     const accessibilityDropdown = document.getElementById('accessibilityDropdown');
     const resetBtn = document.getElementById('resetAccessibility');
     const accessibilityOptions = document.querySelectorAll('.accessibility-option');
     
-    // Alternar visibilidade do menu
     if (accessibilityBtn) {
         accessibilityBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             accessibilityDropdown.classList.toggle('active');
         });
     }
-    
-    // Fechar menu ao clicar fora
+
     document.addEventListener('click', function() {
         if (accessibilityDropdown) {
             accessibilityDropdown.classList.remove('active');
         }
     });
     
-    // Prevenir fechamento ao clicar dentro do menu
+    
     if (accessibilityDropdown) {
         accessibilityDropdown.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     }
     
-    // Aplicar filtro de daltonismo
+   
     accessibilityOptions.forEach(option => {
         option.addEventListener('click', function() {
             const filterType = this.getAttribute('data-filter');
             
-            // Remover classes anteriores
+        
             document.body.className = document.body.className.replace(/\b(protanopia|protanomalia|deuteranopia|deuteranomalia|tritanopia|tritanomalia|acromatopsia|acromatomalia)\b/g, '');
             
-            // Aplicar nova classe
+          
             if (filterType !== 'normal') {
                 document.body.classList.add(filterType);
             }
             
-            // Atualizar estado ativo
+            
             accessibilityOptions.forEach(opt => opt.classList.remove('active'));
             this.classList.add('active');
-            
-            // Salvar preferência
+           
             try { localStorage.setItem('colorAccessibility', filterType); } catch(e){}
             
-            // Fechar menu
+            
             accessibilityDropdown.classList.remove('active');
         });
     });
@@ -57,22 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
         resetBtn.addEventListener('click', function() {
             document.body.className = document.body.className.replace(/\b(protanopia|protanomalia|deuteranopia|deuteranomalia|tritanopia|tritanomalia|acromatopsia|acromatomalia)\b/g, '');
             
-            // Remover estado ativo
+           
             accessibilityOptions.forEach(opt => opt.classList.remove('active'));
             
-            // Restaurar opção normal como ativa
+           
             const normalOption = document.querySelector('.accessibility-option[data-filter="normal"]');
             if (normalOption) { normalOption.classList.add('active'); }
             
-            // Remover preferência salva
+           
             try { localStorage.removeItem('colorAccessibility'); } catch(e){}
             
-            // Fechar menu
+            
             accessibilityDropdown.classList.remove('active');
         });
     }
     
-    // Carregar preferência salva
     const savedPreference = (function(){ try { return localStorage.getItem('colorAccessibility'); } catch(e) { return null; }})();
     if (savedPreference) {
         document.body.classList.add(savedPreference);
@@ -83,3 +79,38 @@ document.addEventListener('DOMContentLoaded', function() {
         if (normalOption) { normalOption.classList.add('active'); }
     }
 });
+
+
+
+const mainBtn = document.getElementById('mainAccessibilityBtn');
+const dropdown = document.getElementById('mainAccessibilityDropdown');
+const darkModeBtn = document.getElementById('toggleDarkMode');
+
+// abrir/fechar menu
+mainBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('active');
+});
+
+
+document.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+});
+
+dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// MODO ESCURO
+darkModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+
+    localStorage.setItem(
+        'modoEscuro',
+        document.body.classList.contains('modo-escuro')
+    );
+});
+
+if (localStorage.getItem('modoEscuro') === 'true') {
+    document.body.classList.add('modo-escuro');
+}

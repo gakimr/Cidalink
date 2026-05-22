@@ -1,5 +1,5 @@
 
-/*Pagina Inicial - Estilos de `ocfooter` para o Administrador */
+/*Pagina Inicial - Administrador */
 .ocfooter.admin {
     justify-content: space-between; 
     align-items: center; 
@@ -11,7 +11,8 @@
 }
 
 .btnadmin {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     background-color: var(--azul); 
     color: white;
     padding: 0.5rem 0.9rem;
@@ -232,7 +233,7 @@
     border: 1px solid #ccc;
      }
 
-/* CARDS DE ESTATÍSTICAS */
+/* Cards de estatísticas */
 .stats {
      display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -258,7 +259,7 @@
      color:  #0322d5;
 }
 
-/* LISTA DE AÇÕES RECENTES */
+/* Lista de ações recentes */
  .list-item {
     background: #fff;
     padding: 1rem;
