@@ -1,0 +1,370 @@
+/* Página Como Usar - CidaLink */
+
+.guia-page {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.guia-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--verdeclaro) 0%, rgba(135, 210, 135, 0.1) 100%);
+  border-radius: 16px;
+  border-left: 5px solid var(--verde);
+}
+
+.guia-hero-texto h1 {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.guia-hero-texto p {
+  font-size: 1rem;
+  color: var(--cinzae);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.guia-etiqueta {
+  display: inline-block;
+  background: var(--verde);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.guia-etiqueta i {
+  margin-right: 0.5rem;
+}
+
+.guia-acoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.guia-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.guia-btn.primaria {
+  background: var(--verde);
+  color: white;
+}
+
+.guia-btn.primaria:hover {
+  background: var(--verdeh);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 170, 70, 0.3);
+}
+
+.guia-btn.secundaria {
+  background: transparent;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+}
+
+.guia-btn.secundaria:hover {
+  background: var(--verde);
+  color: white;
+}
+
+.guia-card-destaque {
+  background: linear-gradient(135deg, var(--azul), var(--azulc));
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.guia-card-destaque i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.guia-card-destaque h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.guia-card-destaque p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Passos */
+.guia-passos {
+  margin-bottom: 4rem;
+}
+
+.guia-passos h2 {
+  font-size: 2rem;
+  color: var(--verde);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.guia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.guia-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+  border-top: 4px solid var(--verde);
+}
+
+.guia-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.guia-card span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--verdeclaro);
+  margin-bottom: 0.5rem;
+}
+
+.guia-card i {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+.guia-card h3 {
+  font-size: 1.2rem;
+  color: var(--verde);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.guia-card p {
+  font-size: 0.9rem;
+  color: var(--cinzae);
+  line-height: 1.5;
+}
+
+/* Duas colunas */
+.guia-duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.guia-bloco {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guia-bloco h2 {
+  font-size: 1.5rem;
+  color: var(--verde);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guia-bloco h2 i {
+  font-size: 1.8rem;
+}
+
+.guia-bloco ul {
+  list-style: none;
+  padding: 0;
+}
+
+.guia-bloco li {
+  padding: 0.7rem 0;
+  padding-left: 1.5rem;
+  color: var(--cinzae);
+  line-height: 1.5;
+  position: relative;
+}
+
+.guia-bloco li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.guia-bloco p {
+  color: var(--cinzae);
+  line-height: 1.6;
+}
+
+.guia-bloco.azul {
+  background: linear-gradient(135deg, var(--azulc), var(--azule));
+  color: white;
+}
+
+.guia-bloco.azul h2 {
+  color: white;
+}
+
+.guia-bloco.azul p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Fluxo */
+.guia-fluxo {
+  background: linear-gradient(135deg, var(--verdeclaro), rgba(135, 210, 135, 0.05));
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.guia-fluxo h2 {
+  font-size: 1.8rem;
+  color: var(--verde);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fluxo-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.fluxo-linha > div {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fluxo-linha i {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin-bottom: 0.5rem;
+}
+
+.fluxo-linha strong {
+  display: block;
+  color: var(--verde);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.fluxo-linha small {
+  display: block;
+  color: var(--cinza);
+  font-size: 0.85rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .guia-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guia-hero-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .guia-acoes {
+    flex-direction: column;
+  }
+
+  .guia-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .guia-passos h2 {
+    font-size: 1.5rem;
+  }
+
+  .guia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guia-duas-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .fluxo-linha {
+    flex-direction: column;
+  }
+
+  .fluxo-linha > div {
+    width: 100%;
+  }
+
+  .guia-page {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .guia-hero-texto h1 {
+    font-size: 1.5rem;
+  }
+
+  .guia-card-destaque {
+    min-height: 200px;
+  }
+
+  .guia-card-destaque i {
+    font-size: 2rem;
+  }
+
+  .guia-card span {
+    font-size: 2rem;
+  }
+
+  .guia-card i {
+    font-size: 2rem;
+  }
+
+  .fluxo-linha > div {
+    padding: 1rem;
+  }
+}

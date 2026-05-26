@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/accessibility.css" rel="stylesheet"/>
+<link href="../../css/styledark.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<title>O que é o CidaLink</title>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71078FM2JV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-71078FM2JV');
+</script>
+<style>
+/* ===== PÁGINA SUGESTÕES CIDALINK ===== */
+
+.sugestoes-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #f4fff7 0%, #ffffff 45%, #e9f8ee 100%);
+}
+
+.sugestoes-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.sugestoes-titulo {
+    font-size: 2.7rem;
+    color: var(--verde);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.sugestoes-subtitulo {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--cinzae);
+    max-width: 760px;
+    margin: 0 auto 45px;
+    line-height: 1.7;
+}
+
+.sugestao-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(40, 170, 70, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.sugestao-card::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 100%;
+    background: linear-gradient(var(--verdeclaro), var(--verde));
+    left: 0;
+    top: 0;
+}
+
+.sugestao-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.sugestao-card h2 {
+    color: var(--verde);
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.sugestao-card p {
+    color: var(--cinzae);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.form-sugestao {
+    display: grid;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label {
+    color: var(--verde);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 2px solid #dcefe2;
+    border-radius: 14px;
+    background: #fff;
+    color: var(--cinzae);
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 4px rgba(40, 170, 70, 0.15);
+}
+
+.campo-form input::placeholder,
+.campo-form textarea::placeholder {
+    color: #9aa8a0;
+}
+
+.btn-sugestao,
+.btn-voltar {
+    display: inline-block;
+    width: fit-content;
+    background: linear-gradient(135deg, var(--verdeclaro), var(--verde));
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 40px;
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 16px rgba(40, 170, 70, 0.25);
+}
+
+.btn-sugestao:hover,
+.btn-voltar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(40, 170, 70, 0.35);
+    filter: brightness(1.05);
+}
+
+.btn-voltar {
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+    .sugestoes-page {
+        padding: 45px 5%;
+    }
+
+    .sugestoes-titulo {
+        font-size: 2rem;
+    }
+
+    .sugestoes-subtitulo {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .sugestao-card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    .sugestao-card h2 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sugestoes-titulo {
+        font-size: 1.7rem;
+    }
+
+    .sugestao-card {
+        padding: 22px 18px;
+    }
+
+    .btn-sugestao,
+    .btn-voltar {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+}
+</style>
+</head>
+<body>
+<header style="position: relative;">
+<div class="logocontainer">
+<a href="../../index.html" class="logo-link" aria-label="Voltar para a página inicial">
+<img alt="CidaLink Logo" id="logo" src="../../img/Logo.svg" href="../../index.html"/>
+</a>
+<p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+</div>
+</div>
+<div class="language-selector" id="languageSelector">
+<button aria-label="Selecionar idioma" class="language-btn" data-translate="select_language">
+<i class="bi bi-translate"></i>
+<span>Português</span>
+<i class="bi bi-chevron-down"></i>
+</button>
+<div class="language-dropdown">
+<div class="language-option" data-lang="pt">
+<i class="bi bi-check-lg"></i>
+<span>Português</span>
+</div>
+<div class="language-option" data-lang="en">
+<i class="bi bi-check-lg"></i>
+<span>English</span>
+</div>
+<div class="language-option" data-lang="es">
+<i class="bi bi-check-lg"></i>
+<span>Español</span>
+</div>
+<div class="language-option" data-lang="fr">
+<i class="bi bi-check-lg"></i>
+<span>Français</span>
+</div>
+</div>
+</div>
+<!-- Acessibilidade: menu para simulação de daltonismo -->
+<div class="accessibility-menu">
+<button aria-label="Configurações de acessibilidade" class="accessibility-btn" id="accessibilityBtn">
+<i class="bi bi-universal-access-circle"></i>
+</button>
+<div class="accessibility-dropdown" id="accessibilityDropdown">
+<div class="accessibility-header">
+<h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+<p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
+</div>
+<div class="accessibility-options">
+<button class="accessibility-option" data-filter="darkmode">
+<span class="color-indicator darkmode"></span>
+<span>Tema Escuro</span>
+</button>
+<button class="accessibility-option" data-filter="protanopia">
+<span class="color-indicator protanopia"></span>
+<span data-translate="option_protanopia">Protanopia</span>
+</button>
+<button class="accessibility-option" data-filter="protanomalia">
+<span class="color-indicator protanomalia"></span>
+<span data-translate="option_protanomalia">Protanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranopia">
+<span class="color-indicator deuteranopia"></span>
+<span data-translate="option_deuteranopia">Deuteranopia</span>
+</button>
+<button class="accessibility-option" data-filter="deuteranomalia">
+<span class="color-indicator deuteranomalia"></span>
+<span data-translate="option_deuteranomalia">Deuteranomalia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanopia">
+<span class="color-indicator tritanopia"></span>
+<span data-translate="option_tritanopia">Tritanopia</span>
+</button>
+<button class="accessibility-option" data-filter="tritanomalia">
+<span class="color-indicator tritanomalia"></span>
+<span data-translate="option_tritanomalia">Tritanomalia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatopsia">
+<span class="color-indicator acromatopsia"></span>
+<span data-translate="option_acromatopsia">Acromatopsia</span>
+</button>
+<button class="accessibility-option" data-filter="acromatomalia">
+<span class="color-indicator acromatomalia"></span>
+<span data-translate="option_acromatomalia">Acromatomalia</span>
+</button>
+</div>
+<div class="accessibility-footer">
+<button class="reset-btn" id="resetAccessibility">
+<i class="bi bi-arrow-clockwise"></i>
+<span data-translate="reset_colors">Restaurar Cores Padrão</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="sugestoes-page">
+    <div class="sugestoes-container">
+
+        <h1 class="sugestoes-titulo">Sugestões de Melhorias</h1>
+
+        <p class="sugestoes-subtitulo">
+            Sua opinião é muito importante para tornar o CidaLink cada vez melhor.
+            Compartilhe ideias, sugestões e melhorias que possam ajudar nossa plataforma a evoluir.
+        </p>
+
+        <section class="sugestao-card">
+            <h2>Ajude a melhorar o CidaLink</h2>
+            <p>
+                O CidaLink foi criado pensando em facilitar a comunicação entre cidadãos e a cidade.
+                Por isso, queremos ouvir você! Se tiver ideias para novas funcionalidades,
+                melhorias no sistema ou sugestões de usabilidade, deixe sua contribuição.
+            </p>
+        </section>
+
+        <section class="sugestao-card">
+            <h2>Envie sua sugestão</h2>
+
+            <form class="form-sugestao">
+                <div class="campo-form">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="campo-form">
+                    <label for="tipo">Tipo de sugestão</label>
+                    <select id="tipo">
+                        <option>Nova funcionalidade</option>
+                        <option>Melhoria visual</option>
+                        <option>Correção de problema</option>
+                        <option>Usabilidade</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo-form">
+                    <label for="mensagem">Sua sugestão</label>
+                    <textarea id="mensagem" rows="6" placeholder="Escreva sua sugestão aqui..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-sugestao">Enviar Sugestão</button>
+            </form>
+        </section>
+
+        <section class="sugestao-card">
+            <h2>Por que sua opinião importa?</h2>
+            <p>
+                Cada sugestão recebida ajuda a melhorar a experiência dos usuários e contribui
+                para que o CidaLink ofereça soluções mais úteis, modernas e acessíveis para toda a comunidade.
+            </p>
+
+            <a href="index.html" class="btn-voltar">Voltar para o início</a>
+        </section>
+
+    </div>
+</main>
+<footer>
+<a class="fatec-fixed-banner" href="https://fatectq.cps.sp.gov.br/" target="_blank"><img alt="Fatec Taquaritinga" src="../../img/fatec.png"/></a>
+<p data-translate="footer_text">© <span class="current-year"></span> Cidalink. Todos os direitos reservados.</p>
+</footer>
+<script src="../../script/script.js"></script>
+<script src="../../script/accessibility.js"></script>
+<script src="../../script/alternar-tema.js"></script>
+<script src="../../script/translate.js"></script>
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper="">
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+<!-- SVG Filters para simulação de daltonismo -->
+<svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+<filter id="protanopia">
+<fecolormatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="protanomalia">
+<fecolormatrix type="matrix" values="0.817 0.183 0 0 0  0.333 0.667 0 0 0  0 0.125 0.875 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranopia">
+<fecolormatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="deuteranomalia">
+<fecolormatrix type="matrix" values="0.8 0.2 0 0 0  0.258 0.742 0 0 0  0 0.142 0.858 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanopia">
+<fecolormatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<filter id="tritanomalia">
+<fecolormatrix type="matrix" values="0.967 0.033 0 0 0  0 0.733 0.267 0 0  0 0.183 0.817 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+</svg>
+</body>
+</html>

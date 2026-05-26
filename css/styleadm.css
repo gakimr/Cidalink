@@ -1,5 +1,5 @@
 
-/*Pagina Inicial - Administrador */
+/*Pagina Inicial - Estilos de `ocfooter` para o Administrador */
 .ocfooter.admin {
     justify-content: space-between; 
     align-items: center; 
@@ -233,7 +233,7 @@
     border: 1px solid #ccc;
      }
 
-/* Cards de estatísticas */
+/* CARDS DE ESTATÍSTICAS */
 .stats {
      display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -259,7 +259,7 @@
      color:  #0322d5;
 }
 
-/* Lista de ações recentes */
+/* LISTA DE AÇÕES RECENTES */
  .list-item {
     background: #fff;
     padding: 1rem;
@@ -529,3 +529,124 @@
 }
 
 
+/* ===== Responsividade da página Gerenciar Ocorrências ===== */
+@media screen and (max-width: 768px) {
+
+    .tabela-container {
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+
+    .tabela-ocorrencias {
+        min-width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela-ocorrencias thead {
+        display: none;
+    }
+
+    .tabela-ocorrencias,
+    .tabela-ocorrencias tbody,
+    .tabela-ocorrencias tr,
+    .tabela-ocorrencias td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabela-ocorrencias tr {
+        background: #fff;
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 1px solid #e5e5e5;
+    }
+
+    .tabela-ocorrencias td {
+        text-align: right;
+        padding: 12px;
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+        word-break: break-word;
+    }
+
+    .tabela-ocorrencias td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .tabela-ocorrencias td:last-child {
+        border-bottom: none;
+    }
+}
+
+
+/* ===== GERENCIAR OC RESPONSIVO ===== */
+
+.table-responsive-mobile{
+    width:100%;
+    overflow-x:auto;
+}
+
+@media (max-width: 768px){
+
+    table{
+        width:100%;
+    }
+
+    .table-responsive-mobile table,
+    .table-responsive-mobile thead,
+    .table-responsive-mobile tbody,
+    .table-responsive-mobile th,
+    .table-responsive-mobile td,
+    .table-responsive-mobile tr{
+        display:block;
+        width:100%;
+    }
+
+    .table-responsive-mobile thead{
+        display:none;
+    }
+
+    .table-responsive-mobile tr{
+        margin-bottom:16px;
+        background:#fff;
+        border-radius:12px;
+        border:1px solid #ddd;
+        padding:10px;
+        box-sizing:border-box;
+    }
+
+    .table-responsive-mobile td{
+        position:relative;
+        padding-left:45% !important;
+        text-align:left !important;
+        min-height:45px;
+        display:flex;
+        align-items:center;
+        border:none !important;
+        border-bottom:1px solid #eee !important;
+        word-break:break-word;
+    }
+
+    .table-responsive-mobile td:last-child{
+        border-bottom:none !important;
+    }
+
+    .table-responsive-mobile td::before{
+        content:attr(data-label);
+        position:absolute;
+        left:12px;
+        width:40%;
+        font-weight:bold;
+        white-space:nowrap;
+    }
+
+    .table-responsive-mobile button{
+        width:100%;
+    }
+}

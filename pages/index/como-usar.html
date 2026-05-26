@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<link href="../../css/accessibility.css" rel="stylesheet"/>
+<link href="../../css/styledark.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<title>Guia CidaLink</title>
+</head>
+<body>
+<header>
+<div class="logocontainer">
+<a href="../../index.html" class="logo-link" aria-label="Voltar para a página inicial">
+<img alt="CidaLink Logo" id="logo" src="../../img/Logo.svg" href="../../index.html"/>
+</a>
+<p class="titulosite"><span class="tcida">Cida</span><span class="tlink">Link</span></p>
+</div>
+<div class="language-selector" id="languageSelector">
+<button aria-label="Selecionar idioma" class="language-btn" data-translate="select_language">
+<i class="bi bi-translate"></i>
+<span>Português</span>
+<i class="bi bi-chevron-down"></i>
+</button>
+<div class="language-dropdown">
+<div class="language-option" data-lang="pt"><i class="bi bi-check-lg"></i><span>Português</span></div>
+<div class="language-option" data-lang="en"><i class="bi bi-check-lg"></i><span>English</span></div>
+<div class="language-option" data-lang="es"><i class="bi bi-check-lg"></i><span>Español</span></div>
+<div class="language-option" data-lang="fr"><i class="bi bi-check-lg"></i><span>Français</span></div>
+</div>
+</div>
+<div class="accessibility-menu">
+<button aria-label="Configurações de acessibilidade" class="accessibility-btn" id="accessibilityBtn">
+<i class="bi bi-universal-access-circle"></i>
+</button>
+<div class="accessibility-dropdown" id="accessibilityDropdown">
+<div class="accessibility-header">
+<h3 data-translate="accessibility_h3">Configurações de Visão</h3>
+<p data-translate="accessibility_p">Ajuste as cores para diferentes tipos de daltonismo</p>
+</div>
+<div class="accessibility-options">
+<button class="accessibility-option" data-filter="darkmode"><span class="color-indicator darkmode"></span><span>Tema Escuro</span></button>
+<button class="accessibility-option" data-filter="protanopia"><span class="color-indicator protanopia"></span><span data-translate="option_protanopia">Protanopia</span></button>
+<button class="accessibility-option" data-filter="protanomalia"><span class="color-indicator protanomalia"></span><span data-translate="option_protanomalia">Protanomalia</span></button>
+<button class="accessibility-option" data-filter="deuteranopia"><span class="color-indicator deuteranopia"></span><span data-translate="option_deuteranopia">Deuteranopia</span></button>
+<button class="accessibility-option" data-filter="deuteranomalia"><span class="color-indicator deuteranomalia"></span><span data-translate="option_deuteranomalia">Deuteranomalia</span></button>
+<button class="accessibility-option" data-filter="tritanopia"><span class="color-indicator tritanopia"></span><span data-translate="option_tritanopia">Tritanopia</span></button>
+<button class="accessibility-option" data-filter="tritanomalia"><span class="color-indicator tritanomalia"></span><span data-translate="option_tritanomalia">Tritanomalia</span></button>
+<button class="accessibility-option" data-filter="acromatopsia"><span class="color-indicator acromatopsia"></span><span data-translate="option_acromatopsia">Acromatopsia</span></button>
+<button class="accessibility-option" data-filter="acromatomalia"><span class="color-indicator acromatomalia"></span><span data-translate="option_acromatomalia">Acromatomalia</span></button>
+</div>
+<div class="accessibility-footer">
+<button class="reset-btn" id="resetAccessibility"><i class="bi bi-arrow-clockwise"></i><span data-translate="reset_colors">Restaurar Cores Padrão</span></button>
+</div>
+</div>
+</div>
+</header>
+
+<main class="guia-page">
+<section class="guia-hero">
+<div class="guia-hero-texto">
+<span class="guia-etiqueta"><i class="bi bi-compass"></i> Guia rápido</span>
+<h1>Como usar o CidaLink</h1>
+<p>Aprenda de forma simples como registrar uma ocorrência, acompanhar o andamento e participar da melhoria da sua cidade.</p>
+<div class="guia-acoes">
+<a class="guia-btn primaria" href="../forms/logincid.html"><i class="bi bi-person-check"></i> Entrar como cidadão</a>
+<a class="guia-btn secundaria" href="../../index.html"><i class="bi bi-house-door"></i> Voltar ao início</a>
+</div>
+</div>
+<div class="guia-card-destaque">
+<i class="bi bi-megaphone-fill"></i>
+<h2>Sua voz vira ação</h2>
+<p>O CidaLink conecta cidadãos e prefeitura para transformar problemas do bairro em soluções acompanhadas por todos.</p>
+</div>
+</section>
+
+<section class="guia-passos">
+<h2>Passo a passo do cidadão</h2>
+<div class="guia-grid">
+<article class="guia-card">
+<span>01</span>
+<i class="bi bi-box-arrow-in-right"></i>
+<h3>Faça login</h3>
+<p>Entre como cidadão ou crie sua conta para acessar as funções principais do sistema.</p>
+</article>
+<article class="guia-card">
+<span>02</span>
+<i class="bi bi-plus-circle"></i>
+<h3>Crie uma ocorrência</h3>
+<p>Informe o tipo do problema, escreva uma descrição clara e adicione uma foto se tiver.</p>
+</article>
+<article class="guia-card">
+<span>03</span>
+<i class="bi bi-geo-alt"></i>
+<h3>Veja no mapa</h3>
+<p>Acompanhe as ocorrências por localização e veja quais problemas estão próximos.</p>
+</article>
+<article class="guia-card">
+<span>04</span>
+<i class="bi bi-chat-dots"></i>
+<h3>Acompanhe respostas</h3>
+<p>Use notificações e bate-papo para acompanhar atualizações da prefeitura.</p>
+</article>
+</div>
+</section>
+
+<section class="guia-duas-colunas">
+<div class="guia-bloco">
+<h2><i class="bi bi-lightbulb"></i> Dicas para uma boa ocorrência</h2>
+<ul>
+<li>Explique o problema com poucas palavras, mas com clareza.</li>
+<li>Coloque o local mais exato possível.</li>
+<li>Use foto quando ela ajudar a identificar o problema.</li>
+<li>Evite criar ocorrências repetidas do mesmo lugar.</li>
+</ul>
+</div>
+<div class="guia-bloco azul">
+<h2><i class="bi bi-shield-check"></i> Para que serve o CidaLink?</h2>
+<p>O sistema ajuda a organizar pedidos da comunidade, dar mais transparência ao atendimento e facilitar a comunicação entre moradores e administração pública.</p>
+</div>
+</section>
+
+<section class="guia-fluxo">
+<h2>Fluxo da solicitação</h2>
+<div class="fluxo-linha">
+<div><i class="bi bi-pencil-square"></i><strong>Registro</strong><small>Cidadão envia</small></div>
+<div><i class="bi bi-search"></i><strong>Análise</strong><small>Prefeitura verifica</small></div>
+<div><i class="bi bi-tools"></i><strong>Resolução</strong><small>Equipe acompanha</small></div>
+<div><i class="bi bi-check-circle"></i><strong>Finalização</strong><small>Status atualizado</small></div>
+</div>
+</section>
+</main>
+
+<footer>
+<a class="fatec-fixed-banner" href="https://fatectq.cps.sp.gov.br/" target="_blank"><img alt="Fatec Taquaritinga" src="../../img/fatec.png"/></a>
+<p>© <span class="current-year"></span> Cidalink. Todos os direitos reservados.</p>
+</footer>
+
+<div class="enabled" vw="">
+<div class="active" vw-access-button=""></div>
+<div vw-plugin-wrapper=""><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+<script src="../../script/translate.js"></script>
+<script src="../../script/alternar-tema.js"></script>
+<script src="../../script/accessibility.js"></script>
+<script src="../../script/script.js"></script>
+<svg class="svg-filters" xmlns="http://www.w3.org/2000/svg">
+<filter id="protanopia"><fecolormatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"></fecolormatrix></filter>
+<filter id="protanomalia"><fecolormatrix type="matrix" values="0.817 0.183 0 0 0  0.333 0.667 0 0 0  0 0.125 0.875 0 0  0 0 0 1 0"></fecolormatrix></filter>
+<filter id="deuteranopia"><fecolormatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"></fecolormatrix></filter>
+<filter id="deuteranomalia"><fecolormatrix type="matrix" values="0.8 0.2 0 0 0  0.258 0.742 0 0 0  0 0.142 0.858 0 0  0 0 0 1 0"></fecolormatrix></filter>
+<filter id="tritanopia"><fecolormatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"></fecolormatrix></filter>
+<filter id="tritanomalia"><fecolormatrix type="matrix" values="0.967 0.033 0 0 0  0 0.733 0.267 0 0  0 0.183 0.817 0 0  0 0 0 1 0"></fecolormatrix></filter>
+</svg>
+</body>
+</html>

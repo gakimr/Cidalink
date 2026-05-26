@@ -1,116 +1,110 @@
-
-document.addEventListener('DOMContentLoaded', function() {
+// Controle do menu de acessibilidade: daltonismo + tema escuro
+ document.addEventListener('DOMContentLoaded', function() {
     const accessibilityBtn = document.getElementById('accessibilityBtn');
     const accessibilityDropdown = document.getElementById('accessibilityDropdown');
     const resetBtn = document.getElementById('resetAccessibility');
     const accessibilityOptions = document.querySelectorAll('.accessibility-option');
-    
-    if (accessibilityBtn) {
+    const themeBtn = document.getElementById('botao-tema');
+    const filterClasses = 'protanopia protanomalia deuteranopia deuteranomalia tritanopia tritanomalia acromatopsia acromatomalia'.split(' ');
+
+    function updateThemeButton() {
+        if (!themeBtn) return;
+        if (document.body.classList.contains('modo-escuro')) {
+            themeBtn.textContent = '☀️';
+            themeBtn.title = 'Desativar Modo Escuro';
+        } else {
+            themeBtn.textContent = '🌙';
+            themeBtn.title = 'Ativar Modo Escuro';
+        }
+    }
+
+    function clearDaltonismFilters() {
+        document.body.classList.remove(...filterClasses);
+    }
+
+    function setActiveOption(filterType) {
+        accessibilityOptions.forEach(opt => opt.classList.remove('active'));
+        const activeOption = document.querySelector(`.accessibility-option[data-filter="${filterType}"]`);
+        if (activeOption) activeOption.classList.add('active');
+    }
+
+    // Alternar visibilidade do menu
+    if (accessibilityBtn && accessibilityDropdown) {
         accessibilityBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             accessibilityDropdown.classList.toggle('active');
         });
     }
 
+    // Fechar menu ao clicar fora
     document.addEventListener('click', function() {
-        if (accessibilityDropdown) {
-            accessibilityDropdown.classList.remove('active');
-        }
+        if (accessibilityDropdown) accessibilityDropdown.classList.remove('active');
     });
-    
-    
+
+    // Prevenir fechamento ao clicar dentro do menu
     if (accessibilityDropdown) {
         accessibilityDropdown.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     }
-    
-   
+
+    // Aplicar filtro de daltonismo ou tema escuro
     accessibilityOptions.forEach(option => {
         option.addEventListener('click', function() {
             const filterType = this.getAttribute('data-filter');
-            
-        
-            document.body.className = document.body.className.replace(/\b(protanopia|protanomalia|deuteranopia|deuteranomalia|tritanopia|tritanomalia|acromatopsia|acromatomalia)\b/g, '');
-            
-          
-            if (filterType !== 'normal') {
+
+            clearDaltonismFilters();
+
+            if (filterType === 'darkmode') {
+                document.body.classList.add('modo-escuro');
+                try { localStorage.setItem('modoEscuro', 'true'); } catch(e){}
+            } else if (filterType === 'normal') {
+                document.body.classList.remove('modo-escuro');
+                try { localStorage.setItem('modoEscuro', 'false'); } catch(e){}
+            } else {
                 document.body.classList.add(filterType);
             }
-            
-            
-            accessibilityOptions.forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-           
+
+            updateThemeButton();
+            setActiveOption(filterType);
+
+            // Salvar preferência
             try { localStorage.setItem('colorAccessibility', filterType); } catch(e){}
-            
-            
-            accessibilityDropdown.classList.remove('active');
+
+            // Fechar menu
+            if (accessibilityDropdown) accessibilityDropdown.classList.remove('active');
         });
     });
-    
+
     // Restaurar cores padrão
     if (resetBtn) {
         resetBtn.addEventListener('click', function() {
-            document.body.className = document.body.className.replace(/\b(protanopia|protanomalia|deuteranopia|deuteranomalia|tritanopia|tritanomalia|acromatopsia|acromatomalia)\b/g, '');
-            
-           
-            accessibilityOptions.forEach(opt => opt.classList.remove('active'));
-            
-           
-            const normalOption = document.querySelector('.accessibility-option[data-filter="normal"]');
-            if (normalOption) { normalOption.classList.add('active'); }
-            
-           
-            try { localStorage.removeItem('colorAccessibility'); } catch(e){}
-            
-            
-            accessibilityDropdown.classList.remove('active');
+            clearDaltonismFilters();
+            document.body.classList.remove('modo-escuro');
+            updateThemeButton();
+            setActiveOption('normal');
+
+            // Remover preferência salva
+            try {
+                localStorage.removeItem('colorAccessibility');
+                localStorage.setItem('modoEscuro', 'false');
+            } catch(e){}
+
+            // Fechar menu
+            if (accessibilityDropdown) accessibilityDropdown.classList.remove('active');
         });
     }
-    
+
+    // Carregar preferência salva
     const savedPreference = (function(){ try { return localStorage.getItem('colorAccessibility'); } catch(e) { return null; }})();
-    if (savedPreference) {
+    if (savedPreference === 'darkmode') {
+        document.body.classList.add('modo-escuro');
+        updateThemeButton();
+        setActiveOption('darkmode');
+    } else if (savedPreference && filterClasses.includes(savedPreference)) {
         document.body.classList.add(savedPreference);
-        const savedOption = document.querySelector(`.accessibility-option[data-filter="${savedPreference}"]`);
-        if (savedOption) { savedOption.classList.add('active'); }
+        setActiveOption(savedPreference);
     } else {
-        const normalOption = document.querySelector('.accessibility-option[data-filter="normal"]');
-        if (normalOption) { normalOption.classList.add('active'); }
+        setActiveOption('normal');
     }
 });
-
-
-
-const mainBtn = document.getElementById('mainAccessibilityBtn');
-const dropdown = document.getElementById('mainAccessibilityDropdown');
-const darkModeBtn = document.getElementById('toggleDarkMode');
-
-// abrir/fechar menu
-mainBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown.classList.toggle('active');
-});
-
-
-document.addEventListener('click', () => {
-    dropdown.classList.remove('active');
-});
-
-dropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
-
-// MODO ESCURO
-darkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('modo-escuro');
-
-    localStorage.setItem(
-        'modoEscuro',
-        document.body.classList.contains('modo-escuro')
-    );
-});
-
-if (localStorage.getItem('modoEscuro') === 'true') {
-    document.body.classList.add('modo-escuro');
-}
