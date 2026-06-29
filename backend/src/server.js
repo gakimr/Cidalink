@@ -13,7 +13,7 @@ const routes = require("./view/routes");
 dotenv.config();
 
 // para mudar a porta do servidor
-const Port = process.env.API_PORT || 3000;
+const Port = process.env.PORT || process.env.API_PORT || 3000;
 
 // instanciar o express no objeto app
 const app = express();
