@@ -1,0 +1,401 @@
+.perfil-container {
+    width: calc(100% - 18rem);
+    max-width: 1100px;
+    margin: 2rem auto 2rem 16rem;
+    padding: 1.5rem;
+}
+.perfil-container h1 {
+    color: var(--azule);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* CARD DOS DADOS */
+
+.card-perfil {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.perfil-topo {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.perfil-foto-box {
+    text-align: center;
+    border-right: 1px solid var(--cinzac);
+    padding-right: 1.5rem;
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--verde);
+    object-fit: cover;
+    background: var(--verdeclaro);
+}
+
+.perfil-foto-box h2 {
+    color: var(--cinzae);
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.selo-ativo {
+    display: inline-block;
+    margin-top: .5rem;
+    background: rgba(40,170,70,.15);
+    color: var(--verdeh);
+    padding: .4rem .8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.perfil-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.perfil-header h2 {
+    color: var(--azule);
+    font-weight: bold;
+}
+
+.btnEditar {
+    background: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: .6rem 1.2rem;
+    cursor: pointer;
+}
+
+.btnEditar:hover {
+    background: var(--azule);
+}
+
+.dados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+}
+
+.inputgp {
+    margin-bottom: 0;
+}
+
+.inputgp label {
+    color: var(--cinzae);
+    font-weight: bold;
+}
+
+.inputgp input {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid var(--cinzac);
+    border-radius: 10px;
+    background: var(--cinzab);
+}
+
+.inputgp input:enabled {
+    background: white;
+    border-color: var(--azul);
+}
+
+/* CARD RESUMO */
+
+.card-status {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.card-status h2 {
+    color: var(--azule);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.cards-status-perfil {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.status-card {
+    background: var(--cinzab);
+    border-radius: 14px;
+    padding: 1.3rem;
+    text-align: center;
+    border-top: 5px solid var(--vermelho);
+}
+
+.status-card strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cinzae);
+}
+
+.status-card span.span-vermelho {
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+.status-card span.span-verde {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.status-card span.span-amarelo {
+    color: var(--amarelo);
+    font-weight: bold;
+}
+
+.status-card.verde {
+    border-top-color: var(--verde);
+}
+
+.status-card.amarelo {
+    border-top-color: var(--amarelo);
+}
+.status-card.vermelho {
+    border-top-color: var(--vermelho);
+}
+
+/* OCORRÊNCIAS */
+
+.card-lista-ocorrencias {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.card-lista-ocorrencias h2 {
+    color: var(--azule);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.lista-ocorrencias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-ocorrencia {
+    background: var(--cinzab);
+    border-left: 5px solid var(--amarelo);
+    border-radius: 14px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.oc-info h3 {
+    color: var(--cinzae);
+    font-weight: bold;
+    margin-bottom: .4rem;
+}
+
+.oc-info p {
+    color: var(--cinza);
+    margin: .25rem 0;
+}
+
+.oc-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-ocorrencia.resolvido,
+.status-concluido {
+    border-left-color: var(--verde);
+}
+
+.card-ocorrencia.resolvido .oc-status span,
+.status-concluido .oc-status {
+    background: rgba(40,170,70,.15);
+    color: var(--verdeh);
+     min-width: 110px;
+    text-align: center;
+    padding: .5rem .8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.card-ocorrencia.nao-resolvido,
+.status-rejeitado {
+    border-left-color: var(--vermelho);
+}
+
+.card-ocorrencia.nao-resolvido .oc-status span,
+.status-rejeitado .oc-status {
+    background: rgba(255,15,15,.15);
+    color: #b30000;
+     min-width: 110px;
+    text-align: center;
+    padding: .5rem .8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.status-em-andamento {
+    border-left-color: var(--amarelo);
+}
+
+.status-em-andamento .oc-status span {
+    background: rgba(255,190,5,.15);
+    color: #b98200;
+     min-width: 110px;
+    text-align: center;
+    padding: .5rem .8rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 950px) {
+    .perfil-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 1rem;
+        padding-bottom: 6rem;
+    }
+
+    .perfil-container h1 {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .card-perfil,
+    .card-status,
+    .card-lista-ocorrencias {
+        border-radius: 18px;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .perfil-topo {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        text-align: center;
+    }
+
+    .perfil-foto-box {
+        border-right: none;
+        border-bottom: 1px solid var(--cinzac);
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+
+    .foto-perfil {
+        width: 105px;
+        height: 105px;
+    }
+
+    .perfil-header {
+        flex-direction: column;
+        gap: .8rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btnEditar {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .dados-grid {
+        grid-template-columns: 1fr;
+        gap: .8rem;
+    }
+
+    .cards-status-perfil {
+        grid-template-columns: 1fr;
+        gap: .8rem;
+    }
+
+    .status-card {
+        padding: 1rem;
+    }
+
+    .status-card strong {
+        font-size: 1.8rem;
+    }
+
+    .card-ocorrencia {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: .8rem;
+    }
+
+    .oc-info h3 {
+        font-size: 1rem;
+    }
+
+    .oc-info p {
+        font-size: .9rem;
+        word-break: break-word;
+    }
+
+    .oc-status {
+        justify-content: flex-start;
+    }
+
+    .oc-status span {
+        width: 100%;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+    .perfil-container {
+        padding: .8rem;
+        padding-bottom: 5.5rem;
+    }
+
+    .card-perfil,
+    .card-status,
+    .card-lista-ocorrencias {
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .perfil-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .inputgp input {
+        font-size: .9rem;
+        padding: .7rem;
+    }
+
+    .status-card strong {
+        font-size: 1.6rem;
+    }
+
+    .card-ocorrencia {
+        border-left-width: 4px;
+    }
+}

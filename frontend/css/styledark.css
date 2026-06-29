@@ -1,0 +1,685 @@
+
+
+/* =========================
+   DARK MODE - CidaLink
+========================= */
+
+body.modo-escuro{
+    background:#121212;
+    color:#f1f1f1;
+}
+
+/* Estrutura principal */
+body.modo-escuro .contentcontainer,
+body.modo-escuro .maincontainer,
+body.modo-escuro .chat-app{
+    background:#181818;
+    color:#f1f1f1;
+}
+
+/* Header / Footer */
+body.modo-escuro header,
+body.modo-escuro footer{
+    background:#14532d;
+    color:#ffffff;
+}
+
+/* Menu lateral */
+body.modo-escuro .menu{
+    background:#1b1b1b;
+    border-right:1px solid #2f2f2f;
+}
+
+body.modo-escuro .menu h2,
+body.modo-escuro .menu a,
+body.modo-escuro .menu nav a{
+    color:#ffffff !important;
+}
+
+body.modo-escuro .menu a{
+    background:#202020;
+}
+
+body.modo-escuro .menu a:hover,
+body.modo-escuro .menu .pagatual{
+    background:#2563eb;
+    color:#ffffff !important;
+}
+
+/* Textos gerais */
+body.modo-escuro p,
+body.modo-escuro span,
+body.modo-escuro label,
+body.modo-escuro small,
+body.modo-escuro li,
+body.modo-escuro td,
+body.modo-escuro th,
+body.modo-escuro h1,
+body.modo-escuro h2,
+body.modo-escuro h3,
+body.modo-escuro h4,
+body.modo-escuro h5,
+body.modo-escuro h6,
+body.modo-escuro .cidinfo strong,
+body.modo-escuro .cidinfo span,
+body.modo-escuro .ocdescricao,
+body.modo-escuro .comentario p,
+body.modo-escuro .nomechat,
+body.modo-escuro .nomechataberto,
+body.modo-escuro .conversas,
+body.modo-escuro .info h3,
+body.modo-escuro .info p,
+body.modo-escuro .info span{
+    color:#ffffff !important;
+}
+
+/* Cards */
+body.modo-escuro .card,
+body.modo-escuro .cardForm,
+body.modo-escuro .cardcadastro,
+body.modo-escuro .cardlogin,
+body.modo-escuro .cardFormOc,
+body.modo-escuro .containernotficacao,
+body.modo-escuro .perfil-container,
+body.modo-escuro .card-perfil,
+body.modo-escuro .occard,
+body.modo-escuro .card-ocorrencia,
+body.modo-escuro .historico-item,
+body.modo-escuro .tabela-container,
+body.modo-escuro .sidebar,
+body.modo-escuro .chat,
+body.modo-escuro .containercontato,
+body.modo-escuro .contato{
+    background:#1e1e1e !important;
+    color:#ffffff !important;
+    border-color:#333 !important;
+}
+
+/* Inputs */
+body.modo-escuro input,
+body.modo-escuro textarea,
+body.modo-escuro select,
+body.modo-escuro #textoMensagem{
+    background:#2a2a2a !important;
+    color:#ffffff !important;
+    border:1px solid #555 !important;
+}
+
+body.modo-escuro input::placeholder,
+body.modo-escuro textarea::placeholder{
+    color:#cfcfcf;
+}
+
+/* Tabelas */
+body.modo-escuro .tabela-ocorrencias th{
+    background:#1d4ed8;
+    color:#fff;
+}
+
+body.modo-escuro .tabela-ocorrencias td{
+    background:#1e1e1e;
+    color:#fff;
+    border-color:#333;
+}
+
+body.modo-escuro .tabela-ocorrencias tbody tr:hover{
+    background:#2a2a2a;
+}
+
+/* Chat */
+body.modo-escuro .chat-topo,
+body.modo-escuro .sidebar-top,
+body.modo-escuro .barra-envio,
+body.modo-escuro .confirmamenssage,
+body.modo-escuro .chataberto{
+    background:#202020 !important;
+    border-color:#333 !important;
+}
+body.modo-escuro .conversa:hover,
+body.modo-escuro .conversa.ativa{
+        background: #5b5b5b;
+}
+body.modo-escuro .mensagens{
+    background:#181818;
+}
+
+body.modo-escuro .msg.outro .balao,
+body.modo-escuro .balao1,
+body.modo-escuro .balao3{
+    background:#2a2a2a !important;
+    color:#fff !important;
+}
+
+body.modo-escuro .msg.eu .balao,
+body.modo-escuro .balao2,
+body.modo-escuro .balao4{
+    background:#2563eb !important;
+    color:#fff !important;
+}
+
+/* Perfil */
+body.modo-escuro .profile-circle{
+    background:#1d4ed8;
+    color:#fff;
+    border-color:#3b82f6;
+}
+
+/* Notificações */
+body.modo-escuro .card:hover{
+    background:#2a2a2a !important;
+}
+
+/* Mapa */
+body.modo-escuro .mapacontainer,
+body.modo-escuro .ocorrenclegend,
+body.modo-escuro .ocorrenciapopup{
+    background:#1f1f1f !important;
+    color:#fff !important;
+    border-color:#333 !important;
+}
+body.modo-escuro .leaflet-control-zoom-in,
+body.modo-escuro .leaflet-control-zoom-out{
+
+    background-color: #000;
+}
+
+/* Dropdowns */
+body.modo-escuro .language-dropdown,
+body.modo-escuro{
+    background:#1f1f1f;
+    border:1px solid #333;
+}
+
+body.modo-escuro .language-option,
+body.modo-escuro{
+    color:#fff;
+}
+
+body.modo-escuro .language-option:hover,
+body.modo-escuro:hover{
+    background:#2a2a2a;
+}
+
+
+
+body.modo-escuro .accessibility-dropdown{
+    background: #1f1f1f;
+    border: 1px solid #333;
+}
+
+body.modo-escuro .accessibility-option{
+    color: white;
+}
+
+body.modo-escuro .accessibility-option:hover{
+    background: #2a2a2a;
+}
+
+body.modo-escuro .reset-btn{
+    background: #2a2a2a;
+    color: white;
+}
+
+body.modo-escuro .reset-btn:hover{
+    background: #333;
+}
+body.modo-escuro .accessibility-dropdown{
+    background: #1c1c1c !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.45);
+}
+
+/* HEADER */
+body.modo-escuro .accessibility-header{
+    background: linear-gradient(135deg, #166534, #2563eb);
+    color: white;
+}
+
+/* ÁREA DAS OPÇÕES */
+body.modo-escuro .accessibility-options{
+    background: #1c1c1c;
+}
+
+/* BOTÕES DAS OPÇÕES */
+body.modo-escuro .accessibility-option{
+    background: #262626 !important;
+    color: #ffffff !important;
+    border: 1px solid #333;
+    margin-bottom: .6rem;
+}
+
+/* HOVER */
+body.modo-escuro .accessibility-option:hover{
+    background: #323232 !important;
+    border-color: #3b82f6;
+}
+
+/* OPÇÃO ATIVA */
+body.modo-escuro .accessibility-option.active{
+    background: #1e3a8a !important;
+    border: 1px solid #60a5fa !important;
+}
+
+/* TEXTOS */
+body.modo-escuro .accessibility-option span,
+body.modo-escuro .accessibility-option p,
+body.modo-escuro .accessibility-option strong{
+    color: #ffffff !important;
+}
+
+/* FOOTER */
+body.modo-escuro .accessibility-footer{
+    background: #1c1c1c;
+    border-top: 1px solid #333;
+}
+
+/* BOTÃO RESET */
+body.modo-escuro .reset-btn{
+    background: #2b2b2b !important;
+    color: white !important;
+    border: 1px solid #444;
+}
+
+body.modo-escuro .reset-btn:hover{
+    background: #3a3a3a !important;
+}
+
+/* SCROLLBAR */
+body.modo-escuro .accessibility-options::-webkit-scrollbar{
+    width: 8px;
+}
+
+body.modo-escuro .accessibility-options::-webkit-scrollbar-thumb{
+    background: #555;
+    border-radius: 10px;
+}
+
+body.modo-escuro .accessibility-options::-webkit-scrollbar-track{
+    background: #222;
+}
+
+/* Botões */
+body.modo-escuro button,
+body.modo-escuro .btnadmin,
+body.modo-escuro .btnadmin-small,
+body.modo-escuro .btnapoio,
+body.modo-escuro .btnEntrar,
+body.modo-escuro .btnCadastro,
+body.modo-escuro .btnoc{
+    background-color: var(--verde);
+    color: white;
+}
+body.modo-escuro .BtnA{
+    background-color: #1d4ed8;
+
+}
+
+/* Hover */
+body.modo-escuro button:hover,
+body.modo-escuro .btnadmin:hover,
+body.modo-escuro .btnadmin-small:hover,
+body.modo-escuro .btnapoio:hover,
+body.modo-escuro .btnEntrar:hover,
+body.modo-escuro .btnCadastro:hover{
+    background-color: var(--verdeh);
+}
+/* Floating */
+body.modo-escuro .mensagenflut{
+    background:#1f1f1f;
+    color:#fff;
+    border:1px solid #333;
+}
+
+/* Responsivo */
+@media (max-width:950px){
+
+    body.modo-escuro .menu,
+    body.modo-escuro .menu.nav-active{
+        background:rgba(20,20,20,.98)!important;
+    }
+
+    body.modo-escuro .menu nav a{
+        color:#fff!important;
+    }
+}
+
+body.modo-escuro .nomechataberto,
+body.modo-escuro .conversas {
+    color:#e0e0e0}
+
+body.modo-escuro footer {
+    background-color: #1b5e20; /* Verde escuro mais agradável (Material Design) */
+    color:#e0e0e0}
+
+/* Botão do Modo Escuro */
+#botao-tema {
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color:#c9c9c9;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#botao-tema:hover {
+    background-color: var(--cinzae);
+    transform: scale(1.1);
+}
+
+body.modo-escuro #botao-tema {
+    background-color: var(--amarelo);
+    color: #000;
+}
+
+/* Modo Escuro - Adições para header e footer em verde escuro */
+body.modo-escuro header {
+    background-color: #1b5e20; 
+}
+
+body.modo-escuro .menu {
+    background-color: #1e1e1e; 
+}
+
+body.modo-escuro .maincontainer {
+    background-color: #1a1a1a;
+}
+
+body.modo-escuro footer {
+    background-color: #1b5e20; 
+    color:#e0e0e0}
+
+body.modo-escuro .cardForm,
+body.modo-escuro .cardcadastro,
+body.modo-escuro .cardlogin {
+    background-color: #1e1e1e;
+    color:#e0e0e0}
+
+body.modo-escuro .contentcontainer {
+    background-color: #1e1e1e; 
+}
+
+body.modo-escuro .card {
+    background-color: #272626; 
+}
+
+body.modo-escuro .mapacontainer, 
+body.modo-escuro .ocorrenclegend, 
+body.modo-escuro .contato, 
+body.modo-escuro .confirmamenssage,
+body.modo-escuro .card-ocorrencia{
+    background-color: #272626; 
+}
+
+body.modo-escuro .ocorrenclegend li,
+body.modo-escuro .ocorrenclegend h3,
+body.modo-escuro .card-ocorrencia h3,
+body.modo-escuro .card-ocorrencia p{
+    color:#ffff;
+
+}
+
+body.modo-escuro .minhas-ocorrencias h2{
+    color: #ffff;
+}
+
+body.modo-escuro .mensagenflut{
+    background-color: #4d4a4a;
+}
+
+body.modo-escuro .mensagenflut{
+    color:#ffff;
+}
+
+
+
+
+/* =========================
+   DEPOIMENTOS
+========================= */
+
+body.modo-escuro .depoimentos{
+    background:#121212;
+}
+
+body.modo-escuro .depoimentos h2{
+    color:#ffffff;
+}
+
+body.modo-escuro .depoimento{
+    background:#1f1f1f;
+    border:1px solid #333;
+    box-shadow:0 4px 15px rgba(0,0,0,.35);
+}
+
+body.modo-escuro .depoimento p,
+body.modo-escuro .depoimento h4{
+    color:#ffffff;
+}
+
+body.modo-escuro .estrelas{
+    color:#facc15;
+}
+
+/* AVATAR */
+body.modo-escuro .avatar{
+    border:3px solid #2563eb;
+}
+
+/* =========================
+   SEÇÃO CARDS
+========================= */
+
+body.modo-escuro .secaocards{
+    background:#181818;
+}
+
+body.modo-escuro .carditem{
+    background:#1f1f1f;
+    border:1px solid #333;
+    box-shadow:0 4px 15px rgba(0,0,0,.35);
+}
+
+body.modo-escuro .carditem:hover{
+    background:#262626;
+    transform:translateY(-5px);
+}
+
+/* =========================
+   CREDIBILIDADE
+========================= */
+
+body.modo-escuro .credibilidade{
+    background:#1a1a1a;
+}
+
+body.modo-escuro .credibilidade h2,
+body.modo-escuro .credibilidade p{
+    color:#ffffff;
+}
+
+/* BOTÃO CTA */
+body.modo-escuro .ctabotao{
+    background:var(--verde);
+    color:#ffffff;
+    border:none;
+}
+
+body.modo-escuro .ctabotao:hover{
+    background:var(--verde);
+}
+
+body.modo-escuro .filtros{
+    background-color: #333 ;
+}
+
+
+/* =========================
+   STATS / DASHBOARD
+========================= */
+
+body.modo-escuro .stats{
+    background:transparent;
+}
+
+/* CARDS */
+body.modo-escuro .stat-card{
+    background:#1f1f1f !important;
+    border:1px solid #333 !important;
+    box-shadow:0 4px 15px rgba(0,0,0,.35);
+    color:#ffffff !important;
+    transition:.3s ease;
+}
+
+/* HOVER */
+body.modo-escuro .stat-card:hover{
+    background:#262626 !important;
+    transform:translateY(-4px);
+}
+
+/* TÍTULOS */
+body.modo-escuro .stat-card h3{
+    color:#d1d5db !important;
+}
+
+/* NÚMEROS */
+body.modo-escuro .stat-number{
+    color:#60a5fa !important;
+}
+
+/* =========================
+   AÇÕES RECENTES
+========================= */
+
+body.modo-escuro .Pacoes{
+    color:#ffffff !important;
+}
+
+/* ITENS */
+body.modo-escuro .list-item{
+    background:#1f1f1f !important;
+    border:1px solid #333 !important;
+    box-shadow:0 3px 12px rgba(0,0,0,.25);
+    color:#ffffff !important;
+}
+
+/* TEXTO */
+body.modo-escuro .list-item strong{
+    color:#ffffff !important;
+}
+
+body.modo-escuro .list-item span{
+    color:#bdbdbd !important;
+}
+
+/* HOVER */
+body.modo-escuro .list-item:hover{
+    background:#2a2a2a !important;
+    border-color:#3b82f6 !important;
+}
+
+
+
+
+
+/* Bottom Navigation Bar no modo escuro */
+@media (max-width: 950px) {
+    body.modo-escuro .menu,
+    body.modo-escuro .menu.nav-active {
+        background: rgba(37, 37, 37, 0.97) !important;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.45) !important;
+    }
+
+    body.modo-escuro .menu nav a {
+        color: #e5e7eb !important;
+        background: transparent !important;
+    }
+
+    body.modo-escuro .menu nav a:hover,
+    body.modo-escuro .menu nav a.pagatual {
+        background: var(--azullink) !important;
+        color: #fff !important;
+    }
+    /* =========================
+   TABELA RESPONSIVA - DARK MODE
+========================= */
+
+    /* CONTAINER */
+    body.modo-escuro .tabela-container,
+    body.modo-escuro .table-responsive-mobile{
+        background:#181818;
+    }
+
+    /* CARD DA TABELA */
+    body.modo-escuro .tabela-ocorrencias tr,
+    body.modo-escuro .table-responsive-mobile tr{
+        background:#1f1f1f !important;
+        border:1px solid #333 !important;
+        box-shadow:0 4px 12px rgba(0,0,0,.35);
+    }
+
+    /* TD */
+    body.modo-escuro .tabela-ocorrencias td,
+    body.modo-escuro .table-responsive-mobile td{
+        background:#1f1f1f !important;
+        color:#ffffff !important;
+        border-bottom:1px solid #333 !important;
+    }
+
+    /* LABEL */
+    body.modo-escuro .tabela-ocorrencias td::before,
+    body.modo-escuro .table-responsive-mobile td::before{
+        color:#60a5fa !important;
+        font-weight:bold;
+    }
+
+    /* TEXTO */
+    body.modo-escuro .tabela-ocorrencias p,
+    body.modo-escuro .tabela-ocorrencias span,
+    body.modo-escuro .tabela-ocorrencias strong,
+    body.modo-escuro .table-responsive-mobile p,
+    body.modo-escuro .table-responsive-mobile span,
+    body.modo-escuro .table-responsive-mobile strong{
+        color:#ffffff !important;
+    }
+
+    /* BOTÕES */
+    body.modo-escuro .table-responsive-mobile button,
+    body.modo-escuro .tabela-ocorrencias button{
+        background:#2563eb;
+        color:#ffffff;
+        border:none;
+    }
+
+    body.modo-escuro .table-responsive-mobile button:hover,
+    body.modo-escuro .tabela-ocorrencias button:hover{
+        background:#1d4ed8;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
